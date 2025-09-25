@@ -31,10 +31,8 @@ header {
   justify-content: space-between;
 }
 
-logo img {
-  height: 5px;      /* tinggi gambar */
-  width: auto;       /* biar proporsi tetap terjaga */
-  max-width: 200px;  /* supaya tidak terlalu besar */
+.logo img {
+  height: 45px;
 }
 
 

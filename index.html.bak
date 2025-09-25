@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,40 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="fade-in">
-    <img src="images/logo.png" alt="Logo" class="logo">
-    <h1>Nama Perusahaan</h1>
-    <p>Solusi Fulfillment & Logistik Terbaik</p>
-    <a href="services.html" class="cta-btn">Lihat Layanan</a>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="OrderOnline Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#harga">Harga</a></li>
+          <li><a href="#fbads">FB Ads Whitelist</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#help">Help Center</a></li>
+        </ul>
+      </nav>
+      <div class="nav-buttons">
+        <a href="#" class="btn-outline">Login</a>
+        <a href="#" class="btn-primary">Daftar</a>
+      </div>
+    </div>
   </header>
 
-  <section class="fade-in">
-    <h2>Tentang Kami</h2>
-    <p>Kami membantu bisnis Anda mengelola pengiriman, stok, dan fulfillment secara efisien.</p>
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Tingkatkan penjualan dengan manajemen order yang serba otomatis.</h1>
+        <a href="#" class="cta-btn">DAFTAR SEKARANG</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.png" alt="Hero Image">
+      </div>
+    </div>
   </section>
-
-  <footer class="fade-in">
-    <p>&copy; 2025 Nama Perusahaan - All Rights Reserved</p>
-  </footer>
 
   <script src="js/script.js"></script>
 </body>
