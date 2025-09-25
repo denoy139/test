@@ -177,10 +177,11 @@ nav ul {
   .hero-image {
     margin-top: 20px;
   }
+}
   
 /* DESCRIPTION SECTION */
 .description {
-  background: #005bb5;
+  background: #c8102e;
   color: #fff;
   text-align: center;
   padding: 20px 40px;
@@ -233,6 +234,4 @@ nav ul {
   margin-bottom: 10px;
   color: #333;
   font-size: 18px;
-}
-
 }
