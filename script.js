@@ -1,14 +1,15 @@
-// Tambahkan class 'visible' saat elemen masuk viewport
-const faders = document.querySelectorAll('.fade-in');
+// Animasi Fade-in ketika halaman dimuat
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, { threshold: 0.2 });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+  fadeElements.forEach(el => observer.observe(el));
 });

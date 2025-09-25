@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1>Nama Perusahaan</h1>
+    <p>Solusi Fulfillment & Logistik Terbaik</p>
+    <a href="services.html" class="cta-btn">Lihat Layanan</a>
+  </header>
+
+  <section class="fade-in">
+    <h2>Tentang Kami</h2>
+    <p>Kami membantu bisnis Anda mengelola pengiriman, stok, dan fulfillment secara efisien.</p>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 Nama Perusahaan - All Rights Reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
