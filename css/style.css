@@ -20,9 +20,14 @@ body {
 
 /* --- Header --- */
 header {
-  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 15px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: #fff;         /* supaya tidak transparan */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 999;  
 }
 
 .nav-container {
@@ -88,6 +93,10 @@ nav ul {
 
 .btn-primary:hover {
   background: #c8102e;
+}
+
+body {
+  padding-top: 80px; /* sama dengan tinggi header */
 }
 
 /* --- Hero Section --- */
@@ -234,4 +243,111 @@ nav ul {
   margin-bottom: 10px;
   color: #333;
   font-size: 18px;
+}
+
+/* --- Business Section --- */
+.business {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.business-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.business-image {
+  flex: 1 1 45%;
+}
+
+.business-image img {
+  max-width: 100%;
+}
+
+.business-text {
+  flex: 1 1 45%;
+}
+
+.business-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.business-text p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.business-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+}
+
+.icon-box {
+  background: #f1f6ff;
+  color: #007bff;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* --- Automation Section --- */
+.automation {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.automation-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.automation-text {
+  flex: 1 1 45%;
+}
+
+.automation-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.automation-text p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.automation-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+}
+
+.automation-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.automation-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .business-content, .automation-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .business-text, .automation-text {
+    flex: 1 1 100%;
+  }
 }
