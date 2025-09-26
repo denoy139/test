@@ -681,8 +681,8 @@ body {
 }
 
 .footer {
-  background: #111;
-  color: #fff;
+  background: #fff;
+  color: #111;
   padding: 40px 20px;
   font-size: 14px;
 }
@@ -722,7 +722,7 @@ body {
 }
 
 .footer-column ul li a {
-  color: #ccc;
+  color: #969393;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -760,7 +760,7 @@ body {
 }
 
 .social-icons a {
-  color: #ccc;
+  color: #969393;
   font-size: 18px;
   margin-left: 15px;
   transition: 0.3s;
