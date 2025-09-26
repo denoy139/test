@@ -575,7 +575,7 @@ body {
 .contact-info h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #c8102e;
+  color: #000;
   margin-bottom: 20px;
 }
 
