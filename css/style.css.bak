@@ -95,7 +95,9 @@ nav ul {
   background: #c8102e;
 }
 
-
+body {
+  padding-top: 80px; /* sama dengan tinggi header */
+}
 
 /* --- Hero Section --- */
 .hero {
@@ -349,3 +351,137 @@ nav ul {
     flex: 1 1 100%;
   }
 }
+
+.kategori-industri {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.kategori-industri h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.kategori-industri p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kategori-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.kategori-card:hover {
+  transform: translateY(-5px);
+}
+
+.kategori-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.kategori-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.kategori-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.testimoni-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9faff;
+}
+
+.testimoni-section h2 {
+  color: #004aad;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimoni-section h3 {
+  color: #004aad;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.testimoni-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default 2 kolom */
+  gap: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.testimoni-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 20px 40px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimoni-card p {
+  font-size: 15px;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.testimoni-card .avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimoni-card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #004aad;
+  margin: 5px 0;
+}
+
+.testimoni-card span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* HP: 1 kolom */
+@media (max-width: 600px) {
+  .testimoni-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -122,6 +122,112 @@
 		</div>
 	</div>
   </section>
+  
+  <!-- Section Kategori Industri -->
+  <section class="kategori-industri">
+	<h2>Kategori Industri</h2>
+		<p>Kategori produk paling laris di e-Commerce yang dapat Crewdbile tangani</p>
+
+	<div class="kategori-grid">
+		<!-- Card 1 -->
+		<div class="kategori-card">
+			<img src="fashion.jpg" alt="Fashion & Accessories">
+				<h3>Fashion & Accessories</h3>
+				<p>Banyaknya SKU lebih mudah ditangani dalam setiap proses pesanan berkat sistem pencatatan yang terautomasi & terintegrasi.</p>
+		</div>
+
+		<!-- Card 2 -->
+		<div class="kategori-card">
+			<img src="makanan.jpg" alt="Makanan & Minuman">
+				<h3>Makanan & Minuman</h3>
+				<p>Metode FEFO kami akan sangat membantu untuk memastikan kualitas makanan kemasan terjaga hingga sampai ke tangan konsumen.</p>
+		</div>
+
+		<!-- Card 3 -->
+		<div class="kategori-card">
+			<img src="kecantikan.jpg" alt="Kecantikan & Kesehatan">
+				<h3>Kecantikan & Kesehatan</h3>
+				<p>Pengaturan suhu ruang penyimpanan diatur secara tepat untuk menjaga produk dalam kualitas terbaik saat disimpan.</p>
+		</div>
+
+		<!-- Card 4 -->
+		<div class="kategori-card">
+			<img src="perabot.jpg" alt="Perabot Rumah">
+				<h3>Perabot Rumah</h3>
+				<p>Dari sendok kecil ataupun sofa ekstra besar, semua barang rumah tangga aman tersimpan dengan pilihan gudang mikro & makro.</p>
+		</div>
+
+		<!-- Card 5 -->
+		<div class="kategori-card">
+			<img src="segar.jpg" alt="Barang Segar">
+				<h3>Barang Segar</h3>
+				<p>Kecepatan proses fulfillment & logistik menjamin produk seperti sayur & buah tetap segar saat diterima konsumen.</p>
+		</div>
+
+		<!-- Card 6 -->
+		<div class="kategori-card">
+			<img src="bernilai.jpg" alt="Barang Bernilai Tinggi">
+				<h3>Barang Bernilai Tinggi</h3>
+				<p>Semua barang yang disimpan diawasi CCTV, ditangani tim berintegritas tinggi, dan dilindungi asuransi serta jaminan diganti jika ada kehilangan.</p>
+		</div>
+	</div>
+  </section>
+  
+  <!-- Section Testimonial -->
+  <section class="testimonial-section">
+	<h2>ORDERONLINE.ID SANGAT POWERFUL & TERBUKTI!</h2>
+	<h3>MEREKA PARA "EXPERT" JUGA MENGATAKAN HAL YANG SAMA!</h3>
+
+		<div class="testimonial-grid">
+		<!-- Card 1 -->
+		<div class="testimonial-card">
+			<p>"Ini tool adalah 'dream came true' banget buat gua... Ini keren banget, gak usah beli domain dan hosting, tapi bisa bikin form pemesanan, masukin video, cek ongkir otomatis, the best-nya bisa masukin Facebook pixel, dan follow-up customer jauh lebih gampang karena tinggal klik-klik aja."</p>
+			<img src="christina.jpg" alt="Christina Lie">
+			<h4>CHRISTINA LIE</h4>
+			<span>Digital Marketer & Founder 101red.com</span>
+		</div>
+
+		<!-- Card 2 -->
+		<div class="testimonial-card">
+			<p>"Sukses terus mas utk OrderOnline nya, saya sudah sempat bantu 1 tahun selesainya. Ngedorakin lagi salah 1 nya gegara platform ini."</p>
+			<img src="maula.jpg" alt="Maula Nikma">
+			<h4>MAULA NIKMA</h4>
+			<span>President Director at ParadiseBiz Indonesia</span>
+		</div>
+
+		<!-- Card 3 -->
+		<div class="testimonial-card">
+			<p>"Ini OrderOnline ngeri... The best tool yang saya cari selama ini. Fiturnya ringan dan enak banget untuk funnel. Lagi ngoprek dan langsung puas."</p>
+			<img src="fahmi.jpg" alt="Fahmi Hakim">
+			<h4>FAHMI HAKIM</h4>
+			<span>Toko Online Expert & Founder kelasbos.com</span>
+		</div>
+
+		<!-- Card 4 -->
+		<div class="testimonial-card">
+			<p>"Ciamik, thumbs up dah! Bisa bump offer, bisa sales funnel dan upsell, order form with shipping integrated - gak pake shopping cart yang ribet."</p>
+			<img src="andry.jpg" alt="Andry Salim">
+			<h4>ANDRY SALIM</h4>
+			<span>Entrepreneur, Digital Marketer & Penulis Buku The Internet Millionaire</span>
+		</div>
+
+		<!-- Card 5 -->
+		<div class="testimonial-card">
+			<p>"Salut buat tool ini! Buat pemegang funneling ini ibarat surga. Juga fitur Split Test form order, keren banget! Jadi ketahuan checkout page mana yang menghasilkan sales lebih banyak."</p>
+			<img src="annas.jpg" alt="Annas Ahmad">
+			<h4>ANNAS AHMAD</h4>
+			<span>Coach at Foodketo.com</span>
+		</div>
+
+		<!-- Card 6 -->
+		<div class="testimonial-card">
+			<p>"Selain bisa rekap orderan secara rapi dan terstruktur, bisa follow up WhatsApp secara berkala juga. Ini adalah jawaban semua masalah saya disaat CS kewalahan. Ditambah lagi saya gak perlu nambah orang buat input transaksi, biasanya pake Google Sheet - tiap transaksi CS langsung input (1 transaksi bisa makan waktu 10-15 menit). Dengan OrderOnline, sekarang cincaail lah... maju terusss OrderOnline!"</p>
+			<img src="revardi.jpg" alt="Revardi Syahputra">
+			<h4>REVARDI SYAHPUTRA</h4>
+			<span>Toko Online Expert</span>
+		</div>
+	</div>
+  </section>
 
   <script src="js/script.js"></script>
 </body>
