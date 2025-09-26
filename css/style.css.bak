@@ -407,6 +407,75 @@ body {
   line-height: 1.5;
 }
 
+.benefits-section {
+  text-align: center;
+  padding: 70px 20px;
+  background: #fff;
+}
+
+.benefits-section h2 {
+  color: #004aad;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.benefits-section .subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.benefit-card .icon {
+  margin-bottom: 15px;
+}
+
+.benefit-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.benefit-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .testimoni-section {
   text-align: center;
   padding: 60px 20px;
@@ -431,7 +500,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* default 2 kolom */
   gap: 25px;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   align-items: start;
 }
@@ -484,4 +553,199 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.contact-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  background: linear-gradient(135deg, #0072ff, #00c6ff, #7fff00);
+  padding: 40px;
+  border-radius: 25px;
+  color: #fff;
+  gap: 20px;
+}
+
+.contact-content {
+  flex: 1;
+}
+
+.contact-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-content .highlight {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-content p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-contact:hover {
+  background: #e64a19;
+}
+
+.contact-image {
+  flex: 1;
+  text-align: right;
+}
+
+.contact-image img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsif Tablet */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 20px auto;
+  font-size: 13px;
+}
+
+.footer-middle a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.footer-middle a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+  font-size: 13px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 18px;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-columns {
+    justify-content: center;
+  }
+
+  .footer-middle {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
 
