@@ -555,7 +555,7 @@ body {
 }
 
 .contact-section {
-  background: #f9fafc;
+  background: #fff;
   padding: 60px 20px;
 }
 
@@ -575,7 +575,7 @@ body {
 .contact-info h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #0b2d60;
+  color: #000;
   margin-bottom: 20px;
 }
 
@@ -590,11 +590,11 @@ body {
   align-items: center;
   gap: 8px;
   background: #fff;
-  border: 2px solid #0b2d60;
+  border: 2px solid #c8102e;
   padding: 12px 20px;
   border-radius: 10px;
   font-weight: 600;
-  color: #0b2d60;
+  color: #c8102e;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -605,7 +605,7 @@ body {
 }
 
 .whatsapp-btn:hover {
-  background: #0b2d60;
+  background: #c8102e;
   color: #fff;
 }
 
@@ -643,23 +643,25 @@ body {
 }
 
 .form-footer a {
-  color: #f9b233;
+  color: #c8102e;
   text-decoration: none;
 }
 
 .submit-btn {
-  background: #f9b233;
+  background: #c8102e;
   border: none;
-  color: #0b2d60;
+  color: #fff;
   font-weight: 600;
   padding: 12px 28px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  border: 2px solid #c8102e;
 }
 
 .submit-btn:hover {
-  background: #f5a623;
+  background: #fff;
+  color: #c8102e
 }
 
 /* Responsif */
@@ -728,7 +730,7 @@ body {
 }
 
 .footer-column ul li a:hover {
-  color: #fff;
+  color: #000;
 }
 
 .footer-middle {
@@ -767,7 +769,7 @@ body {
 }
 
 .social-icons a:hover {
-  color: #fff;
+  color: #000;
 }
 
 /* Responsif */
