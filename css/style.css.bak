@@ -195,8 +195,8 @@ body {
   }
 }
   
-/* DESCRIPTION SECTION */
-.description {
+/* DEFINITION SECTION */
+.definition {
   background: #c8102e;
   color: #fff;
   text-align: center;
@@ -345,6 +345,57 @@ body {
 .automation-image img {
   max-width: 100%;
   border-radius: 12px;
+}
+
+/* --- Sameday Section --- */
+.sameday {
+  padding: 30px 0;
+  background: #f9f9f9;
+}
+
+.sameday-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sameday-image {
+  flex: 1 1 45%;
+}
+
+.sameday-image img {
+  max-width: 100%;
+}
+
+.sameday-text {
+  flex: 1 1 45%;
+}
+
+.sameday-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.sameday-text p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.sameday-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+}
+
+.icon-box {
+  background: #f1f6ff;
+  color: #007bff;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 /* --- Responsive --- */
