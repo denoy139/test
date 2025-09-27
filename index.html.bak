@@ -119,7 +119,7 @@
   <section class="datadriven">
 	<div class="container datadriven-content">
 		<div class="datadriven-text">
-			<h2>Data Driven Fulfillment Untuk Bisnis yang Lebih Pintar</h2>
+			<h2>Data Driven Fulfillment Untuk Bisnis Yang Lebih Pintar</h2>
 		<p>
 			Setiap proses disertai laporan real-time yang dapat membantu Anda mengambil keputusan strategis untuk bisnis. Lebih dari sekadar gudang, Fulfillin adalah partner pertumbuhan bisnis Anda.
 		</p>
@@ -130,52 +130,37 @@
 	</div>
   </section>
   
-  <!-- Section Kategori Industri -->
-  <section class="kategori-industri">
-	<h2>Kategori Industri</h2>
-		<p>Kategori produk paling laris di e-Commerce yang dapat Fulfillin tangani</p>
+  <!-- Section Kategori Produk -->
+  <section class="kategori-produk">
+	<h2>Kami Siap Tangani Beragam Produk Anda</h2>
 
-	<div class="kategori-grid">
+	<div class="kategori-grid kategori-grid-produk">
 		<!-- Card 1 -->
 		<div class="kategori-card">
 			<img src="fashion.jpg" alt="Fashion & Accessories">
 				<h3>Fashion & Accessories</h3>
-				<p>Banyaknya SKU lebih mudah ditangani dalam setiap proses pesanan berkat sistem pencatatan yang terautomasi & terintegrasi.</p>
+				<p>Dengan sistem yang sudah terautomatis dan terintegrasi, banyak SKU dapat tercatat rapi dan akurat. Sehingga proses pesanan lebih cepat dan efisien.</p>
 		</div>
 
 		<!-- Card 2 -->
 		<div class="kategori-card">
 			<img src="makanan.jpg" alt="Makanan & Minuman">
 				<h3>Makanan & Minuman</h3>
-				<p>Metode FEFO kami akan sangat membantu untuk memastikan kualitas makanan kemasan terjaga hingga sampai ke tangan konsumen.</p>
+				<p>Melalui penerapan FEFO kami, membantu memastikan kualitas produk terjaga sampai ke tangan konsumen.</p>
 		</div>
 
 		<!-- Card 3 -->
 		<div class="kategori-card">
 			<img src="kecantikan.jpg" alt="Kecantikan & Kesehatan">
 				<h3>Kecantikan & Kesehatan</h3>
-				<p>Pengaturan suhu ruang penyimpanan diatur secara tepat untuk menjaga produk dalam kualitas terbaik saat disimpan.</p>
+				<p>Dengan menjaga suhu ruang penyimpanan yang diatur secara tepat untuk menjaga produk dalam kualitas terbaik.</p>
 		</div>
 
 		<!-- Card 4 -->
 		<div class="kategori-card">
 			<img src="perabot.jpg" alt="Perabot Rumah">
 				<h3>Perabot Rumah</h3>
-				<p>Dari sendok kecil ataupun sofa ekstra besar, semua barang rumah tangga aman tersimpan dengan pilihan gudang mikro & makro.</p>
-		</div>
-
-		<!-- Card 5 -->
-		<div class="kategori-card">
-			<img src="segar.jpg" alt="Barang Segar">
-				<h3>Barang Segar</h3>
-				<p>Kecepatan proses fulfillment & logistik menjamin produk seperti sayur & buah tetap segar saat diterima konsumen.</p>
-		</div>
-
-		<!-- Card 6 -->
-		<div class="kategori-card">
-			<img src="bernilai.jpg" alt="Barang Bernilai Tinggi">
-				<h3>Barang Bernilai Tinggi</h3>
-				<p>Semua barang yang disimpan diawasi CCTV, ditangani tim berintegritas tinggi, dan dilindungi asuransi serta jaminan diganti jika ada kehilangan.</p>
+				<p>Semua produk rumah tangga aman tersimpan dengan klasifikasi ukuran produk.</p>
 		</div>
 	</div>
   </section>

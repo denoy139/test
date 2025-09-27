@@ -280,7 +280,7 @@ body {
 .business-text h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #222;
+  color: #c8102e;
 }
 
 .business-text p {
@@ -323,7 +323,7 @@ body {
 .automation-text h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #222;
+  color: #c8102e;
 }
 
 .automation-text p {
@@ -375,7 +375,7 @@ body {
 .sameday-text h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #222;
+  color: #c8102e;
 }
 
 .sameday-text p {
@@ -418,7 +418,7 @@ body {
 .datadriven-text h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #222;
+  color: #c8102e;
 }
 
 .datadriven-text p {
@@ -454,18 +454,19 @@ body {
   }
 }
 
-.kategori-industri {
-  padding: 60px 20px;
+.kategori-produk {
+  padding: 30px 20px;
   text-align: center;
 }
 
-.kategori-industri h2 {
+.kategori-produk h2 {
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  color: #c8102e;
 }
 
-.kategori-industri p {
+.kategori-produk p {
   font-size: 16px;
   color: #555;
   margin-bottom: 40px;
@@ -475,7 +476,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -501,12 +502,27 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #c8102e;
 }
 
 .kategori-card p {
   font-size: 14px;
   color: #444;
   line-height: 1.5;
+}
+
+.kategori-grid-produk {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-items: center; /* centerkan semua item */
+}
+
+/* Atur hanya card terakhir di grid ini */
+.kategori-grid-produk .kategori-card:last-child {
+  grid-column: 2; /* center di bawah card tengah */
 }
 
 .benefits-section {
@@ -516,7 +532,7 @@ body {
 }
 
 .benefits-section h2 {
-  color: #004aad;
+  color: #c8102e;
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -553,7 +569,7 @@ body {
 .benefit-card h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #004aad;
+  color: #c8102e;
   margin-bottom: 10px;
 }
 
