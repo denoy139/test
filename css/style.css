@@ -924,7 +924,8 @@ body {
   }
 
   .footer-columns {
-    justify-content: left;
+    justify-content: center;
+	text-align: left;
   }
 
   .footer-bottom {
