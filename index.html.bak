@@ -64,15 +64,15 @@
   <section class="features">
     <div class="features-grid">
       <div class="feature-card">
-        <img src="images/wh.png" alt="Produk"/>
+        <img src="images/wh.webp" alt="Produk"/>
         <h3>Gudang Terverifikasi Fulfillin</h3>
       </div>
       <div class="feature-card">
-        <img src="images/destination.png" alt="Pesanan"/>
+        <img src="images/destination.webp" alt="Pesanan"/>
         <h3>Lokasi Gudang Tersebar di Kota-Kota Strategis</h3>
       </div>
       <div class="feature-card">
-        <img src="images/people.png" alt="Kelola Pesanan"/>
+        <img src="images/people.webp" alt="Kelola Pesanan"/>
         <h3>Professional Team</h3>
       </div>
     </div>
@@ -82,7 +82,7 @@
   <section class="business">
 	<div class="container business-content">
 		<div class="business-image">
-			<img src="images/business.png" alt="Business Illustration">
+			<img src="images/business.webp" alt="Business Illustration">
 		</div>
 		<div class="business-text">
 			<h2>Kelola Bisnis Lebih Mudah & Efisien</h2>
@@ -112,7 +112,7 @@
   <section class="sameday">
 	<div class="container sameday-content">
 		<div class="sameday-image">
-			<img src="images/sameday.png" alt="sameday Illustration">
+			<img src="images/sameday.webp" alt="sameday Illustration">
 		</div>
 		<div class="sameday-text">
 			<h2>Kirim Pesanan Lebih Cepat, Tingkatkan Kepuasan Pelanggan</h2>
@@ -133,7 +133,7 @@
 		</p>
 		</div>
 		<div class="datadriven-image">
-			<img src="images/datadriven.png" alt="datadriven Illustration">
+			<img src="images/datadriven.webp" alt="datadriven Illustration">
 		</div>
 	</div>
   </section>
@@ -181,7 +181,7 @@
     <!-- Benefit 1 -->
     <div class="benefit-card">
       <div class="icon">
-        <img src="images/wallet.png" alt="Paling Terjangkau">
+        <img src="images/wallet.webp" alt="Paling Terjangkau">
       </div>
       <h3>Paling Terjangkau</h3>
       <p>Kami dapat menekan biaya fulfillment menjadi lebih terjangkau dan saling menguntungkan dengan model bisnis kami yang unik.</p>
@@ -190,7 +190,7 @@
     <!-- Benefit 2 -->
     <div class="benefit-card">
       <div class="icon">
-        <img src="images/flexible.png" alt="Paling Fleksibel">
+        <img src="images/flexible.webp" alt="Paling Fleksibel">
       </div>
       <h3>Paling Fleksibel</h3>
       <p>Layanan yang dapat disesuaikan dengan kebutuhan anda.</p>
@@ -199,7 +199,7 @@
     <!-- Benefit 3 -->
     <div class="benefit-card">
       <div class="icon">
-        <img src="images/qc.png" alt="Kualitas Terbaik">
+        <img src="images/qc.webp" alt="Kualitas Terbaik">
       </div>
       <h3>Kualitas Layanan Terbaik</h3>
       <p>Perpaduan Teknologi dan Team profesional siap menghasilkan kualitas layanan yang terbaik.</p>
@@ -208,7 +208,7 @@
     <!-- Benefit 4 -->
     <div class="benefit-card">
       <div class="icon">
-        <img src="images/chart.png" alt="Tingkatkan Penjualan">
+        <img src="images/chart.webp" alt="Tingkatkan Penjualan">
       </div>
       <h3>Tingkatkan Penjualan</h3>
       <p>Biarkan kami mengurus seluruh operasional fulfillment, Anda bisa fokus mengembangkan bisnis dan strategi pemasaran untuk tingkatkan penjualan.</p>
@@ -310,7 +310,7 @@
   <footer class="footer">
   <div class="footer-top">
     <div class="footer-logo">
-      <img src="images/logo.png" alt="Fulfillin Logo">
+      <img src="images/logo.webp" alt="Fulfillin Logo">
     </div>
     <div class="footer-columns">
       <div class="footer-column">
