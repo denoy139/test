@@ -7,6 +7,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCFMoS1K21uSvq5rbx2
 const form = document.getElementById("contactForm"); // ← ID form kamu di sini
 
 // ✅ Tambahkan event listener supaya form tidak reload halaman saat submit
+if (form) {
 form.addEventListener("submit", (e) => {
   e.preventDefault(); // Mencegah reload halaman
 
@@ -29,6 +30,7 @@ form.addEventListener("submit", (e) => {
       alert("Terjadi kesalahan saat mengirim data.");
     });
 });
+};
 
 // Animasi Fade-in ketika halaman dimuat
 document.addEventListener("DOMContentLoaded", () => {
