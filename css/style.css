@@ -525,6 +525,50 @@ body {
   grid-column: 2; /* center di bawah card tengah */
 }
 
+/* ====== RESPONSIVE ====== */
+
+/* Tablet (max-width 1024px) */
+@media (max-width: 1024px) {
+  .kategori-produk h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .kategori-produk p {
+    font-size: 15px;
+  }
+  .kategori-card {
+    padding: 18px;
+  }
+  .kategori-grid-produk .kategori-card:last-child {
+    grid-column: auto; /* biar tetap fleksibel di tablet */
+  }
+}
+
+/* HP (max-width 768px) */
+@media (max-width: 768px) {
+  .kategori-produk h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .kategori-produk p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .kategori-card h3 {
+    font-size: 16px;
+  }
+  .kategori-card p {
+    font-size: 13px;
+  }
+  .kategori-grid,
+  .kategori-grid-produk {
+    grid-template-columns: 1fr; /* 1 kolom di layar kecil */
+  }
+  .kategori-grid-produk .kategori-card:last-child {
+    grid-column: auto; /* biar tidak ganggu layout di mobile */
+  }
+}
+
 .benefits-section {
   text-align: center;
   padding: 70px 20px;

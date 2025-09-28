@@ -444,12 +444,12 @@ body {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .business-content, .automation-content {
+  .business-content, .automation-content, .sameday-content, .datadriven-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .business-text, .automation-text {
+  .business-text, .automation-text, .sameday-text, .datadriven-text{
     flex: 1 1 100%;
   }
 }
