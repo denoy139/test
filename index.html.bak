@@ -28,7 +28,15 @@
         <a href="#" class="btn-outline">Login</a>
         <a href="#" class="btn-primary">Daftar</a>
       </div>
-    </div>
+	  
+		<!-- NEW: Hamburger menu -->
+		<div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		
+	</div>
   </header>
 
   <!-- Hero Section -->
