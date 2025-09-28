@@ -95,6 +95,53 @@ nav ul {
   background: #c8102e;
 }
 
+/* --- RESPONSIVE --- */
+/* NEW: Tambahkan hamburger menu styling */
+.hamburger {
+  display: none; /* sembunyikan di desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* NEW: Styling untuk nav di mobile */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 65px; /* di bawah header */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 20px;
+    transform: translateY(-120%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav ul.show { /* ketika menu aktif */
+    transform: translateY(0);
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex; /* tampilkan hamburger */
+  }
+}
+
 body {
   padding-top: 80px; /* sama dengan tinggi header */
 }
