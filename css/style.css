@@ -197,12 +197,12 @@ body {
 }
 
 .hero-image {
-  flex: 1 1 45%;
+  flex: 1 1 50%;
   text-align: right;
 }
 
 .hero-image img {
-  max-width: 100%;
+  max-width: 117%;
   border-radius: 12px;
 }
 
