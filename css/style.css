@@ -263,7 +263,7 @@ body {
 /* --- Responsive Mobile --- */
 @media (max-width: 600px) {
   .hero {
-    padding: 50px 15px;
+    padding: 60px 15px;
   }
 
   .hero-text h1 {
