@@ -1,31 +1,39 @@
-// form.js
-// ✅ Menangkap pesan dari Google Apps Script setelah form submit
-window.addEventListener("message", function(event) {
-  try {
-    const data = event.data;
-    if (data && data.result === "success") {
-      alert("✅ Data berhasil dikirim ke Google Sheet!");
-      document.getElementById("contactForm").reset();
-    } else {
-      alert("❌ Gagal mengirim data: " + (data?.message || "Unknown error"));
-    }
-  } catch (e) {
-    console.error("Error parsing message:", e);
-  }
-});
-
-// ✅ Optional: Tambahkan indikator loading saat form submit
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const submitBtn = form.querySelector(".submit-btn");
 
-  form.addEventListener("submit", () => {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // cegah reload page
+
     submitBtn.disabled = true;
     submitBtn.textContent = "Processing...";
-    setTimeout(() => {
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData
+      });
+
+      const text = await response.text();
+
+      // Jika response dari Apps Script mengandung "OK" berarti sukses
+      if (text.includes("OK")) {
+        alert("✅ Data berhasil dikirim ke Google Sheet!");
+        form.reset();
+      } else {
+        console.error("Response:", text);
+        alert("❌ Gagal mengirim data!");
+      }
+
+    } catch (err) {
+      console.error(err);
+      alert("❌ Terjadi error saat mengirim data!");
+    } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = "Submit";
-    }, 3000); // aktifkan kembali tombol setelah 3 detik
+    }
   });
 });
 
