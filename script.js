@@ -1,42 +1,33 @@
-// ✅ Masukkan URL Web App dari Google Apps Script kamu (yang ada /exec di belakang)
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCFMoS1K21uSvq5rbx2SpW9sd5CUPEToYUu_-JrRMLfRo_yJMpSImP1hh3JlvnugxBGQ/exec";
+// form.js
+// ✅ Menangkap pesan dari Google Apps Script setelah form submit
+window.addEventListener("message", function(event) {
+  try {
+    const data = event.data;
+    if (data && data.result === "success") {
+      alert("✅ Data berhasil dikirim ke Google Sheet!");
+      document.getElementById("contactForm").reset();
+    } else {
+      alert("❌ Gagal mengirim data: " + (data?.message || "Unknown error"));
+    }
+  } catch (e) {
+    console.error("Error parsing message:", e);
+  }
+});
 
-// ✅ Ambil elemen form berdasarkan id yang ada di HTML
-const form = document.getElementById("contactForm"); // Pastikan id di HTML sesuai
+// ✅ Optional: Tambahkan indikator loading saat form submit
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const submitBtn = form.querySelector(".submit-btn");
 
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Mencegah reload halaman
-
-    // ✅ Ambil semua data input dari form
-    let formData = new FormData(form);
-
-    // ✅ Tambahkan informasi origin (untuk validasi di Apps Script)
-    formData.append("origin", window.location.origin);
-
-    // ✅ Kirim data ke Google Apps Script Web App
-    fetch(SCRIPT_URL, { 
-      method: "POST", 
-      mode: "cors", // pastikan CORS aktif
-      body: formData 
-    })
-      .then(response => response.json()) // Ambil respon sebagai JSON
-      .then(result => {
-        console.log("✅ Data terkirim:", result);
-
-        if (result.result === "success") {
-          alert("✅ Data berhasil dikirim ke Google Sheet!");
-          form.reset();
-        } else {
-          alert("⚠️ Gagal: " + (result.message || "Terjadi error"));
-        }
-      })
-      .catch(error => {
-        console.error("❌ Terjadi error:", error);
-        alert("Terjadi kesalahan saat mengirim data. Cek console untuk detail.");
-      });
+  form.addEventListener("submit", () => {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Processing...";
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit";
+    }, 3000); // aktifkan kembali tombol setelah 3 detik
   });
-}
+});
 
 // Animasi Fade-in ketika halaman dimuat
 document.addEventListener("DOMContentLoaded", () => {
