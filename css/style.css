@@ -234,10 +234,11 @@ body {
   }
 
   .hero-text, .hero-image {
-    flex: 1 1 117%;
+    flex: 1 1 100%;
   }
 
   .hero-image {
+	max-width: 117%;
     margin-top: 20px;
   }
 }
