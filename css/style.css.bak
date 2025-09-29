@@ -238,6 +238,7 @@ body {
   }
 
   .hero-image {
+	max-width: 117%;
     margin-top: 20px;
   }
 }
