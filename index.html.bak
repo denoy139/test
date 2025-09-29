@@ -44,7 +44,7 @@
     <div class="container hero-content">
       <div class="hero-text fade-in">
         <h1>Kembangkan Bisnismu Tanpa Pusing Urusan Gudang</h1>
-		<p>Biar kami urus pengemasan & logistik, anda fokus scale up bisnismu.</p>
+		<p>Biar kami yang urus pengemasan & logistik, anda fokus scale up bisnismu.</p>
         <a href="#" class="cta-btn">DAFTAR SEKARANG</a>
       </div>
       <div class="hero-image">
@@ -87,7 +87,7 @@
 		<div class="business-text">
 			<h2>Kelola Bisnis Lebih Mudah & Efisien</h2>
 		<p>
-			Tidak perlu lagi pusing mengurus gudang dan packing. Biarkan kami yang tangani operasional, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong>
+			Tidak perlu lagi pusing mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong>
 		</p>	
 		</div>
 	</div>
@@ -99,7 +99,7 @@
 		<div class="automation-text">
 			<h2>Fulfillment Yang Terintegrasi & Transparan</h2>
 		<p>
-			Dari penyimpanan barang, proses picking, proses packing dan informasi stock semuanya tercatat dalam sistem real-time. Pantau setiap langkah proses dengan mudah, tanpa perlu datang ke gudang.
+			Dari penyimpanan barang, proses picking, proses packing, informasi produk return dan informasi stock semuanya tercatat dalam sistem real-time. Pantau setiap langkah proses dengan mudah, tanpa perlu datang ke gudang.
 		</p>
 		</div>
 		<div class="automation-image">
@@ -117,7 +117,7 @@
 		<div class="sameday-text">
 			<h2>Kirim Pesanan Lebih Cepat, Tingkatkan Kepuasan Pelanggan</h2>
 		<p>
-			Sameday process order, memastikan pesanan di proses di hari yang sama agar dapat dikirim cepat dan tepat. Lebih puas pelangganmu, lebih tinggi repeat order bisnis Anda.
+			Sameday process order, memastikan pesanan di proses di hari yang sama agar dapat dikirim cepat, tepat dan mengurangi resiko return. Lebih puas pelangganmu, lebih tinggi repeat order bisnis Anda.
 		</p>	
 		</div>
 	</div>
@@ -288,28 +288,31 @@
       </a>
     </div>
 
-   <!-- Right Side -->
-<div class="contact-form">
-    <form id="contactForm"
-        action="https://script.google.com/macros/s/AKfycbzCFMoS1K21uSvq5rbx2SpW9sd5CUPEToYUu_-JrRMLfRo_yJMpSImP1hh3JlvnugxBGQ/exec"
-        method="POST">
+  <div class="contact-form">
+	<!-- iframe tersembunyi untuk menerima response -->
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
-        <input type="text" name="fullname" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="company" placeholder="Company Name">
-        <textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
+	<form id="contactForm"
+			action="https://script.google.com/macros/s/AKfycbzCFMoS1K21uSvq5rbx2SpW9sd5CUPEToYUu_-JrRMLfRo_yJMpSImP1hh3JlvnugxBGQ/exec"
+			method="POST"
+			target="hidden_iframe">
 
-        <div class="form-footer">
-            <p>By submitting, you agree to Fulfillin.id 
-                <a href="#">Privacy Policy</a>
-            </p>
-            <button type="submit" class="submit-btn">Submit</button>
-        </div>
+				<input type="text" name="fullname" placeholder="Full Name" required>
+				<input type="email" name="email" placeholder="Email" required>
+				<input type="text" name="company" placeholder="Company Name">
+				<textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
+
+			<div class="form-footer">
+				<p>By submitting, you agree to Fulfillin.id 
+				<a href="#">Privacy Policy</a>
+				</p>
+				<button type="submit" class="submit-btn">Submit</button>
+			</div>
     </form>
-</div>
+  </div>
 
   </div>
-</section>
+  </section>
   
   <footer class="footer">
   <div class="footer-top">
