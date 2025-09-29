@@ -11,43 +11,34 @@
 <body>
 
   <!-- Header -->
-<header>
-  <div class="container nav-container">
-    <div class="logo">
-      <img src="images/logo.webp" alt="Fulfillin Logo">
-    </div>
-
-    <!-- NAV MENU -->
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#fitur">Fitur</a></li>
-        <li><a href="#harga">Harga</a></li>
-        <li><a href="#fbads">FB Ads Whitelist</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#help">Help Center</a></li>
-
-        <!-- Tombol untuk MOBILE -->
-        <li class="nav-buttons-mobile">
-          <a href="#" class="btn-outline">Login</a>
-          <a href="#" class="btn-primary">Daftar</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Tombol untuk DESKTOP -->
-    <div class="nav-buttons">
-      <a href="#" class="btn-outline">Login</a>
-      <a href="#" class="btn-primary">Daftar</a>
-    </div>
-
-    <!-- Hamburger menu -->
-    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</header>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.webp" alt="Fulfillin Logo">
+      </div>
+      <nav class="navbar">
+		<ul class="nav-links">
+          <li><a href="#fitur">Fitur</a></li>
+          <li><a href="#harga">Harga</a></li>
+          <li><a href="#fbads">FB Ads Whitelist</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#help">Help Center</a></li>
+        </ul>
+      </nav>
+      <div class="nav-buttons">
+        <a href="#" class="btn-outline">Login</a>
+        <a href="#" class="btn-primary">Daftar</a>
+      </div>
+	  
+		<!-- NEW: Hamburger menu -->
+		<div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		
+	</div>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">

@@ -18,7 +18,7 @@ body {
   margin: auto;
 }
 
-/* --- HEADER --- */
+/* --- Header --- */
 header {
   position: fixed;
   top: 0;
@@ -57,7 +57,13 @@ nav ul {
   color: #555;
 }
 
-/* Tombol di menu mobile */
+/* Tombol Desktop */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Tombol di dalam menu mobile (hidden by default) */
 .nav-buttons-mobile {
   display: none;
   flex-direction: column;
@@ -103,12 +109,14 @@ nav ul {
     transform: translateY(0);
   }
 
-  /* Tampilkan tombol di menu */
+  /* Tampilkan tombol mobile, sembunyikan tombol desktop */
+  .nav-buttons {
+    display: none;
+  }
   .nav-buttons-mobile {
     display: flex;
   }
 
-  /* Tampilkan hamburger, sembunyikan tombol desktop */
   .hamburger {
     display: flex;
   }
