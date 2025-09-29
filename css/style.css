@@ -350,9 +350,53 @@ body {
   text-align: center;
 }
 
-/* --- Automation Section --- */
-.automation {
+/* --- Jaringan Gudang Section --- */
+.jaringangudang {
   padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.jaringangudang-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.jaringangudang-text {
+  flex: 1 1 45%;
+}
+
+.jaringangudang-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #c8102e;
+}
+
+.jaringangudang-text p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.jaringangudang-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+}
+
+.jaringangudang-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.jaringangudang-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* --- automation Section --- */
+.automation {
+  padding: 30px 0;
   background: #f9f9f9;
 }
 
@@ -361,6 +405,14 @@ body {
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
+}
+
+.automation-image {
+  flex: 1 1 45%;
+}
+
+.automation-image img {
+  max-width: 100%;
 }
 
 .automation-text {
@@ -384,19 +436,18 @@ body {
   gap: 15px;
 }
 
-.automation-image {
-  flex: 1 1 45%;
+.icon-box {
+  background: #f1f6ff;
+  color: #007bff;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
   text-align: center;
 }
 
-.automation-image img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-/* --- Sameday Section --- */
+/* --- sameday Section --- */
 .sameday {
-  padding: 30px 0;
+  padding: 80px 0;
   background: #f9f9f9;
 }
 
@@ -405,14 +456,6 @@ body {
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
-}
-
-.sameday-image {
-  flex: 1 1 45%;
-}
-
-.sameday-image img {
-  max-width: 100%;
 }
 
 .sameday-text {
@@ -436,18 +479,19 @@ body {
   gap: 15px;
 }
 
-.icon-box {
-  background: #f1f6ff;
-  color: #007bff;
-  font-weight: 500;
-  padding: 12px;
-  border-radius: 8px;
+.sameday-image {
+  flex: 1 1 45%;
   text-align: center;
 }
 
-/* --- Data Driven Section --- */
+.sameday-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* --- datadriven Section --- */
 .datadriven {
-  padding: 80px 0;
+  padding: 30px 0;
   background: #f9f9f9;
 }
 
@@ -456,6 +500,14 @@ body {
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
+}
+
+.datadriven-image {
+  flex: 1 1 45%;
+}
+
+.datadriven-image img {
+  max-width: 100%;
 }
 
 .datadriven-text {
@@ -479,24 +531,23 @@ body {
   gap: 15px;
 }
 
-.datadriven-image {
-  flex: 1 1 45%;
+.icon-box {
+  background: #f1f6ff;
+  color: #007bff;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 8px;
   text-align: center;
-}
-
-.datadriven-image img {
-  max-width: 100%;
-  border-radius: 12px;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .business-content, .automation-content, .sameday-content, .datadriven-content {
+  .business-content, .automation-content, .sameday-content, .datadriven-content .jaringangudang-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .business-text, .automation-text, .sameday-text, .datadriven-text{
+  .business-text, .automation-text, .sameday-text, .datadriven-text .jaringangudang-text{
     flex: 1 1 100%;
   }
 }
