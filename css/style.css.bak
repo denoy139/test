@@ -25,9 +25,9 @@ header {
   left: 0;
   width: 100%;
   padding: 15px 0;
-  background: #f9f9f9;
+  background: #f9f9f9;         /* supaya tidak transparan */
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 999;
+  z-index: 999;  
 }
 
 .nav-container {
@@ -46,42 +46,64 @@ nav ul {
   gap: 25px;
 }
 
-/* Link menu */
+/* Navbar dasar */
 .nav-links li a {
-  color: #000;
+  color: #000; /* warna hitam normal */
   text-decoration: none;
+  display: flex;
   font-weight: 500;
   transition: color 0.2s ease;
-}
-.nav-links li a:hover {
-  color: #555;
-}
+  }
 
-/* Tombol Desktop */
+/* Hover effect */
+.nav-links li a:hover {
+  color: #555; /* warna abu-abu lebih redup */
+  display: flex;
+  }
+
 .nav-buttons {
   display: flex;
   gap: 10px;
 }
 
-/* Tombol di dalam menu mobile (hidden by default) */
-.nav-buttons-mobile {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
+.btn-outline {
+  border: 2px solid #c8102e;
+  color: #c8102e;
+  padding: 6px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.nav-buttons-mobile a {
-  text-align: center;
+.btn-outline:hover {
+  background: #c8102e;
+  color: white;
 }
 
-/* Hamburger */
+.btn-primary {
+  background: #c8102e;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c8102e;
+}
+
+/* --- RESPONSIVE --- */
+/* NEW: Tambahkan hamburger menu styling */
 .hamburger {
-  display: none;
+  display: none; /* sembunyikan di desktop */
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
 }
+
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -90,11 +112,11 @@ nav ul {
   transition: 0.3s;
 }
 
-/* --- RESPONSIVE --- */
+/* NEW: Styling untuk nav di mobile */
 @media (max-width: 768px) {
   nav ul {
     position: absolute;
-    top: 65px;
+    top: 65px; /* di bawah header */
     left: 0;
     width: 100%;
     flex-direction: column;
@@ -105,20 +127,18 @@ nav ul {
     transition: transform 0.3s ease-in-out;
   }
 
-  nav ul.show {
+  nav ul.show { /* ketika menu aktif */
     transform: translateY(0);
   }
 
-  /* Tampilkan tombol mobile, sembunyikan tombol desktop */
   .nav-buttons {
-    display: none;
-  }
-  .nav-buttons-mobile {
-    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* tampilkan hamburger */
   }
 }
 
@@ -182,8 +202,9 @@ body {
 }
 
 .hero-image img {
-  max-width: 110%;
+  max-width: 100%;
   border-radius: 12px;
+  transform: translateX(63px); /* geser 50px ke kiri */
 }
 
 /* Tombol animasi bergoyang */
@@ -342,6 +363,7 @@ body {
 
 .business-image img {
   max-width: 100%;
+  transform: translateX(-65px); /* geser 50px ke kiri */
 }
 
 .business-text {

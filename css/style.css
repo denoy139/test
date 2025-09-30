@@ -202,8 +202,9 @@ body {
 }
 
 .hero-image img {
-  max-width: 110%;
+  max-width: 100%;
   border-radius: 12px;
+  transform: translateX(63px); /* geser 50px ke kiri */
 }
 
 /* Tombol animasi bergoyang */
@@ -256,7 +257,8 @@ body {
   }
 
   .hero-image img {
-    max-width: 90%;
+    max-width: 100%;
+	transform: translateX(63px); /* geser 63px ke kiri */
   }
 }
 
@@ -281,8 +283,9 @@ body {
   }
 
   .hero-image img {
-    max-width: 110%;
+    max-width: 100%;
     border-radius: 8px;
+	transform: translateX(63px); /* geser 63px ke kiri */
   }
 }
   
@@ -362,6 +365,7 @@ body {
 
 .business-image img {
   max-width: 100%;
+  transform: translateX(-63px); /* geser 63px ke kiri */
 }
 
 .business-text {
