@@ -258,7 +258,7 @@ body {
 
   .hero-image img {
     max-width: 100%;
-	transform: translateX(63px); /* geser 63px ke kiri */
+	transform: translateX(50px); /* geser 63px ke kiri */
   }
 }
 
