@@ -285,7 +285,7 @@ body {
   .hero-image img {
     max-width: 100%;
     border-radius: 8px;
-	transform: translateX(50px); /* geser 63px ke kiri */
+	transform: translateX(30px); /* geser 63px ke kiri */
   }
 }
   
