@@ -440,7 +440,7 @@ body {
 .jaringangudang-image img {
   max-width: 100%;
   border-radius: 12px;
-  transform: translateX(63px); /* geser 63px ke kanan */
+  transform: translateX(60px); /* geser 63px ke kanan */
 }
 
 /* --- automation Section --- */
@@ -462,6 +462,7 @@ body {
 
 .automation-image img {
   max-width: 100%;
+  transform: translateX(-63px); /* geser 63px ke kiri */
 }
 
 .automation-text {
