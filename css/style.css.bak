@@ -462,6 +462,7 @@ body {
 
 .automation-image img {
   max-width: 100%;
+  transform: translateX(-63px); /* geser 63px ke kiri */
 }
 
 .automation-text {
@@ -591,13 +592,19 @@ body {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .business-content, .automation-content, .sameday-content, .datadriven-content, .jaringangudang-content {
+  .business-content, .automation-content, .datadriven-content img{
     flex-direction: column;
     text-align: center;
   }
+  
+  .sameday-content, .jaringangudang-content img {
+    max-width: 100%;
+    transform: translateX(30px); /* geser 63px ke kiri */
+  }
 
-  .business-text, .automation-text, .sameday-text, .datadriven-text, .jaringangudang-text{
+  .business-text, .automation-text, .sameday-text, .datadriven-text, .jaringangudang-text p{
     flex: 1 1 100%;
+	text-align: center;
   }
 }
 
