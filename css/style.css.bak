@@ -590,23 +590,125 @@ body {
   text-align: center;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .business-content, .automation-content, .datadriven-content img{
+/* --- Responsive CSS --- */
+
+/* Tablet (max-width 1024px) */
+@media (max-width: 1024px) {
+  .business-content,
+  .jaringangudang-content,
+  .automation-content,
+  .sameday-content,
+  .datadriven-content {
     flex-direction: column;
     text-align: center;
   }
+
+  .business-image img,
+  .automation-image img,
+  .datadriven-image img {
+   transform: translateX(-63px); /* geser 63px ke kiri */
+   margin: 0 auto;
+  }
   
-  .sameday-content, .jaringangudang-content img {
-    max-width: 100%;
-    transform: translateX(30px); /* geser 63px ke kiri */
+  .jaringangudang-image img,
+  .sameday-image img{
+   transform: translateX(63px); /* geser 63px ke kiri */
+   margin: 0 auto;
   }
 
-  .business-text, .automation-text, .sameday-text, .datadriven-text, .jaringangudang-text p{
+  .business-text,
+  .jaringangudang-text,
+  .automation-text,
+  .sameday-text,
+  .datadriven-text {
     flex: 1 1 100%;
-	text-align: center;
+    text-align: center;
+  }
+
+  .business-text h2,
+  .jaringangudang-text h2,
+  .automation-text h2,
+  .sameday-text h2,
+  .datadriven-text h2 {
+    font-size: 24px;
+  }
+
+  .business-text p,
+  .jaringangudang-text p,
+  .automation-text p,
+  .sameday-text p,
+  .datadriven-text p {
+    font-size: 15px;
   }
 }
+
+/* Mobile (max-width 768px) */
+@media (max-width: 768px) {
+  .business,
+  .jaringangudang,
+  .automation,
+  .sameday,
+  .datadriven {
+    padding: 40px 15px;
+  }
+
+  .business-icons,
+  .jaringangudang-icons,
+  .automation-icons,
+  .sameday-icons,
+  .datadriven-icons {
+    grid-template-columns: 1fr; /* ikon 1 kolom */
+  }
+
+  .business-text h2,
+  .jaringangudang-text h2,
+  .automation-text h2,
+  .sameday-text h2,
+  .datadriven-text h2 {
+    font-size: 20px;
+  }
+  
+  .business-image img,
+  .automation-image img,
+  .datadriven-image img {
+   transform: translateX(-63px); /* geser 63px ke kiri */
+  }
+  
+  .jaringangudang-image img,
+  .sameday-image img{
+   transform: translateX(63px); /* geser 63px ke kiri */
+  }
+
+  .icon-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Extra Small (max-width 480px) */
+@media (max-width: 480px) {
+  .business-text h2,
+  .jaringangudang-text h2,
+  .automation-text h2,
+  .sameday-text h2,
+  .datadriven-text h2 {
+    font-size: 18px;
+  }
+
+  .business-text p,
+  .jaringangudang-text p,
+  .automation-text p,
+  .sameday-text p,
+  .datadriven-text p {
+    font-size: 14px;
+  }
+
+  .icon-box {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
 
 .kategori-produk {
   padding: 30px 20px;
