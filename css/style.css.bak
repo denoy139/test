@@ -537,6 +537,7 @@ body {
 .sameday-image img {
   max-width: 100%;
   border-radius: 12px;
+  transform: translateX(60px); /* geser 63px ke kanan */
 }
 
 /* --- datadriven Section --- */
