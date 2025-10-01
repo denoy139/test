@@ -559,7 +559,7 @@ body {
 
 .datadriven-image img {
   max-width: 100%;
-  transform: translateX(-23px); /* geser 63px ke kiri */
+  transform: translateX(-63px); /* geser 63px ke kiri */
 }
 
 .datadriven-text {
@@ -590,6 +590,24 @@ body {
   padding: 12px;
   border-radius: 8px;
   text-align: center;
+}
+
+/* --- General Section Spacing --- */
+.jaringangudang,
+.automation,
+.sameday {
+  padding-top: 5px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 5px;
+}
+
+.business {
+  padding-top: 30px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 5px;
+}
+
+.datadriven {
+  padding-top: 5px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 30px;
 }
 
 /* --- Responsive CSS --- */

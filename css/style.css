@@ -592,6 +592,24 @@ body {
   text-align: center;
 }
 
+/* --- General Section Spacing --- */
+.jaringangudang,
+.automation,
+.sameday {
+  padding-top: 10px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 10px;
+}
+
+.business {
+  padding-top: 30px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 10px;
+}
+
+.datadriven {
+  padding-top: 10px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 30px;
+}
+
 /* --- Responsive CSS --- */
 
 /* Tablet (max-width 1024px) */
