@@ -596,17 +596,17 @@ body {
 .jaringangudang,
 .automation,
 .sameday {
-  padding-top: 5px;  /* lebih kecil dari sebelumnya */
-  padding-bottom: 5px;
+  padding-top: 10px;  /* lebih kecil dari sebelumnya */
+  padding-bottom: 10px;
 }
 
 .business {
   padding-top: 30px;  /* lebih kecil dari sebelumnya */
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .datadriven {
-  padding-top: 5px;  /* lebih kecil dari sebelumnya */
+  padding-top: 10px;  /* lebih kecil dari sebelumnya */
   padding-bottom: 30px;
 }
 
