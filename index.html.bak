@@ -26,13 +26,13 @@
         </ul>
       </nav>
 	  
-      <!-- NEW: login & daftar masuk ke hamburger -->
+      <!-- ✅ Login & Daftar versi mobile -->
         <li class="mobile-only"><a href="#" class="btn-outline">Login</a></li>
         <li class="mobile-only"><a href="#" class="btn-primary">Daftar</a></li>
       </ul>
     </nav>
 
-    <!-- Tombol login/daftar normal hanya tampil di desktop -->
+    <!-- ✅ Login & Daftar versi desktop -->
     <div class="nav-buttons desktop-only">
       <a href="#" class="btn-outline">Login</a>
       <a href="#" class="btn-primary">Daftar</a>

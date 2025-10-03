@@ -112,6 +112,15 @@ nav ul {
   transition: 0.3s;
 }
 
+/* --- UPDATE: Tambahan helper class --- */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
 /* NEW: Styling untuk nav di mobile */
 @media (max-width: 768px) {
   nav ul {
@@ -139,6 +148,24 @@ nav ul {
 
   .hamburger {
     display: flex; /* tampilkan hamburger */
+  }
+  
+   /* --- UPDATE: sembunyikan tombol desktop, tampilkan mobile --- */
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  /* --- UPDATE: style tombol di hamburger menu --- */
+  .nav-links .btn-outline,
+  .nav-links .btn-primary {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
   }
 }
 

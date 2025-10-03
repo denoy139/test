@@ -135,6 +135,13 @@ nav ul {
     transform: translateY(-120%);
     transition: transform 0.3s ease-in-out;
   }
+  
+  .nav-links .mobile-only a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+  }
 
   nav ul.show { /* ketika menu aktif */
     transform: translateY(0);
@@ -152,7 +159,7 @@ nav ul {
   
    /* --- UPDATE: sembunyikan tombol desktop, tampilkan mobile --- */
   .desktop-only {
-    display: none;
+    display: none !important;
   }
 
   .mobile-only {
