@@ -77,11 +77,13 @@ nav ul {
 }
 
 .btn-outline:hover {
+  transform: scale(1.05);
   background: #c8102e;
   color: white;
 }
 
 .btn-primary {
+  border: 2px solid #c8102e;
   background: #c8102e;
   color: white;
   padding: 6px 16px;
@@ -92,7 +94,9 @@ nav ul {
 }
 
 .btn-primary:hover {
-  background: #c8102e;
+  transform: scale(1.05);
+  background: #fff;
+  color: #c8102e;
 }
 
 /* --- RESPONSIVE --- */
@@ -159,7 +163,7 @@ nav ul {
   
    /* --- UPDATE: sembunyikan tombol desktop, tampilkan mobile --- */
   .desktop-only {
-    display: none !important;
+    display: none;
   }
 
   .mobile-only {
@@ -173,6 +177,34 @@ nav ul {
     text-align: center;
     padding: 10px;
     border-radius: 8px;
+  }
+  
+  .nav-links .mobile-only .btn-outline {
+    color: #c8102e;
+  }
+  
+  .nav-links .mobile-only .btn-outline:hover {
+	color: white;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .nav-links .mobile-only .btn-primary {
+    color: #fff;
+	border: 2px solid #c8102e;
+  }
+  
+  .nav-links .mobile-only .btn-primary:hover {
+	background: #fff; 
+	color: #c8102e;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
   }
 }
 
