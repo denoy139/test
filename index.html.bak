@@ -14,23 +14,24 @@
   <header>
     <div class="container nav-container">
       <div class="logo">
+		<a href="index.html">
         <img src="images/logo.webp" alt="Fulfillin Logo">
       </div>
       <nav class="navbar">
 		<ul class="nav-links">
-          <li><a href="#fitur">Fitur</a></li>
-          <li><a href="#harga">Harga</a></li>
-          <li><a href="#fbads">FB Ads Whitelist</a></li>
+          <li><a href="index.html">BERANDA</a></li>
+          <li><a href="#harga">LAYANAN</a></li>
+          <li><a href="#fbads">INFORMASI GUDANG</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#help">Help Center</a></li>
 	  
-      <!-- ✅ Login & Daftar versi mobile -->
-        <li class="mobile-only"><a href="#" class="btn-outline">Login</a></li>
+      <!-- Login & Daftar versi mobile -->
+        <li class="mobile-only"><a href="#" class="btn-outline">Log In</a></li>
         <li class="mobile-only"><a href="#" class="btn-primary">Daftar</a></li>
       </ul>
     </nav>
 
-    <!-- ✅ Login & Daftar versi desktop -->
+    <!-- Login & Daftar versi desktop -->
     <div class="nav-buttons desktop-only">
       <a href="#" class="btn-outline">Login</a>
       <a href="#" class="btn-primary">Daftar</a>
