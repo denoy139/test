@@ -77,6 +77,7 @@ nav ul {
 }
 
 .btn-outline:hover {
+  transform: scale(1.05);
   background: #c8102e;
   color: white;
 }
@@ -290,6 +291,17 @@ body {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.fade-in-right{
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in-right.visible-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* --- Responsive Tablet --- */
@@ -673,6 +685,17 @@ body {
 .datadriven {
   padding-top: 10px;  /* lebih kecil dari sebelumnya */
   padding-bottom: 30px;
+}
+
+.fade-in-right{
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in-right.visible-right {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* --- Responsive CSS --- */
