@@ -52,7 +52,7 @@
     <div class="container hero-content">
       <div class="hero-text fade-in">
         <h1>Kelola Bisnis Lebih Mudah & Efisien</h1>
-		<p>Tidak perlu lagi pusing mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong></p>
+		<p>Tidak perlu pusing lagi mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong></p>
         <a href="#" class="cta-btn">DAFTAR SEKARANG</a>
       </div>
       <div class="hero-image">
@@ -79,7 +79,111 @@
     </div>
   </section>
   
-  <!-- Business Section -->
+  <!-- Slider Definition -->
+  <section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-desc">
+      Unlock the power of seamless fulfillment with our comprehensive services. 
+      We provide end-to-end solutions designed to optimize your operations and enhance 
+      customer satisfaction. Explore our range of services below and discover how 
+      we can help your business thrive.
+    </p>
+
+    <div class="slider">
+      <button class="slide-btn prev">&#10094;</button>
+
+      <div class="slides">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <div class="slide-content">
+            <div class="slide-text">
+              <h3>01</h3>
+              <h2>Warehouse Management</h2>
+              <ul>
+                <li>Inventory control</li>
+                <li>Goods receipt & placement</li>
+                <li>Barcode management</li>
+                <li>Storage optimization</li>
+              </ul>
+            </div>
+            <div class="slide-image">
+              <img src="images/service1.png" alt="Warehouse Management">
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="slide-content">
+            <div class="slide-text">
+              <h3>02</h3>
+              <h2>Delivery Management</h2>
+              <ul>
+                <li>Managed packed to delivery company</li>
+                <li>3PL Assignment</li>
+                <li>Shipment monitoring</li>
+                <li>Shipment reporting</li>
+              </ul>
+            </div>
+            <div class="slide-image">
+              <img src="images/service2.png" alt="Delivery Management">
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="slide-content">
+            <div class="slide-text">
+              <h3>03</h3>
+              <h2>Return Handling</h2>
+              <ul>
+                <li>Product return inspection</li>
+                <li>Repack & reshelving</li>
+                <li>Defective product management</li>
+                <li>Return reporting</li>
+              </ul>
+            </div>
+            <div class="slide-image">
+              <img src="images/service3.png" alt="Return Handling">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="slide-btn next">&#10095;</button>
+    </div>
+  </div>
+  </section>
+
+  
+  <!-- Flow Process Section -->
+	<section class="flow-process">
+		<div class="container">
+		<h2 class="section-title">Flow Process</h2>
+			<p class="section-desc">
+			This process is a carefully orchestrated system that ensures the efficient movement of goods,
+			from their arrival at the warehouse to their final dispatch, optimizing productivity and minimizing delays.
+			</p>
+
+			<!-- Tabs -->
+			<div class="flow-tabs">
+				<button class="tab active" data-target="inbound">Inbound</button>
+				<button class="tab" data-target="outbound">Outbound</button>
+			</div>
+
+			<!-- Image toggle area -->
+			<div class="flow-image-wrapper">
+				<img src="images/pakaian.webp" alt="Inbound Flow" class="flow-image active" id="inbound">
+				<img src="images/makanan.webp" alt="Outbound Flow" class="flow-image" id="outbound">
+			</div>
+		</div>
+	</section>
+	
+	<!-- Business Section -->
   <section class="business">
 	<div class="container business-content">
 		<div class="business-image">
@@ -88,206 +192,69 @@
 		<div class="business-text">
 			<h2>Kelola Bisnis Lebih Mudah & Efisien</h2>
 		<p>
-			Tidak perlu lagi pusing mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong>
-		</p>	
-		</div>
-	</div>
-  </section>
-
-  <!-- Jaringan Gudang Section -->
-  <section class="jaringangudang">
-	<div class="container jaringangudang-content">
-		<div class="jaringangudang-text">
-			<h2>Jaringan Gudang Yang Luas, Lebih Efisien dan Menguntungkan</h2>
-		<p>
-			Gudang fulfillment yang tersebar di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Dengan lokasi yang lebih dekat dengan penerima, closing rate order meningkat, success rate pengiriman lebih tinggi, dan return rate pengiriman dapat ditekan secara signifikan.
-		</p>
-		</div>
-		<div class="jaringangudang-image">
-			<img src="images/jaringangudang.webp" alt="jaringangudang Illustration">
-		</div>
-	</div>
-  </section>
-  
-    <!-- automation Section -->
-  <section class="automation">
-	<div class="container automation-content">
-		<div class="automation-image">
-			<img src="images/automation.webp" alt="automation Illustration">
-		</div>
-		<div class="automation-text">
-			<h2>Fulfillment Yang Terintegrasi & Transparan</h2>
-		<p>
-			Dari penyimpanan barang, proses picking, proses packing, informasi produk return dan informasi stock semuanya tercatat dalam sistem real-time. Pantau setiap langkah proses dengan mudah, tanpa perlu datang ke gudang.
+			Tidak perlu pusing lagi mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong>
 		</p>	
 		</div>
 	</div>
   </section>
   
-  <!-- sameday Section -->
-  <section class="sameday">
-	<div class="container sameday-content">
-		<div class="sameday-text">
-			<h2>Kirim Pesanan Lebih Cepat, Tingkatkan Kepuasan Pelanggan</h2>
-		<p>
-			Sameday process order, memastikan pesanan di proses di hari yang sama agar dapat dikirim cepat, tepat dan mengurangi resiko return. Lebih puas pelangganmu, lebih tinggi repeat order bisnis Anda.
-		</p>
-		</div>
-		<div class="sameday-image">
-			<img src="images/sameday.webp" alt="sameday Illustration">
-		</div>
-	</div>
-  </section>
-  
-  <!-- Data Driven Section -->
-  <section class="datadriven">
-	<div class="container datadriven-content">
-		<div class="datadriven-image">
-			<img src="images/datadriven.webp" alt="datadriven Illustration">
-		</div>
-		<div class="datadriven-text">
-			<h2>Data Driven Fulfillment Untuk Bisnis Yang Lebih Pintar</h2>
-		<p>
-			Setiap proses disertai laporan real-time yang dapat membantu Anda mengambil keputusan strategis untuk bisnis. Lebih dari sekadar gudang, Fulfillin adalah partner pertumbuhan bisnis Anda.
-		</p>	
-		</div>
-	</div>
-  </section>
-  
-  <!-- Section Kategori Produk -->
-  <section class="kategori-produk">
-	<h2>Kami Siap Tangani Beragam Produk Anda</h2>
+  <!-- Comparison Section -->
+  <section class="comparison-section">
+  <div class="container">
+    <h2 class="section-title">Making The Right Choice for Your Brand</h2>
+    <p class="section-desc">
+      Are you an entrepreneur or brand owner struggling to meet the growing demand for your products? 
+      Let’s explore the key differences between self-fulfillment and using Ethix to help you make an informed decision.
+    </p>
 
-	<div class="kategori-grid kategori-grid-produk">
-		<!-- Card 1 -->
-		<div class="kategori-card">
-			<img src="images/pakaian.webp" alt="Fashion & Accessories">
-				<h3>Fashion & Accessories</h3>
-				<p>Dengan sistem yang sudah terautomatis dan terintegrasi, banyak SKU dapat tercatat rapi dan akurat. Sehingga proses pesanan lebih cepat dan efisien.</p>
-		</div>
-
-		<!-- Card 2 -->
-		<div class="kategori-card">
-			<img src="images/makanan.webp" alt="Makanan & Minuman">
-				<h3>Makanan & Minuman</h3>
-				<p>Melalui penerapan FEFO kami, membantu memastikan kualitas produk terjaga sampai ke tangan konsumen.</p>
-		</div>
-
-		<!-- Card 3 -->
-		<div class="kategori-card">
-			<img src="images/kecantikan.webp" alt="Kecantikan & Kesehatan">
-				<h3>Kecantikan & Kesehatan</h3>
-				<p>Dengan menjaga suhu ruang penyimpanan yang diatur secara tepat untuk menjaga produk dalam kualitas terbaik.</p>
-		</div>
-
-		<!-- Card 4 -->
-		<div class="kategori-card">
-			<img src="images/rumahtangga.webp" alt="Perabot Rumah">
-				<h3>Produk Rumah Tangga</h3>
-				<p>Semua produk rumah tangga aman tersimpan dengan klasifikasi ukuran produk.</p>
-		</div>
-	</div>
-  </section>
-  
-  <section class="benefits-section">
-  <h2>Kenapa Harus Dengan Fulfillin?</h2>
-  <p class="subtitle">Kami mengerti apa yang paling anda butuhkan</p>
-
-  <div class="benefits-grid">
-    <!-- Benefit 1 -->
-    <div class="benefit-card">
-      <div class="icon">
-        <img src="images/wallet.webp" alt="Paling Terjangkau">
+    <div class="comparison-table">
+      <!-- POV Column -->
+      <div class="comparison-col pov-col">
+        <h3>POV (Point of View)</h3>
+        <ul>
+          <li>Focus business strategy</li>
+          <li>Operation cost</li>
+          <li>System & Technology</li>
+          <li>SLA Performance</li>
+          <li>Operation Visibility<br>(order, inventory)</li>
+          <li>Expand fulfillment<br>to other location</li>
+        </ul>
       </div>
-      <h3>Biaya Terjangkau</h3>
-      <p>Kami dapat menekan biaya fulfillment menjadi lebih terjangkau dan menguntungkan untuk anda.</p>
-    </div>
 
-    <!-- Benefit 2 -->
-    <div class="benefit-card">
-      <div class="icon">
-        <img src="images/flexible.webp" alt="Paling Fleksibel">
+      <!-- Ethix Column -->
+      <div class="comparison-col ethix-col">
+        <div class="comparison-header">
+          <img src="images/logo.webp" alt="ethix.id" class="ethix-logo">
+        </div>
+        <ul>
+          <li>Client focus for Business strategy development</li>
+          <li>Cost Efficiency (Shared multi user facility)</li>
+          <li>Support by Ethix system (ready to be used)</li>
+          <li>Guaranteed by Ethix, and possible penalty if out of SLA</li>
+          <li>Supported by Ethix system</li>
+          <li>Possible and ready to be used by Ethix multi facility across nationwide</li>
+        </ul>
       </div>
-      <h3>Layanan Fleksibel</h3>
-      <p>Layanan yang dapat disesuaikan dengan kebutuhan anda.</p>
-    </div>
 
-    <!-- Benefit 3 -->
-    <div class="benefit-card">
-      <div class="icon">
-        <img src="images/qc.webp" alt="Kualitas Terbaik">
+      <!-- Individually Column -->
+      <div class="comparison-col individually-col">
+        <div class="comparison-header">
+          <h3>Individually</h3>
+        </div>
+        <ul>
+          <li>Any effort for operation handle (unfocused)</li>
+          <li>High Operation cost : Manpower, CAPEX, Opex + Operational issue that possible occurred</li>
+          <li>If the client have no system. Any effort, cost, and risk for system development and lack performance</li>
+          <li>If any bad performance, the risk absorb 100% by client</li>
+          <li>Possible, if the client have own system</li>
+          <li>New Effort development & cost</li>
+        </ul>
       </div>
-      <h3>Kualitas Terbaik</h3>
-      <p>Perpaduan Teknologi dan Team profesional siap menghasilkan kualitas layanan yang terbaik.</p>
-    </div>
-
-    <!-- Benefit 4 -->
-    <div class="benefit-card">
-      <div class="icon">
-        <img src="images/chart.webp" alt="Tingkatkan Penjualan">
-      </div>
-      <h3>Scaleup Penjualan</h3>
-      <p>Biarkan kami mengurus seluruh operasional fulfillment, Anda bisa fokus mengembangkan bisnis dan strategi pemasaran untuk tingkatkan penjualan.</p>
     </div>
   </div>
-  </section>
+</section>
   
-  <!-- Section Testimonial -->
-  <section class="testimoni-section">
-  <h2>FULFILLIN SANGAT POWERFUL & TERBUKTI!</h2>
-  <h3>MEREKA JUGA MENGATAKAN HAL YANG SAMA!</h3>
-
-  <div class="testimoni-grid">
-    <!-- Card 1 -->
-    <div class="testimoni-card">
-      <p>"Ini fulfillment gudang yang ngebantu gua banget... keren banget lah, Dulu orderan banyak nambah juga pusingnya gara-gara mikirin packingan belum lagi mikirin drama packer yang tau-tau keluar dan gak masuk. sekarang gak pusing lagi karna ada fulfillin yang handling, the best lah"</p>
-      <img src="images/abdul.webp" alt="Abdul Abdullah" class="avatar">
-      <h4>ABDUL ABDULLAH</h4>
-      <span>Digital Marketer</span>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="testimoni-card">
-      <p>"Sukses terus mas utk Fulfillin nya, membantu banget buat bisnis saya. Team Fulfillin keren banget di chat kapan aja balesnya sat set dan yang terpenting packingan saya clear semua tanpa pending. Mantap mas"</p>
-      <img src="images/sartikaanggun.webp" alt="Sartika Anggun" class="avatar">
-      <h4>SARTIKA ANGGUN</h4>
-      <span>Brand Owner</span>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="testimoni-card">
-      <p>"Fulfillin membantu banget... Saya sebagai brand owner memang butuh gudang di berbagai daerah untuk bisa percepatan pengiriman ke beberapa kota. Fulfillin ngejawab banget kebutuhan saya, pengiriman pesanan jadi lebih cepat, handlingnya perfect dan repeat order saya makin banyak."</p>
-      <img src="images/michael.webp" alt="Michael" class="avatar">
-      <h4>MICHAEL</h4>
-      <span>Brand Owner</span>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="testimoni-card">
-      <p>"Thumbs up dah! Buat performancenya Fulfillin, urus orderan banyak gak pake ribet bisa lebih fokus boost penjualan. Makin Jooss pake Fulfillin"</p>
-      <img src="images/anton.webp" alt="Anton" class="avatar">
-      <h4>ANTON</h4>
-      <span>Digital Marketer & Importir</span>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="testimoni-card">
-      <p>"Fulfillin solusi banget buat digital marketer apalagi order dari soscom. Paket return saya bisa turun signifikan karena terbantu dengan adanya gudang Fulfillin di beberapa daerah, sehingga pengiriman bisa lebih cepat dari gudang yang dekat dengan lokasi pengantaran. Succsess rate meningkat, cuan makin banyak."</p>
-      <img src="images/yoko.webp" alt="Yoko Nugroho" class="avatar">
-      <h4>YOKO NUGROHO</h4>
-      <span>Digital Marketer</span>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="testimoni-card">
-      <p>"Pengiriman cepat sampai ke konsumen, return sedikit, bebas drama operasional gudang, makin banyak repeat ordernya dan yang terpenting makin fokus scale up bisnis. Ini impian saya banget sih, Fulfillin adalah jawaban dari semua masalah saya dahulu. Dengan Fulfillin, sekarang cincaail lah... maju terusss Fulfillin!"</p>
-      <img src="images/aditya.webp" alt="Aditya" class="avatar">
-      <h4>ADITYA</h4>
-      <span>Brand Owner</span>
-    </div>
-  </div>
-  </section>
-
+  <!-- Contact Section -->
   <section class="contact-section">
   <div class="contact-container">
     <!-- Left Side -->
