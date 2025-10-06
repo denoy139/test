@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fulfillin | Fullfilment Andalan Anda</title>
   <link rel="icon" type="image/webp" href="images/favicon.webp">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylelayanan.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -51,21 +51,14 @@
   <section class="hero">
     <div class="container hero-content">
       <div class="hero-text fade-in">
-        <h1>Kembangkan Bisnismu Tanpa Pusing Urusan Gudang</h1>
-		<p>Biar kami yang urus pengemasan & logistik, anda fokus scale up bisnismu.</p>
+        <h1>Kelola Bisnis Lebih Mudah & Efisien</h1>
+		<p>Tidak perlu lagi pusing mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong></p>
         <a href="#" class="cta-btn">DAFTAR SEKARANG</a>
       </div>
       <div class="hero-image">
-        <img src="images/hero.webp" alt="Hero Image">
+        <img src="images/herolayanan.webp" alt="Hero Image">
       </div>
     </div>
-  </section>
-  
-  <!-- DEFINITION SECTION -->
-  <section class="definition">
-        <p>
-          <strong>Fulfillin</strong> adalah Solusi fulfillment yang dapat membantu bisnis online Anda berkembang lebih cepat. <strong>#TanpaRibet</strong> Penjualan pun <strong>#Melesat</strong>.
-        </p>
   </section>
   
   <!-- Features -->
@@ -384,6 +377,6 @@
   </div>
 </footer>
 
-  <script src="script.js"></script>
+  <script src="jsscript/jslayanan.js"></script>
 </body>
 </html>
