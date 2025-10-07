@@ -416,7 +416,7 @@ body {
 
 /* Slider Definition */
 .services-section {
-  background: #f4f6f9;
+  background: #f9f9f9;
   padding: 100px 0;
   text-align: center;
   position: relative;
@@ -425,7 +425,7 @@ body {
 .section-title {
   font-size: 2.3rem;
   font-weight: 700;
-  color: #1c2c5c;
+  color: #c8102e;
 }
 
 .section-desc {
@@ -451,6 +451,7 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
+  height:480px;
 }
 
 .slide.active {
@@ -483,14 +484,14 @@ body {
 
 .slide-text h3 {
   font-size: 2rem;
-  color: #f5b400;
+  color: #c8102e;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .slide-text h2 {
   font-size: 2rem;
-  color: #1c2c5c;
+  color: #c8102e;
   font-weight: 800;
   margin-bottom: 15px;
 }
@@ -516,7 +517,7 @@ body {
 .slide-btn {
   background: none;
   border: none;
-  color: #1c2c5c;
+  color: #000;
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
@@ -528,7 +529,7 @@ body {
 }
 
 .slide-btn:hover {
-  color: #f5b400;
+  color: #c8102e;
 }
 
 .prev {
@@ -556,7 +557,7 @@ body {
 }
 
 .slider-dots span.active {
-  background: #1c2c5c;
+  background: #c8102e;
 }
 
 /* Responsive */
@@ -593,7 +594,7 @@ body {
 .flow-process .section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #1c2c5c;
+  color: #c8102e;
 }
 
 .flow-process .section-desc {
@@ -623,7 +624,7 @@ body {
 }
 
 .flow-tabs .tab.active {
-  color: #1c2c5c;
+  color: #c8102e;
 }
 
 .flow-tabs .tab.active::after {
@@ -633,7 +634,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: #f5b400;
+  background: #c8102e;
   border-radius: 2px;
 }
 
@@ -758,7 +759,7 @@ body {
 .section-title {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #1b2d5a;
+  color: #c8102e;
   margin-bottom: 20px;
 }
 
@@ -782,7 +783,7 @@ body {
 
 /* POV Column */
 .pov-col {
-  background: #f5b400;
+  background: #c8102e;
   color: white;
   text-align: left;
   padding: 30px 20px;
@@ -807,21 +808,21 @@ body {
   padding-top: 40px;
 }
 
-/* Ethix Column */
-.ethix-col, .individually-col {
+/* Fulfillin Column */
+.fulfillin-col, .individually-col {
   background: #fff;
   text-align: center;
   padding: 30px 25px;
   border-left: 1px solid #e5e8ec;
 }
 
-.ethix-col ul, .individually-col ul {
+.fulfillin-col ul, .individually-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.ethix-col li, .individually-col li {
+.fulfillin-col li, .individually-col li {
   border-top: 1px solid #f0f0f0;
   padding: 19px 10px;
   color: #2b2b2b;
@@ -830,7 +831,7 @@ body {
 }
 
 /* Remove top border on first row */
-.ethix-col li:first-child, .individually-col li:first-child {
+.fulfillin-col li:first-child, .individually-col li:first-child {
   border-top: none;
 }
 
@@ -842,7 +843,7 @@ body {
   margin-bottom: 10px;
 }
 
-.ethix-logo {
+.fulfillin-logo {
   max-height: 35px;
 }
 
@@ -851,7 +852,7 @@ body {
 }
 
 .individually-col h3 {
-  color: #1b2d5a;
+  color: #c8102e;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -862,7 +863,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .pov-col, .ethix-col, .individually-col {
+  .pov-col, .fulfillin-col, .individually-col {
     border: none;
   }
 
@@ -871,7 +872,7 @@ body {
     text-align: center;
   }
 
-  .ethix-col, .individually-col {
+  .fulfillin-col, .individually-col {
     border-radius: 0;
   }
 
