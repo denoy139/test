@@ -165,8 +165,7 @@
 		<div class="container">
 		<h2 class="section-title">Flow Process</h2>
 			<p class="section-desc">
-			This process is a carefully orchestrated system that ensures the efficient movement of goods,
-			from their arrival at the warehouse to their final dispatch, optimizing productivity and minimizing delays.
+			Proses ini merupakan sistem yang terencana dengan baik untuk memastikan setiap pergerakan barang berlangsung efisien, mulai dari kedatangan di gudang hingga pengiriman akhir, guna meningkatkan produktivitas dan mengurangi potensi keterlambatan.
 			</p>
 
 			<!-- Tabs -->
@@ -177,8 +176,8 @@
 
 			<!-- Image toggle area -->
 			<div class="flow-image-wrapper">
-				<img src="images/pakaian.webp" alt="Inbound Flow" class="flow-image active" id="inbound">
-				<img src="images/makanan.webp" alt="Outbound Flow" class="flow-image" id="outbound">
+				<img src="images/inbound.webp" alt="Inbound Flow" class="flow-image active" id="inbound">
+				<img src="images/outbound.webp" alt="Outbound Flow" class="flow-image" id="outbound">
 			</div>
 		</div>
 	</section>
