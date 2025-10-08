@@ -82,7 +82,7 @@
   <!-- Slider Definition -->
   <section class="services-section">
   <div class="container">
-    <h2 class="section-title">Services</h2>
+    <h2 class="section-title">Layanan</h2>
     <p class="section-desc">
       Unlock the power of seamless fulfillment with our comprehensive services. 
       We provide end-to-end solutions designed to optimize your operations and enhance 
@@ -165,19 +165,21 @@
 		<div class="container">
 		<h2 class="section-title">Flow Process</h2>
 			<p class="section-desc">
-			Proses ini merupakan sistem yang terencana dengan baik untuk memastikan setiap pergerakan barang berlangsung efisien, mulai dari kedatangan di gudang hingga pengiriman akhir, guna meningkatkan produktivitas dan mengurangi potensi keterlambatan.
+			Proses ini merupakan sistem yang terencana dengan baik untuk memastikan setiap pergerakan produk berlangsung efisien, mulai dari penerimaan di gudang hingga pengiriman, guna meningkatkan produktivitas dan mengurangi potensi keterlambatan.
 			</p>
 
 			<!-- Tabs -->
 			<div class="flow-tabs">
 				<button class="tab active" data-target="inbound">Inbound</button>
 				<button class="tab" data-target="outbound">Outbound</button>
+				<button class="tab" data-target="return">Return</button>
 			</div>
 
 			<!-- Image toggle area -->
 			<div class="flow-image-wrapper">
 				<img src="images/inbound.webp" alt="Inbound Flow" class="flow-image active" id="inbound">
 				<img src="images/outbound.webp" alt="Outbound Flow" class="flow-image" id="outbound">
+				<img src="images/return.webp" alt="Return Flow" class="flow-image" id="return">
 			</div>
 		</div>
 	</section>
