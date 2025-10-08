@@ -181,16 +181,16 @@
 		</div>
 	</section>
 	
-	<!-- Business Section -->
-  <section class="business">
-	<div class="container business-content">
-		<div class="business-image">
-			<img src="images/business.webp" alt="Business Illustration">
+	<!-- Fulfillin Solution Section -->
+  <section class="fulfillinsolution">
+	<div class="container fulfillinsolution-content">
+		<div class="fulfillinsolution-image">
+			<img src="images/fulfillinsolution.webp" alt="fulfillinsolution Illustration">
 		</div>
-		<div class="business-text">
-			<h2>Kelola Bisnis Lebih Mudah & Efisien</h2>
+		<div class="fulfillinsolution-text">
+			<h2>Fulfillin, Solusi Untuk Bisnis Anda</h2>
 		<p>
-			Tidak perlu pusing lagi mengurus gudang dan packing. Biarkan kami yang tangani operasional gudang dari penyimpanan, pengemasan, pendataan sampai dengan pengiriman paket ke ekspedisi, Anda fokus tingkatkan penjualan. <strong>#LebihEfisien #LebihUntung</strong>
+			Kami memastikan setiap proses berjalan dengan efektif dan efisien pesanan diproses cepat, stok terkelola rapi dan paket terkirim tepat waktu. Bersama Fulfillin, biarkan bisnismu tumbuh tanpa batas. <strong>#LebihEfisien #LebihUntung</strong>
 		</p>	
 		</div>
 	</div>
@@ -199,10 +199,10 @@
   <!-- Comparison Section -->
   <section class="comparison-section">
   <div class="container">
-    <h2 class="section-title">Making The Right Choice for Your Brand</h2>
+    <h2 class="section-title">Pilihan Tepat Untuk Binismu</h2>
     <p class="section-desc">
-      Are you an entrepreneur or brand owner struggling to meet the growing demand for your products? 
-      Let’s explore the key differences between self-fulfillment and using Fulfillin to help you make an informed decision.
+      Kamu mulai kewalahan memenuhi permintaan pelanggan yang terus meningkat ? dan operasional belum siap mengimbanginya ?
+      Mari kita explore perbedaan antara self-fulfillment dan menggunakan layanan Fulfillin, agar anda dapat membuat keputusan yang lebih tepat dan terinformasi.
     </p>
 
     <div class="comparison-table">
