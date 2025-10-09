@@ -1,24 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelectorAll('.flow-tabs .tab');
-  const images = document.querySelectorAll('.flow-image');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // hapus active di semua tab
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const target = tab.getAttribute('data-target');
-      // sembunyikan semua gambar
-      images.forEach(img => {
-        img.classList.remove('active');
-      });
-      // tampilkan gambar sesuai target
-      document.getElementById(target).classList.add('active');
-    });
-  });
-});
-
 // Animasi Fade-in ketika halaman dimuat
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(".fade-in");
@@ -63,4 +42,64 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.2 });
 
   fadeElements.forEach(el => observer.observe(el));
+});
+
+// Flow process Function
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.flow-tabs .tab');
+  const images = document.querySelectorAll('.flow-image');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // hapus active di semua tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const target = tab.getAttribute('data-target');
+      // sembunyikan semua gambar
+      images.forEach(img => {
+        img.classList.remove('active');
+      });
+      // tampilkan gambar sesuai target
+      document.getElementById(target).classList.add('active');
+    });
+  });
+});
+
+// Slider Function
+const slider = document.querySelector('.layananslider-wrapper');
+const prev = document.querySelector('.arrow-btn.prev');
+const next = document.querySelector('.arrow-btn.next');
+const slides = document.querySelectorAll('.slide-card');
+
+let currentIndex = 0;
+const slidesToShow = 3;
+const gap = 30; // sama seperti CSS
+const slideWidth = slides[0].offsetWidth + gap;
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// tombol next
+next.addEventListener('click', () => {
+  if (currentIndex < slides.length - slidesToShow) {
+    currentIndex++;
+    updateSlider();
+  }
+});
+
+// tombol prev
+prev.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+  }
+});
+
+// agar resize tetap responsif
+window.addEventListener('resize', () => {
+  slider.style.transition = 'none';
+  updateSlider();
+  setTimeout(() => slider.style.transition = 'transform 0.6s ease', 100);
 });

@@ -240,7 +240,7 @@ body {
 .hero-text p {
   font-size: 1.1rem;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   line-height: 1.5;
 }
 
@@ -419,6 +419,7 @@ body {
   padding: 80px 20px;
   background-color: #f9f9f9;
   text-align: center;
+  overflow: hidden;
 }
 
 .layananslider h2 {
@@ -436,24 +437,28 @@ body {
 
 .layananslider-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  transition: transform 0.6s ease;
+  width: max-content;
+}
+
+.slider-container {
+  max-width: 1040px;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 /* --- slide Card --- */
 .slide-card {
-  flex: 1 1 300px;
-  max-width: 360px;
+  flex: 0 0 320px; /* setiap kartu punya lebar tetap */
   background-color: #fff;
   border: 1px solid #eaeaea;
   border-radius: 24px;
   padding: 40px 25px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .slide-card:hover {
@@ -515,14 +520,16 @@ body {
   background-color: #c8102e;
   color: #fff;
 }
-
 /* --- Responsive --- */
-@media (max-width: 768px) {
-  .layananslider h2 {
-    font-size: 2rem;
-  }
+@media (max-width: 992px) {
   .slide-card {
-    max-width: 100%;
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-card {
+    flex: 0 0 90%;
   }
 }
 

@@ -79,82 +79,81 @@
     </div>
   </section>
   
-  <!-- Slider Definition -->
-  <section class="services-section">
+  <!-- Layanan Slider Section -->
+<section class="layananslider">
   <div class="container">
-    <h2 class="section-title">Layanan</h2>
-    <p class="section-desc">
-      Raih kemudahan dalam proses pemenuhan pesanan dengan layanan kami, layanan yang dapat membantu anda lebih efisien, terintegrasi dan berfokus pada kepuasan pelanggan. Buktikan bagaimana layanan kami mendorong pertumbuhan bisnismu dan meningkatkan profit secara berkelanjutan.
+    <h2>Operasional Bisnis Online Yang Terautomasi</h2>
+    <p class="subtitle">
+      Kemudahan mengelola fulfillment dengan staf berpengalaman, platform yang optimal, dan harga terbaik.
     </p>
-
-    <div class="slider">
-      <button class="slide-btn prev">&#10094;</button>
-
-      <div class="slides">
-
-        <!-- Slide 1 -->
-        <div class="slide active">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h3>01</h3>
-              <h2>Warehouse Management</h2>
-              <ul>
-                <li>Inventory control</li>
-                <li>Goods receipt & placement</li>
-                <li>Barcode management</li>
-                <li>Storage optimization</li>
-              </ul>
-            </div>
-            <div class="slide-image">
-              <img src="images/service1.png" alt="Warehouse Management">
-            </div>
-          </div>
+	
+	<div class="slider-container">
+    <div class="layananslider-wrapper">
+	  <!-- Slide 1 -->
+      <div class="slide-card">
+        <div class="icon">
+          <img src="images/icon-insurance.svg" alt="Insurance Icon">
         </div>
-
-        <!-- Slide 2 -->
-        <div class="slide">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h3>02</h3>
-              <h2>Delivery Management</h2>
-              <ul>
-                <li>Managed packed to delivery company</li>
-                <li>3PL Assignment</li>
-                <li>Shipment monitoring</li>
-                <li>Shipment reporting</li>
-              </ul>
-            </div>
-            <div class="slide-image">
-              <img src="images/service2.png" alt="Delivery Management">
-            </div>
-          </div>
+        <h3>Professional Team</h3>
+        <p>
+          Tim professional Fulfillin berpengalaman di bidang logistik dan operasional. Kami bekerja dengan standar tinggi untuk memastikan setiap proses berjalan cepat, akurat dan efisien untuk mendukung pertumbuhan bisnismu.
+        </p>
+      </div>
+	
+      <!-- slide 2 -->
+      <div class="slide-card">
+        <div class="icon">
+          <img src="images/icon-platform.svg" alt="Platform Icon">
         </div>
-
-        <!-- Slide 3 -->
-        <div class="slide">
-          <div class="slide-content">
-            <div class="slide-text">
-              <h3>03</h3>
-              <h2>Return Handling</h2>
-              <ul>
-                <li>Product return inspection</li>
-                <li>Repack & reshelving</li>
-                <li>Defective product management</li>
-                <li>Return reporting</li>
-              </ul>
-            </div>
-            <div class="slide-image">
-              <img src="images/service3.png" alt="Return Handling">
-            </div>
-          </div>
-        </div>
-
+        <h3>Gudang Terverifikasi Fulfillin</h3>
+        <p>
+          Setiap gudang dalam jaringan Fulfillin telah melalui proses verifikasi ketat untuk menjamin keamanan, efektifitas, efisiensi dan ketepatan pengiriman setiap produk.
+        </p>
       </div>
 
-      <button class="slide-btn next">&#10095;</button>
+      <!-- slide 3 -->
+      <div class="slide-card">
+        <div class="icon">
+          <img src="images/icon-shipping.svg" alt="Shipping Icon">
+        </div>
+        <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
+        <p>
+          Gudang Fulfillment yang tersebar di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Lokasi yang dekat dengan penerima meningkatkan Closing Rate, Success Rate pengiriman dan menekan return secara signifikan.
+        </p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide-card">
+        <div class="icon">
+          <img src="images/icon-insurance.svg" alt="Insurance Icon">
+        </div>
+        <h3>Professional Team</h3>
+        <p>
+          Tim professional Fulfillin berpengalaman di bidang logistik dan operasional. Kami bekerja dengan standar tinggi untuk memastikan setiap proses berjalan cepat, akurat dan efisien untuk mendukung pertumbuhan bisnismu.
+        </p>
+      </div>
+	
+	<!-- slide 5 -->
+      <div class="slide-card">
+        <div class="icon">
+          <img src="images/icon-shipping.svg" alt="Shipping Icon">
+        </div>
+        <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
+        <p>
+          Gudang Fulfillment yang tersebar di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Lokasi yang dekat dengan penerima meningkatkan Closing Rate, Success Rate pengiriman dan menekan return secara signifikan.
+        </p>
+      </div>
+	  </div>
+	</div>
+
+    <!-- Navigation Arrows -->
+    <div class="nav-arrows">
+      <button class="arrow-btn">&#8592;</button>
+      <button class="arrow-btn">&#8594;</button>
     </div>
   </div>
-  </section>
+</section>
+
 
   
   <!-- Flow Process Section -->

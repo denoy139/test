@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeElements.forEach(el => observer.observe(el));
 });
 
+// Flow process Function
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.flow-tabs .tab');
   const images = document.querySelectorAll('.flow-image');
@@ -65,46 +66,69 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Slider Function
+const slider = document.querySelector('.layananslider-wrapper');
+const prev = document.querySelector('.arrow-btn.prev');
+const next = document.querySelector('.arrow-btn.next');
+let slides = document.querySelectorAll('.slide-card');
 
-  const slides = document.querySelectorAll('.slide');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
-  let currentIndex = 0;
-  let autoSlide;
+let currentIndex = 0;
+const slidesToShow = 3;
+const gap = 30;
+let slideWidth = slides[0].offsetWidth + gap;
 
-  function showSlide(index) {
-    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+// --- 1️⃣ Clone untuk efek infinite loop ---
+const firstClones = Array.from(slides)
+  .slice(0, slidesToShow)
+  .map(slide => slide.cloneNode(true));
+
+firstClones.forEach(clone => slider.appendChild(clone));
+
+// Update NodeList setelah clone
+slides = document.querySelectorAll('.slide-card');
+
+// --- 2️⃣ Update posisi awal ---
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// --- 3️⃣ Next button ---
+next.addEventListener('click', () => {
+  currentIndex++;
+  updateSlider();
+  if (currentIndex >= slides.length - slidesToShow) {
+    setTimeout(() => {
+      slider.style.transition = 'none';
+      currentIndex = 0;
+      updateSlider();
+      setTimeout(() => (slider.style.transition = 'transform 0.6s ease'), 50);
+    }, 600);
   }
+});
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
+// --- 4️⃣ Prev button ---
+prev.addEventListener('click', () => {
+  if (currentIndex <= 0) {
+    slider.style.transition = 'none';
+    currentIndex = slides.length - slidesToShow;
+    updateSlider();
+    setTimeout(() => (slider.style.transition = 'transform 0.6s ease'), 50);
   }
+  currentIndex--;
+  updateSlider();
+});
 
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-  }
+// --- 5️⃣ Responsif: hitung ulang lebar ---
+window.addEventListener('resize', () => {
+  slideWidth = slides[0].offsetWidth + gap;
+  updateSlider();
+});
 
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoSlide();
-  });
+// --- 6️⃣ (Opsional) Auto-slide tiap 4 detik ---
+let autoSlide = setInterval(() => next.click(), 4000);
 
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoSlide();
-  });
-
-  function startAutoSlide() {
-    autoSlide = setInterval(nextSlide, 4000);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(autoSlide);
-    startAutoSlide();
-  }
-
-  // Start auto slide
-  showSlide(currentIndex);
-  startAutoSlide();
+// Hentikan auto-slide saat hover
+slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
+slider.addEventListener('mouseleave', () => {
+  autoSlide = setInterval(() => next.click(), 4000);
+});
