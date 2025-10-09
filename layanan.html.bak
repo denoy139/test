@@ -75,7 +75,7 @@
 		<!-- Slide 1 -->
         <div class="slide-card">
           <div class="icon">
-            <img src="images/icon-insurance.svg" alt="Insurance Icon">
+            <img src="images/whmgt.webp" alt="whmgt Icon">
           </div>
           <h3>Warehouse Management</h3>
           <p>
@@ -86,7 +86,7 @@
         <!-- Slide 2 -->
         <div class="slide-card">
           <div class="icon">
-            <img src="images/icon-shipping.svg" alt="Shipping Icon">
+            <img src="images/destination.webp" alt="destination Icon">
           </div>
           <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
           <p>
@@ -99,7 +99,7 @@
 		<!-- Slide 3 -->
         <div class="slide-card">
           <div class="icon">
-            <img src="images/wh.webp" alt="Platform Icon">
+            <img src="images/wh.webp" alt="wh Icon">
           </div>
           <h3>Gudang Terverifikasi Fulfillin</h3>
           <p>
@@ -111,7 +111,7 @@
         <!-- Slide 4 -->
         <div class="slide-card">
           <div class="icon">
-            <img src="images/icon-insurance.svg" alt="Insurance Icon">
+            <img src="images/people.webp" alt="people Icon">
           </div>
           <h3>Professional Team</h3>
           <p>
@@ -122,7 +122,7 @@
 		<!-- Slide 5 -->
         <div class="slide-card">
           <div class="icon">
-            <img src="images/icon-insurance.svg" alt="Insurance Icon">
+            <img src="images/icon-insurance.svg" alt="rts Icon">
           </div>
           <h3>Return Management</h3>
           <p>
