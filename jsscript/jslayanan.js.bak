@@ -70,36 +70,73 @@ document.addEventListener('DOMContentLoaded', () => {
 const slider = document.querySelector('.layananslider-wrapper');
 const prev = document.querySelector('.arrow-btn.prev');
 const next = document.querySelector('.arrow-btn.next');
-const slides = document.querySelectorAll('.slide-card');
+let slides = document.querySelectorAll('.slide-card');
 
 let currentIndex = 0;
-const slidesToShow = 3;
-const gap = 30; // sama seperti CSS
-const slideWidth = slides[0].offsetWidth + gap;
+let slidesToShow = getSlidesToShow();
+const gap = 30;
+let slideWidth = slides[0].offsetWidth + gap;
 
+// --- Clone untuk efek infinite loop ---
+function cloneSlides() {
+  const firstClones = Array.from(slides)
+    .slice(0, slidesToShow)
+    .map(slide => slide.cloneNode(true));
+
+  firstClones.forEach(clone => slider.appendChild(clone));
+  slides = document.querySelectorAll('.slide-card');
+}
+
+cloneSlides();
+
+// --- Update posisi slider ---
 function updateSlider() {
   slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-// tombol next
+// --- Tentukan jumlah slide yang tampil ---
+function getSlidesToShow() {
+  if (window.innerWidth <= 768) return 1;
+  if (window.innerWidth <= 992) return 2;
+  return 3;
+}
+
+// --- Next ---
 next.addEventListener('click', () => {
-  if (currentIndex < slides.length - slidesToShow) {
-    currentIndex++;
-    updateSlider();
-  }
-});
-
-// tombol prev
-prev.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSlider();
-  }
-});
-
-// agar resize tetap responsif
-window.addEventListener('resize', () => {
-  slider.style.transition = 'none';
+  currentIndex++;
   updateSlider();
-  setTimeout(() => slider.style.transition = 'transform 0.6s ease', 100);
+  if (currentIndex >= slides.length - slidesToShow) {
+    setTimeout(() => {
+      slider.style.transition = 'none';
+      currentIndex = 0;
+      updateSlider();
+      setTimeout(() => (slider.style.transition = 'transform 0.6s ease'), 50);
+    }, 600);
+  }
+});
+
+// --- Prev ---
+prev.addEventListener('click', () => {
+  if (currentIndex <= 0) {
+    slider.style.transition = 'none';
+    currentIndex = slides.length - slidesToShow;
+    updateSlider();
+    setTimeout(() => (slider.style.transition = 'transform 0.6s ease'), 50);
+  }
+  currentIndex--;
+  updateSlider();
+});
+
+// --- Responsif: hitung ulang ketika resize ---
+window.addEventListener('resize', () => {
+  slidesToShow = getSlidesToShow();
+  slideWidth = slides[0].offsetWidth + gap;
+  updateSlider();
+});
+
+// --- Auto-slide setiap 4 detik ---
+let autoSlide = setInterval(() => next.click(), 4000);
+slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
+slider.addEventListener('mouseleave', () => {
+  autoSlide = setInterval(() => next.click(), 4000);
 });

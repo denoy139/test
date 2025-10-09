@@ -387,24 +387,25 @@ body {
   margin-bottom: 60px;
 }
 
-.layananslider-wrapper {
-  display: flex;
-  gap: 30px;
-  transition: transform 0.6s ease;
-  width: max-content;
-  will-change: transform;
-}
-
 .slider-container {
+  width: 100%;
   max-width: 1040px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
 
-/* --- slide Card --- */
+/* --- Wrapper --- */
+.layananslider-wrapper {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+/* --- Slide Card --- */
 .slide-card {
-  flex: 0 0 320px; /* setiap kartu punya lebar tetap */
+  flex: 0 0 320px;
   background-color: #fff;
   border: 1px solid #eaeaea;
   border-radius: 24px;
@@ -412,7 +413,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   transition: all 0.3s ease;
   text-align: center;
-  
+  box-sizing: border-box;
 }
 
 .slide-card:hover {
@@ -434,11 +435,11 @@ body {
 .slide-card .icon img {
   width: 30px;
   height: 30px;
-  filter: brightness(0) invert(1); /* membuat ikon putih */
+  filter: brightness(0) invert(1);
 }
 
 .slide-card h3 {
-  font-size: 15px;
+  font-size: 16px;
   color: #c8102e;
   font-weight: 600;
   margin-bottom: 12px;
@@ -474,16 +475,28 @@ body {
   background-color: #c8102e;
   color: #fff;
 }
+
 /* --- Responsive --- */
 @media (max-width: 992px) {
   .slide-card {
-    flex: 0 0 280px;
+    flex: 0 0 45%; /* 2 di tablet */
+    padding: 30px 20px;
   }
 }
 
 @media (max-width: 768px) {
   .slide-card {
-    flex: 0 0 90%;
+    flex: 0 0 95%; /* 1 di HP */
+    margin: 0 auto;
+    padding: 24px 18px;
+  }
+
+  .slide-card h3 {
+    font-size: 15px;
+  }
+
+  .slide-card p {
+    font-size: 12px;
   }
 }
 
@@ -553,7 +566,7 @@ body {
   min-height: 350px;
   max-height: 550px; /* batas tinggi maksimum */
   overflow: hidden;  /* pastikan tidak keluar dari area */
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .flow-image {
@@ -574,32 +587,50 @@ body {
   transform: translateY(0);
   z-index: 2;
 }
-
-/* Responsif */
+/* --- RESPONSIVE --- */
 @media (max-width: 992px) {
+  .flow-tabs {
+    margin-bottom: 25px;
+  }
   .flow-image-wrapper {
     max-height: 420px;
-  }
-  .flow-image {
-    max-height: 380px;
+    padding: 5px 5px;
+    margin-top: -15px; /* gambar lebih dekat dengan tab */
   }
 }
 
 @media (max-width: 768px) {
-  .flow-image-wrapper {
-    max-height: 350px;
+  .flow-tabs {
+    margin-bottom: -100px;
+	position: relative;
+	z-index: 5; /* pastikan tab ada di atas gambar */
   }
-  .flow-image {
-    max-height: 320px;
+  .flow-image-wrapper {
+    max-height: 360px;
+    padding: 8px 5px;
+    margin-top: -20px;
+	position: relative;
+	z-index: 1;
+	overflow: visible; /* agar gambar tidak menutupi area klik */
   }
 }
 
 @media (max-width: 480px) {
+  .flow-tabs {
+    margin-bottom: -100px;
+	position: relative;
+	z-index: 5; /* pastikan tab ada di atas gambar */
+  }
   .flow-image-wrapper {
-    max-height: 280px;
+    max-height: 300px;
+    padding: 0px 5px;
+    margin-top: -25px; /* rapat di mobile */
+	position: relative;
+	z-index: 1;
+	overflow: visible; /* agar gambar tidak menutupi area klik */
   }
   .flow-image {
-    max-height: 250px;
+    max-height: 270px;
   }
 }
 
@@ -653,6 +684,83 @@ body {
   padding: 12px;
   border-radius: 8px;
   text-align: center;
+}
+
+/* --- Responsive --- */
+
+/* Tablet (max 992px) */
+@media (max-width: 992px) {
+  .fulfillinsolution-content {
+    gap: 30px;
+  }
+
+  .fulfillinsolution-image img {
+    transform: translateX(-30px); /* kurangi geser kiri */
+  }
+
+  .fulfillinsolution-text h2 {
+    font-size: 24px;
+  }
+
+  .fulfillinsolution-text p {
+    font-size: 15px;
+  }
+}
+
+/* Tablet kecil & HP besar (max 768px) */
+@media (max-width: 768px) {
+  .fulfillinsolution-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .fulfillinsolution-image {
+    order: -1; /* tampilkan gambar di atas teks */
+  }
+
+  .fulfillinsolution-image img {
+    transform: none; /* hilangkan pergeseran kiri */
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .fulfillinsolution-text {
+    flex: 1 1 100%;
+  }
+
+  .fulfillinsolution-text h2 {
+    font-size: 22px;
+  }
+
+  .fulfillinsolution-icons {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+/* HP kecil (max 480px) */
+@media (max-width: 480px) {
+  .fulfillinsolution {
+    padding: 0px 0;
+  }
+
+  .fulfillinsolution-text h2 {
+    font-size: 20px;
+  }
+
+  .fulfillinsolution-text p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .icon-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .fulfillinsolution-image img {
+    max-width: 100%;
+  }
 }
 
 /* --- Comparison Section --- */

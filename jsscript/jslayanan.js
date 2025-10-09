@@ -73,61 +73,68 @@ const next = document.querySelector('.arrow-btn.next');
 let slides = document.querySelectorAll('.slide-card');
 
 let currentIndex = 0;
-const slidesToShow = 3;
-const gap = 30;
+let slidesToShow = getSlidesToShow();
+let gap = 30;
 let slideWidth = slides[0].offsetWidth + gap;
 
-// --- 1️⃣ Clone untuk efek infinite loop ---
-const firstClones = Array.from(slides)
-  .slice(0, slidesToShow)
-  .map(slide => slide.cloneNode(true));
+// --- Clone Slides untuk infinite loop ---
+function cloneSlides() {
+  const clones = Array.from(slides)
+    .slice(0, slidesToShow)
+    .map(s => s.cloneNode(true));
+  clones.forEach(clone => slider.appendChild(clone));
+  slides = document.querySelectorAll('.slide-card');
+}
 
-firstClones.forEach(clone => slider.appendChild(clone));
+cloneSlides();
 
-// Update NodeList setelah clone
-slides = document.querySelectorAll('.slide-card');
-
-// --- 2️⃣ Update posisi awal ---
 function updateSlider() {
   slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-// --- 3️⃣ Next button ---
+// --- Hitung jumlah slide berdasarkan ukuran layar ---
+function getSlidesToShow() {
+  if (window.innerWidth <= 768) return 1;
+  if (window.innerWidth <= 992) return 2;
+  return 3;
+}
+
+// --- Tombol Next ---
 next.addEventListener('click', () => {
   currentIndex++;
   updateSlider();
+
   if (currentIndex >= slides.length - slidesToShow) {
     setTimeout(() => {
       slider.style.transition = 'none';
       currentIndex = 0;
       updateSlider();
-      setTimeout(() => (slider.style.transition = 'transform 0.6s ease'), 50);
+      setTimeout(() => slider.style.transition = 'transform 0.6s ease', 50);
     }, 600);
   }
 });
 
-// --- 4️⃣ Prev button ---
+// --- Tombol Prev ---
 prev.addEventListener('click', () => {
   if (currentIndex <= 0) {
     slider.style.transition = 'none';
     currentIndex = slides.length - slidesToShow;
     updateSlider();
-    setTimeout(() => (slider.style.transition = 'transform 0.6s ease'), 50);
+    setTimeout(() => slider.style.transition = 'transform 0.6s ease', 50);
   }
   currentIndex--;
   updateSlider();
 });
 
-// --- 5️⃣ Responsif: hitung ulang lebar ---
+// --- Resize Responsif ---
 window.addEventListener('resize', () => {
+  slidesToShow = getSlidesToShow();
   slideWidth = slides[0].offsetWidth + gap;
   updateSlider();
 });
 
-// --- 6️⃣ (Opsional) Auto-slide tiap 4 detik ---
+// --- Auto Slide ---
 let autoSlide = setInterval(() => next.click(), 4000);
-
-// Hentikan auto-slide saat hover
 slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
 slider.addEventListener('mouseleave', () => {
   autoSlide = setInterval(() => next.click(), 4000);
