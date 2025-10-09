@@ -61,100 +61,85 @@
     </div>
   </section>
   
-  <!-- Features -->
-  <section class="features">
-    <div class="features-grid">
-      <div class="feature-card">
-        <img src="images/wh.webp" alt="Produk"/>
-        <h3>Gudang Terverifikasi Fulfillin</h3>
-      </div>
-      <div class="feature-card">
-        <img src="images/destination.webp" alt="Pesanan"/>
-        <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
-      </div>
-      <div class="feature-card">
-        <img src="images/people.webp" alt="Kelola Pesanan"/>
-        <h3>Professional Team</h3>
-      </div>
-    </div>
-  </section>
-  
   <!-- Layanan Slider Section -->
 <section class="layananslider">
   <div class="container">
-    <h2>Operasional Bisnis Online Yang Terautomasi</h2>
+    <h2>Biar Fulfillin Yang Urus Operasional Gudang, Anda Fokus Scaleup Bisnis</h2>
     <p class="subtitle">
-      Kemudahan mengelola fulfillment dengan staf berpengalaman, platform yang optimal, dan harga terbaik.
+      Saatnya Bisnismu Berjalan #LebihEfisien, Lebih Efektif dan #LebihUntung Bersama Fulfillin
     </p>
-	
-	<div class="slider-container">
-    <div class="layananslider-wrapper">
-	  <!-- Slide 1 -->
-      <div class="slide-card">
-        <div class="icon">
-          <img src="images/icon-insurance.svg" alt="Insurance Icon">
-        </div>
-        <h3>Professional Team</h3>
-        <p>
-          Tim professional Fulfillin berpengalaman di bidang logistik dan operasional. Kami bekerja dengan standar tinggi untuk memastikan setiap proses berjalan cepat, akurat dan efisien untuk mendukung pertumbuhan bisnismu.
-        </p>
-      </div>
-	
-      <!-- slide 2 -->
-      <div class="slide-card">
-        <div class="icon">
-          <img src="images/icon-platform.svg" alt="Platform Icon">
-        </div>
-        <h3>Gudang Terverifikasi Fulfillin</h3>
-        <p>
-          Setiap gudang dalam jaringan Fulfillin telah melalui proses verifikasi ketat untuk menjamin keamanan, efektifitas, efisiensi dan ketepatan pengiriman setiap produk.
-        </p>
-      </div>
 
-      <!-- slide 3 -->
-      <div class="slide-card">
-        <div class="icon">
-          <img src="images/icon-shipping.svg" alt="Shipping Icon">
+    <div class="slider-container">
+      <div class="layananslider-wrapper">
+        <!-- Slide 1 -->
+        <div class="slide-card">
+          <div class="icon">
+            <img src="images/icon-insurance.svg" alt="Insurance Icon">
+          </div>
+          <h3>Professional Team</h3>
+          <p>
+            Tim professional Fulfillin berpengalaman di bidang logistik dan operasional.
+            Kami bekerja dengan standar tinggi untuk memastikan setiap proses berjalan cepat,
+            akurat dan efisien untuk mendukung pertumbuhan bisnismu.
+          </p>
         </div>
-        <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
-        <p>
-          Gudang Fulfillment yang tersebar di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Lokasi yang dekat dengan penerima meningkatkan Closing Rate, Success Rate pengiriman dan menekan return secara signifikan.
-        </p>
-      </div>
 
-      <!-- Slide 4 -->
-      <div class="slide-card">
-        <div class="icon">
-          <img src="images/icon-insurance.svg" alt="Insurance Icon">
+        <!-- Slide 2 -->
+        <div class="slide-card">
+          <div class="icon">
+            <img src="images/icon-platform.svg" alt="Platform Icon">
+          </div>
+          <h3>Gudang Terverifikasi Fulfillin</h3>
+          <p>
+            Setiap gudang dalam jaringan Fulfillin telah melalui proses verifikasi ketat
+            untuk menjamin keamanan, efektivitas, efisiensi dan ketepatan pengiriman setiap produk.
+          </p>
         </div>
-        <h3>Professional Team</h3>
-        <p>
-          Tim professional Fulfillin berpengalaman di bidang logistik dan operasional. Kami bekerja dengan standar tinggi untuk memastikan setiap proses berjalan cepat, akurat dan efisien untuk mendukung pertumbuhan bisnismu.
-        </p>
-      </div>
-	
-	<!-- slide 5 -->
-      <div class="slide-card">
-        <div class="icon">
-          <img src="images/icon-shipping.svg" alt="Shipping Icon">
+
+        <!-- Slide 3 -->
+        <div class="slide-card">
+          <div class="icon">
+            <img src="images/icon-shipping.svg" alt="Shipping Icon">
+          </div>
+          <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
+          <p>
+            Gudang Fulfillment yang tersebar di kota-kota strategis membantu memangkas ongkir
+            dan SLA pengiriman. Lokasi yang dekat dengan penerima meningkatkan Closing Rate
+            dan menekan return secara signifikan.
+          </p>
         </div>
-        <h3>Lokasi Gudang Tersebar di Kota Strategis</h3>
-        <p>
-          Gudang Fulfillment yang tersebar di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Lokasi yang dekat dengan penerima meningkatkan Closing Rate, Success Rate pengiriman dan menekan return secara signifikan.
-        </p>
+
+        <!-- Slide 4 -->
+        <div class="slide-card">
+          <div class="icon">
+            <img src="images/icon-insurance.svg" alt="Insurance Icon">
+          </div>
+          <h3>Asuransi Pengiriman</h3>
+          <p>
+            Produkmu terlindungi asuransi dari risiko kerusakan atau kehilangan selama proses pengiriman.
+          </p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide-card">
+          <div class="icon">
+            <img src="images/icon-platform.svg" alt="Platform Icon">
+          </div>
+          <h3>Integrasi Mudah</h3>
+          <p>
+            Hubungkan sistemmu dengan mudah melalui API untuk memantau pengiriman secara real-time.
+          </p>
+        </div>
       </div>
-	  </div>
-	</div>
+    </div>
 
     <!-- Navigation Arrows -->
     <div class="nav-arrows">
-      <button class="arrow-btn">&#8592;</button>
-      <button class="arrow-btn">&#8594;</button>
+      <button class="arrow-btn prev">&#8592;</button>
+      <button class="arrow-btn next">&#8594;</button>
     </div>
   </div>
 </section>
-
-
   
   <!-- Flow Process Section -->
 	<section class="flow-process">
@@ -198,9 +183,9 @@
   <!-- Comparison Section -->
   <section class="comparison-section">
   <div class="container">
-    <h2 class="section-title">Pilihan Tepat Untuk Binismu</h2>
+    <h2 class="section-title">Pilihan Tepat Untuk Bisnismu</h2>
     <p class="section-desc">
-      Kamu mulai kewalahan memenuhi permintaan pelanggan yang terus meningkat ? dan operasional belum siap mengimbanginya ?
+      Anda mulai kewalahan memenuhi permintaan pelanggan yang terus meningkat ? dan operasional belum siap mengimbanginya ?
       Mari kita explore perbedaan antara self-fulfillment dan menggunakan layanan Fulfillin, agar anda dapat membuat keputusan yang lebih tepat dan terinformasi.
     </p>
 

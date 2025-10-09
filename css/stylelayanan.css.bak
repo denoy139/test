@@ -440,6 +440,7 @@ body {
   gap: 30px;
   transition: transform 0.6s ease;
   width: max-content;
+  will-change: transform;
 }
 
 .slider-container {
