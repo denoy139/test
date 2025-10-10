@@ -623,7 +623,7 @@ body {
   }
   .flow-image-wrapper {
     max-height: 300px;
-    padding: 0px 10px;
+    padding: 0px 5px;
     margin-top: -25px; /* rapat di mobile */
 	position: relative;
 	z-index: 1;
@@ -871,28 +871,59 @@ body {
   font-size: 1.1rem;
 }
 
-/* Responsive */
+/* Responsive Fix for Tablet & Mobile */
 @media (max-width: 992px) {
+  .comparison-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .comparison-table {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 250px 300px 300px; /* lebar tiap kolom */
+    min-width: 850px; /* agar bisa scroll horizontal */
   }
 
   .pov-col, .fulfillin-col, .individually-col {
     border: none;
+    padding: 20px 15px;
+  }
+
+  .comparison-col ul li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .comparison-header img {
+    max-height: 28px;
+  }
+}
+
+/* HP Kecil */
+@media (max-width: 576px) {
+  .comparison-table {
+    grid-template-columns: 200px 260px 260px;
+    min-width: 720px;
   }
 
   .pov-col {
-    border-radius: 10px 10px 0 0;
-    text-align: center;
+    font-size: 0.85rem;
   }
 
-  .fulfillin-col, .individually-col {
-    border-radius: 0;
+  .fulfillin-col li,
+  .individually-col li {
+    font-size: 0.85rem;
+    padding: 14px 8px;
   }
+}
 
-  .comparison-header {
-    border: none;
-  }
+.comparison-section::after {
+  content: "← Geser tabel untuk melihat selengkapnya →";
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 10px;
 }
 
 /* --- Contact Section --- */

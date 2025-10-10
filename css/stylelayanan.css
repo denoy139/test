@@ -785,6 +785,12 @@ body {
   line-height: 1.6;
 }
 
+/* --- Wrapper agar scroll hanya di tabel --- */
+.comparison-wrapper {
+  width: 100%;
+  overflow-x: visible; /* default: desktop tidak bisa scroll */
+}
+
 /* Table Layout */
 .comparison-table {
   display: grid;
@@ -844,8 +850,8 @@ body {
   line-height: 1.6;
 }
 
-/* Remove top border on first row */
-.fulfillin-col li:first-child, .individually-col li:first-child {
+.fulfillin-col li:first-child,
+.individually-col li:first-child {
   border-top: none;
 }
 
@@ -871,27 +877,63 @@ body {
   font-size: 1.1rem;
 }
 
-/* Responsive */
+/* --- Responsive: hanya tabel yang bisa discroll --- */
 @media (max-width: 992px) {
+  .comparison-wrapper {
+    overflow-x: auto; /* aktifkan scroll */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
   .comparison-table {
-    grid-template-columns: 1fr;
+    min-width: 850px; /* agar bisa digeser */
+    grid-template-columns: 250px 300px 300px;
   }
 
   .pov-col, .fulfillin-col, .individually-col {
     border: none;
+    padding: 20px 15px;
+  }
+
+  .comparison-col ul li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .comparison-header img {
+    max-height: 28px;
+  }
+
+  /* UX hint */
+  .comparison-section::after {
+    content: "← Geser tabel untuk melihat selengkapnya →";
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 10px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 576px) {
+  .comparison-table {
+    min-width: 720px;
+    grid-template-columns: 200px 260px 260px;
   }
 
   .pov-col {
-    border-radius: 10px 10px 0 0;
-    text-align: center;
+    font-size: 0.85rem;
   }
 
-  .fulfillin-col, .individually-col {
-    border-radius: 0;
+  .fulfillin-col li,
+  .individually-col li {
+    font-size: 0.85rem;
+    padding: 14px 8px;
   }
 
-  .comparison-header {
-    border: none;
+  .comparison-section::after {
+    font-size: 0.8rem;
   }
 }
 
