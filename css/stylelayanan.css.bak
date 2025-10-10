@@ -764,143 +764,183 @@ body {
 }
 
 /* --- Comparison Section --- */
-/* === Section === */
 .comparison-section {
   background: #f9f9f9;
-  padding: 50px 8%; /* tambah jarak kanan kiri */
+  padding: 30px 0;
   text-align: center;
-  font-family: "Poppins", sans-serif;
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: #c8102e;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .section-desc {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #555;
   max-width: 750px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   line-height: 1.6;
 }
 
-/* === Table Wrapper === */
+/* --- Wrapper agar scroll hanya di tabel --- */
 .comparison-wrapper {
   width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
+  overflow-x: visible; /* default: desktop tidak bisa scroll */
 }
 
+/* Table Layout */
 .comparison-table {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
-  border-radius: 16px;
+  border-radius: 15px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  margin: 0 auto;
-  max-width: 1400px; /* batasi lebar agar tidak full page */
-  padding: 0 30px; /* tambah padding kanan kiri */
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* === Column Style === */
-.comparison-col {
-  display: flex;
-  flex-direction: column;
-}
-
-/* === Header === */
-.comparison-header {
-  padding: 20px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  border-bottom: 2px solid #f0f0f0;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pov-col .comparison-header {
+/* POV Column */
+.pov-col {
   background: #c8102e;
-  color: #fff;
+  color: white;
   text-align: left;
-  justify-content: flex-start;
+  padding: 30px 20px;
 }
 
-.fulfillin-col .comparison-header {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pov-col h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.individual-col .comparison-header {
-  background: #fff;
-  color: #c8102e;
-}
-
-/* === Logo === */
-.fulfillin-logo {
-  max-height: 45px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* === List === */
-.comparison-col ul {
+.pov-col ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  flex: 1;
-  display: grid;
-  grid-template-rows: repeat(6, 1fr); /* Samakan tinggi antar baris */
+  margin: 0;
 }
 
-.comparison-col ul li {
-  padding: 18px 20px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  border-top: 1px solid #f0f0f0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pov-col li {
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-top: 40px;
+}
+
+/* Fulfillin Column */
+.fulfillin-col {
+  background: #fff;
   text-align: center;
+  padding: 5px 15px;
+  border-left: 1px solid #e5e8ec;
 }
 
-.comparison-col ul li:first-child {
+.individually-col {
+  background: #fff;
+  text-align: center;
+  padding: 15px 15px;
+  border-left: 1px solid #e5e8ec;
+}
+
+.fulfillin-col ul, .individually-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fulfillin-col li, .individually-col li {
+  border-top: 1px solid #f0f0f0;
+  padding: 19px 10px;
+  color: #2b2b2b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fulfillin-col li:first-child,
+.individually-col li:first-child {
   border-top: none;
 }
 
-.pov-col ul li {
-  background: #c8102e;
-  color: #fff;
-  text-align: left;
-  justify-content: flex-start;
-  border-top: 1px solid rgba(255,255,255,0.15);
+/* Header styling */
+.comparison-header {
+  background: #fff;
+  padding: 10px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 10px;
 }
 
-/* === Responsif === */
+.fulfillin-logo {
+  max-height: 35px;
+}
+
+.individually-col .comparison-header {
+  background: #f1f2f5;
+}
+
+.individually-col h3 {
+  color: #c8102e;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* --- Responsive: hanya tabel yang bisa discroll --- */
 @media (max-width: 992px) {
-  .comparison-table {
-    min-width: 850px;
-    padding: 0 10px;
+  .comparison-wrapper {
+    overflow-x: auto; /* aktifkan scroll */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
   }
 
+  .comparison-table {
+    min-width: 850px; /* agar bisa digeser */
+    grid-template-columns: 250px 300px 300px;
+  }
+
+  .pov-col, .fulfillin-col, .individually-col {
+    border: none;
+    padding: 20px 15px;
+  }
+
+  .comparison-col ul li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .comparison-header img {
+    max-height: 28px;
+  }
+
+  /* UX hint */
   .comparison-section::after {
     content: "← Geser tabel untuk melihat selengkapnya →";
     display: block;
+    text-align: center;
     font-size: 0.85rem;
-    color: #888;
+    color: #999;
     margin-top: 10px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 576px) {
+  .comparison-table {
+    min-width: 720px;
+    grid-template-columns: 200px 260px 260px;
+  }
+
+  .pov-col {
+    font-size: 0.85rem;
+  }
+
+  .fulfillin-col li,
+  .individually-col li {
+    font-size: 0.85rem;
+    padding: 14px 8px;
+  }
+
+  .comparison-section::after {
+    font-size: 0.8rem;
   }
 }
 

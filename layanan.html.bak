@@ -182,57 +182,63 @@
   
   <!-- Comparison Section -->
 <section class="comparison-section">
-  <h2 class="section-title">Perbandingan Fulfillin vs Individually</h2>
-  <p class="section-desc">Berikut perbandingan antara menggunakan layanan Fulfillin dan mengelola sendiri operasional gudang Anda.</p>
+  <div class="container">
+    <h2 class="section-title">Pilihan Tepat Untuk Bisnismu</h2>
+    <p class="section-desc">
+      Anda mulai kewalahan memenuhi permintaan pelanggan yang terus meningkat ? dan operasional belum siap mengimbanginya ? 
+      Mari kita explore perbedaan antara self-fulfillment dan menggunakan layanan Fulfillin, agar anda dapat membuat keputusan yang lebih tepat dan terinformasi.
+    </p>
 
-  <div class="comparison-wrapper">
-    <div class="comparison-table">
-      
-      <!-- POV -->
-      <div class="comparison-col pov-col">
-        <div class="comparison-header"><strong>POV (Point of View)</strong></div>
-        <ul>
-          <li>Fokus Strategi Bisnis</li>
-          <li>Biaya Operasional</li>
-          <li>System & Technology</li>
-          <li>SLA Performance</li>
-          <li>Operation Visibility (Order, Inventory)</li>
-          <li>Expand Fulfillment Di Lokasi Lain</li>
-        </ul>
-      </div>
-
-      <!-- Fulfillin -->
-      <div class="comparison-col fulfillin-col">
-        <div class="comparison-header">
-          <img src="images/logo.webp" alt="Fulfillin" class="fulfillin-logo">
+    <!-- Tambahkan wrapper di sini -->
+    <div class="comparison-wrapper">
+      <div class="comparison-table">
+        <!-- POV Column -->
+        <div class="comparison-col pov-col">
+          <h3>POV (Point of View)</h3>
+          <ul>
+            <li>Fokus Strategi Bisnis</li>
+            <li>Biaya Operasional</li>
+            <li>System & Technology</li>
+            <li>SLA Performance</li>
+            <li>Operation Visibility<br>(Order, Inventory)</li>
+            <li>Expand Fulfillment<br>Di Lokasi Lain</li>
+          </ul>
         </div>
-        <ul>
-          <li>Anda dapat fokus untuk pengembangan strategi bisnis Anda</li>
-          <li>Efisiensi biaya (fasilitas bersama “Multi User Facility”)</li>
-          <li>Support by Fulfillin system</li>
-          <li>Dikelola secara profesional oleh Fulfillin</li>
-          <li>Supported by Fulfillin system</li>
-          <li>Memungkinkan digunakan dengan fasilitas multi gudang Fulfillin di seluruh Indonesia</li>
-        </ul>
-      </div>
 
-      <!-- Individually -->
-      <div class="comparison-col individual-col">
-        <div class="comparison-header"><strong>Individually</strong></div>
-        <ul>
-          <li>Anda disibukkan dengan masalah operasional (Tidak Fokus)</li>
-          <li>Biaya operasional tinggi: manpower, CAPEX, OPEX, dan kendala operasional lainnya</li>
-          <li>Jika belum memiliki sistem, semua biaya & risiko menjadi tanggungan Anda</li>
-          <li>Anda akan dibebani dengan kendala operasional yang dapat mengganggu bisnis</li>
-          <li>Memungkinkan, jika Anda memiliki sistem sendiri</li>
-          <li>Membutuhkan effort development dan biaya lebih</li>
-        </ul>
-      </div>
+        <!-- Fulfillin Column -->
+        <div class="comparison-col fulfillin-col">
+          <div class="comparison-header">
+            <img src="images/log.webp" alt="fulfillin.id" class="fulfillin-logo">
+          </div>
+          <ul>
+            <li>Anda dapat Fokus untuk pengembangan strategi bisnis Anda</li>
+            <li>Efisiensi Biaya (Fasilitas bersama "Multi User Facility")</li>
+            <li>Support by Fulfillin system</li>
+            <li>Dikelola secara profesional oleh Fulfillin</li>
+            <li>Supported by Fulfillin system</li>
+            <li>Memungkinkan dan siap digunakan dengan fasilitas multi gudang Fulfillin di seluruh Indonesia</li>
+          </ul>
+        </div>
 
+        <!-- Individually Column -->
+        <div class="comparison-col individually-col">
+          <div class="comparison-header">
+            <h3>Individually</h3>
+          </div>
+          <ul>
+            <li>Anda disibukan dengan masalah operasional (Tidak Fokus)</li>
+            <li>Biaya Operasional Tinggi : Manpower, CAPEX, Opex + berbagai masalah operasional yang mungkin terjadi.</li>
+            <li>Jika Anda belum memiliki sistem, semua usaha, biaya dan resiko pengembangan serta potensi penurunan pada kinerja menjadi tanggung jawab Anda.</li>
+            <li>Anda akan di bebani dengan kendala dan drama operasional yang dapat mengganggu bisnis Anda</li>
+            <li>Memungkinkan, Jika anda memiliki sistem sendiri</li>
+            <li>Membutuhkan effort development lebih dan biaya lebih</li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <!-- End wrapper -->
   </div>
 </section>
-
   
   <!-- Contact Section -->
   <section class="contact-section">
