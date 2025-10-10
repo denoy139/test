@@ -764,166 +764,144 @@ body {
 }
 
 /* --- Comparison Section --- */
+/* === Section === */
 .comparison-section {
   background: #f9f9f9;
-  padding: 30px 0;
+  padding: 50px 8%; /* tambah jarak kanan kiri */
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #c8102e;
-  margin-bottom: 20px;
-}
-
-.section-desc {
-  font-size: 1.05rem;
-  color: #555;
-  max-width: 750px;
-  margin: 0 auto 60px;
-  line-height: 1.6;
-}
-
-/* Table Layout */
-.comparison-table {
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  border-radius: 15px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* POV Column */
-.pov-col {
-  background: #c8102e;
-  color: white;
-  text-align: left;
-  padding: 30px 20px;
-}
-
-.pov-col h3 {
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.pov-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pov-col li {
-  margin-bottom: 0;
-  font-weight: 500;
-  line-height: 1.4;
-  padding-top: 40px;
-}
-
-/* Fulfillin Column */
-.fulfillin-col, .individually-col {
-  background: #fff;
-  text-align: center;
-  padding: 30px 25px;
-  border-left: 1px solid #e5e8ec;
-}
-
-.fulfillin-col ul, .individually-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.fulfillin-col li, .individually-col li {
-  border-top: 1px solid #f0f0f0;
-  padding: 19px 10px;
-  color: #2b2b2b;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Remove top border on first row */
-.fulfillin-col li:first-child, .individually-col li:first-child {
-  border-top: none;
-}
-
-/* Header styling */
-.comparison-header {
-  background: #fff;
-  padding: 10px;
-  border-bottom: 2px solid #f0f0f0;
+  color: #c8102e;
   margin-bottom: 10px;
 }
 
-.fulfillin-logo {
-  max-height: 35px;
+.section-desc {
+  font-size: 1rem;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
 }
 
-.individually-col .comparison-header {
-  background: #f1f2f5;
+/* === Table Wrapper === */
+.comparison-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
 }
 
-.individually-col h3 {
-  color: #c8102e;
-  font-weight: 700;
+.comparison-table {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin: 0 auto;
+  max-width: 1400px; /* batasi lebar agar tidak full page */
+  padding: 0 30px; /* tambah padding kanan kiri */
+}
+
+/* === Column Style === */
+.comparison-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header === */
+.comparison-header {
+  padding: 20px;
+  font-weight: 600;
   font-size: 1.1rem;
-}
-
-/* Responsive Fix for Tablet & Mobile */
-@media (max-width: 992px) {
-  .comparison-section {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .comparison-table {
-    display: grid;
-    grid-template-columns: 250px 300px 300px; /* lebar tiap kolom */
-    min-width: 850px; /* agar bisa scroll horizontal */
-  }
-
-  .pov-col, .fulfillin-col, .individually-col {
-    border: none;
-    padding: 20px 15px;
-  }
-
-  .comparison-col ul li {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .comparison-header img {
-    max-height: 28px;
-  }
-}
-
-/* HP Kecil */
-@media (max-width: 576px) {
-  .comparison-table {
-    grid-template-columns: 200px 260px 260px;
-    min-width: 720px;
-  }
-
-  .pov-col {
-    font-size: 0.85rem;
-  }
-
-  .fulfillin-col li,
-  .individually-col li {
-    font-size: 0.85rem;
-    padding: 14px 8px;
-  }
-}
-
-.comparison-section::after {
-  content: "← Geser tabel untuk melihat selengkapnya →";
-  display: block;
+  border-bottom: 2px solid #f0f0f0;
   text-align: center;
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pov-col .comparison-header {
+  background: #c8102e;
+  color: #fff;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.fulfillin-col .comparison-header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual-col .comparison-header {
+  background: #fff;
+  color: #c8102e;
+}
+
+/* === Logo === */
+.fulfillin-logo {
+  max-height: 45px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* === List === */
+.comparison-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr); /* Samakan tinggi antar baris */
+}
+
+.comparison-col ul li {
+  padding: 18px 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.comparison-col ul li:first-child {
+  border-top: none;
+}
+
+.pov-col ul li {
+  background: #c8102e;
+  color: #fff;
+  text-align: left;
+  justify-content: flex-start;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* === Responsif === */
+@media (max-width: 992px) {
+  .comparison-table {
+    min-width: 850px;
+    padding: 0 10px;
+  }
+
+  .comparison-section::after {
+    content: "← Geser tabel untuk melihat selengkapnya →";
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 10px;
+  }
 }
 
 /* --- Contact Section --- */

@@ -181,60 +181,58 @@
   </section>
   
   <!-- Comparison Section -->
-  <section class="comparison-section">
-  <div class="container">
-    <h2 class="section-title">Pilihan Tepat Untuk Bisnismu</h2>
-    <p class="section-desc">
-      Anda mulai kewalahan memenuhi permintaan pelanggan yang terus meningkat ? dan operasional belum siap mengimbanginya ?
-      Mari kita explore perbedaan antara self-fulfillment dan menggunakan layanan Fulfillin, agar anda dapat membuat keputusan yang lebih tepat dan terinformasi.
-    </p>
+<section class="comparison-section">
+  <h2 class="section-title">Perbandingan Fulfillin vs Individually</h2>
+  <p class="section-desc">Berikut perbandingan antara menggunakan layanan Fulfillin dan mengelola sendiri operasional gudang Anda.</p>
 
+  <div class="comparison-wrapper">
     <div class="comparison-table">
-      <!-- POV Column -->
+      
+      <!-- POV -->
       <div class="comparison-col pov-col">
-        <h3>POV (Point of View)</h3>
+        <div class="comparison-header"><strong>POV (Point of View)</strong></div>
         <ul>
-          <li>Focus business strategy</li>
-          <li>Operation cost</li>
+          <li>Fokus Strategi Bisnis</li>
+          <li>Biaya Operasional</li>
           <li>System & Technology</li>
           <li>SLA Performance</li>
-          <li>Operation Visibility<br>(order, inventory)</li>
-          <li>Expand fulfillment<br>to other location</li>
+          <li>Operation Visibility (Order, Inventory)</li>
+          <li>Expand Fulfillment Di Lokasi Lain</li>
         </ul>
       </div>
 
-      <!-- Fulfillin Column -->
+      <!-- Fulfillin -->
       <div class="comparison-col fulfillin-col">
         <div class="comparison-header">
-          <img src="images/logo.webp" alt="fulfillin.id" class="fulfillin-logo">
+          <img src="images/logo.webp" alt="Fulfillin" class="fulfillin-logo">
         </div>
         <ul>
-          <li>Client focus for Business strategy development</li>
-          <li>Cost Efficiency (Shared multi user facility)</li>
-          <li>Support by Fulfillin system (ready to be used)</li>
-          <li>Guaranteed by Fulfillin, and possible penalty if out of SLA</li>
+          <li>Anda dapat fokus untuk pengembangan strategi bisnis Anda</li>
+          <li>Efisiensi biaya (fasilitas bersama “Multi User Facility”)</li>
+          <li>Support by Fulfillin system</li>
+          <li>Dikelola secara profesional oleh Fulfillin</li>
           <li>Supported by Fulfillin system</li>
-          <li>Possible and ready to be used by Fulfillin multi facility across nationwide</li>
+          <li>Memungkinkan digunakan dengan fasilitas multi gudang Fulfillin di seluruh Indonesia</li>
         </ul>
       </div>
 
-      <!-- Individually Column -->
-      <div class="comparison-col individually-col">
-        <div class="comparison-header">
-          <h3>Individually</h3>
-        </div>
+      <!-- Individually -->
+      <div class="comparison-col individual-col">
+        <div class="comparison-header"><strong>Individually</strong></div>
         <ul>
-          <li>Any effort for operation handle (unfocused)</li>
-          <li>High Operation cost : Manpower, CAPEX, Opex + Operational issue that possible occurred</li>
-          <li>If the client have no system. Any effort, cost, and risk for system development and lack performance</li>
-          <li>If any bad performance, the risk absorb 100% by client</li>
-          <li>Possible, if the client have own system</li>
-          <li>New Effort development & cost</li>
+          <li>Anda disibukkan dengan masalah operasional (Tidak Fokus)</li>
+          <li>Biaya operasional tinggi: manpower, CAPEX, OPEX, dan kendala operasional lainnya</li>
+          <li>Jika belum memiliki sistem, semua biaya & risiko menjadi tanggungan Anda</li>
+          <li>Anda akan dibebani dengan kendala operasional yang dapat mengganggu bisnis</li>
+          <li>Memungkinkan, jika Anda memiliki sistem sendiri</li>
+          <li>Membutuhkan effort development dan biaya lebih</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
+
   
   <!-- Contact Section -->
   <section class="contact-section">
