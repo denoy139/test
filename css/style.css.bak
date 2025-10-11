@@ -240,7 +240,7 @@ body {
 .hero-text p {
   font-size: 1.1rem;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   line-height: 1.5;
 }
 
@@ -346,7 +346,7 @@ body {
   }
 
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 25px;
   }
 
   .hero-text p {
@@ -907,7 +907,7 @@ body {
 /* HP (max-width 768px) */
 @media (max-width: 768px) {
   .kategori-produk h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 30px;
   }
   .kategori-produk p {
@@ -993,9 +993,25 @@ body {
 
 /* Responsif untuk HP */
 @media (max-width: 600px) {
+  .benefits-section h2 {
+  color: #c8102e;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.benefits-section .subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
   .benefits-grid {
     grid-template-columns: 1fr;
   }
+  .benefit-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
 }
 
 .testimoni-section {
@@ -1071,6 +1087,19 @@ body {
 
 /* HP: 1 kolom */
 @media (max-width: 600px) {
+	.testimoni-section h2 {
+  color: #c8102e;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.testimoni-section h3 {
+  color: #c8102e;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
   .testimoni-grid {
     grid-template-columns: 1fr;
   }

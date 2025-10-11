@@ -346,11 +346,11 @@ body {
   }
 
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 25px;
   }
 
   .hero-text p {
-    font-size: 0.95rem;
+    font-size: 14px;
     margin-bottom: 15px;
   }
 
@@ -485,6 +485,19 @@ body {
 }
 
 @media (max-width: 768px) {
+   .layananslider h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c8102e;
+  margin-bottom: 30px;
+}
+
+  .layananslider .subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+	
   .slide-card {
     flex: 0 0 95%; /* 1 di HP */
     margin: 0 auto;
@@ -616,6 +629,20 @@ body {
 }
 
 @media (max-width: 480px) {
+  .flow-process .section-title {
+   font-size: 20px;
+   font-weight: 700;
+   color: #c8102e;
+   }
+
+  .flow-process .section-desc {
+   font-size: 14px;
+   max-width: 700px;
+   margin: 15px auto 30px;
+   color: #5a6372;
+   line-height: 1.6;
+   }
+	
   .flow-tabs {
     margin-bottom: -100px;
 	position: relative;
@@ -772,7 +799,6 @@ body {
 
 .section-title {
   font-size: 2.2rem;
-  font-weight: 800;
   color: #c8102e;
   margin-bottom: 20px;
 }
@@ -974,6 +1000,26 @@ body {
 
 /* HP kecil */
 @media (max-width: 576px) {
+.comparison-section {
+  background: #f9f9f9;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #c8102e;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+	
   .comparison-table {
     min-width: 720px;
     grid-template-columns: 200px 260px 260px;
@@ -1115,6 +1161,19 @@ body {
   .contact-form {
     width: 100%;
   }
+  
+  .contact-info h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c8102e;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+}
 
   .form-footer {
     flex-direction: column;
