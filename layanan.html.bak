@@ -21,7 +21,7 @@
 		<ul class="nav-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="layanan.html">Layanan</a></li>
-          <li><a href="#fbads">Informasi Warehouse</a></li>
+          <li><a href="#fbads">Warehouse</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#help">Help Center</a></li>
 	  
@@ -208,7 +208,7 @@
         <!-- Fulfillin Column -->
         <div class="comparison-col fulfillin-col">
           <div class="comparison-header">
-            <img src="images/log.webp" alt="fulfillin.id" class="fulfillin-logo">
+            <img src="images/logo.webp" alt="fulfillin.id" class="fulfillin-logo">
           </div>
           <ul>
             <li>Anda dapat Fokus untuk pengembangan strategi bisnis Anda</li>
