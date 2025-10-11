@@ -1,0 +1,141 @@
+// Animasi Fade-in ketika halaman dimuat
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in-right");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible-right");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in-left");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible-left");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+
+// Flow process Function
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.flow-tabs .tab');
+  const images = document.querySelectorAll('.flow-image');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // hapus active di semua tab
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const target = tab.getAttribute('data-target');
+      // sembunyikan semua gambar
+      images.forEach(img => {
+        img.classList.remove('active');
+      });
+      // tampilkan gambar sesuai target
+      document.getElementById(target).classList.add('active');
+    });
+  });
+});
+
+// Slider Function
+const slider = document.querySelector('.layananslider-wrapper');
+const prev = document.querySelector('.arrow-btn.prev');
+const next = document.querySelector('.arrow-btn.next');
+let slides = document.querySelectorAll('.slide-card');
+
+let currentIndex = 0;
+let slidesToShow = getSlidesToShow();
+let gap = 30;
+let slideWidth = slides[0].offsetWidth + gap;
+
+// --- Clone Slides untuk infinite loop ---
+function cloneSlides() {
+  const clones = Array.from(slides)
+    .slice(0, slidesToShow)
+    .map(s => s.cloneNode(true));
+  clones.forEach(clone => slider.appendChild(clone));
+  slides = document.querySelectorAll('.slide-card');
+}
+
+cloneSlides();
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+// --- Hitung jumlah slide berdasarkan ukuran layar ---
+function getSlidesToShow() {
+  if (window.innerWidth <= 768) return 1;
+  if (window.innerWidth <= 992) return 2;
+  return 3;
+}
+
+// --- Tombol Next ---
+next.addEventListener('click', () => {
+  currentIndex++;
+  updateSlider();
+
+  if (currentIndex >= slides.length - slidesToShow) {
+    setTimeout(() => {
+      slider.style.transition = 'none';
+      currentIndex = 0;
+      updateSlider();
+      setTimeout(() => slider.style.transition = 'transform 0.6s ease', 50);
+    }, 600);
+  }
+});
+
+// --- Tombol Prev ---
+prev.addEventListener('click', () => {
+  if (currentIndex <= 0) {
+    slider.style.transition = 'none';
+    currentIndex = slides.length - slidesToShow;
+    updateSlider();
+    setTimeout(() => slider.style.transition = 'transform 0.6s ease', 50);
+  }
+  currentIndex--;
+  updateSlider();
+});
+
+// --- Resize Responsif ---
+window.addEventListener('resize', () => {
+  slidesToShow = getSlidesToShow();
+  slideWidth = slides[0].offsetWidth + gap;
+  updateSlider();
+});
+
+// --- Auto Slide ---
+let autoSlide = setInterval(() => next.click(), 4000);
+slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
+slider.addEventListener('mouseleave', () => {
+  autoSlide = setInterval(() => next.click(), 4000);
+});

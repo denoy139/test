@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fulfillin | Fullfilment Andalan Anda</title>
+  <link rel="icon" type="image/webp" href="images/favicon.webp">
+  <link rel="stylesheet" href="css/stylewarehouse.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+		<a href="index.html">
+        <img src="images/logo.webp" alt="Fulfillin Logo">
+      </div>
+      <nav class="navbar">
+		<ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+          <li><a href="warehouse.html">Warehouse</a></li>
+          <li><a href="#blog">Tentang</a></li>
+          <li><a href="#help">Help Center</a></li>
+	  
+      <!-- Login & Daftar versi mobile -->
+        <li class="mobile-only"><a href="#" class="btn-outline">Log In</a></li>
+        <li class="mobile-only"><a href="#" class="btn-primary">Daftar</a></li>
+      </ul>
+    </nav>
+
+    <!-- Login & Daftar versi desktop -->
+    <div class="nav-buttons desktop-only">
+      <a href="#" class="btn-outline">Login</a>
+      <a href="#" class="btn-primary">Daftar</a>
+    </div>
+	  
+		<!-- NEW: Hamburger menu -->
+		<div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		
+	</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <h1>Jaringan Gudang Yang Luas, Lebih Efisien dan Menguntungkan</h1>
+		<p>Dengan jaringan gudang fulfillment di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Dengan dekatnya lokasi ke penerima berdampak langsung pada peningkatan closing rate, success rate dan menekan tingkat retur.</p>
+        <a href="#" class="cta-btn">DAFTAR SEKARANG</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/jaringangudang.webp" alt="Hero Image">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Indonesia Map Section -->
+  <section class="indonesia-map-section">
+  <div class="container">
+    <h2 class="map-title">Peta Wilayah Operasional</h2>
+    <p class="map-subtitle">
+      Jangkauan layanan Fulfillin di seluruh Indonesia, dari barat hingga timur, 
+      untuk mendukung kelancaran operasional dan pengiriman produk Anda.
+    </p>
+
+    <div class="map-wrapper">
+      <img src="images/cabangwh.webp" alt="Peta Indonesia" class="map-image">
+    </div>
+  </div>
+</section> 
+  
+  <!-- Contact Section -->
+  <section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side -->
+    <div class="contact-info">
+      <h2>Hubungi Kami</h2>
+      <p>
+        Hubungi orang yang tepat di <b>Fulfillin</b>, isi formulir 
+        atau kirim pesan melalui WhatsApp. Kami akan mengarahkan Anda ke tim yang sesuai.
+      </p>
+      <p>Atau Anda bisa langsung mengirim pesan melalui WhatsApp.</p>
+
+      <a href="https://wa.me/6281234567890" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Open Whatsapp
+      </a>
+    </div>
+
+  <div class="contact-form">
+	<!-- iframe tersembunyi untuk menerima response -->
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+	<form id="contactForm"
+			action="https://script.google.com/macros/s/AKfycbzCFMoS1K21uSvq5rbx2SpW9sd5CUPEToYUu_-JrRMLfRo_yJMpSImP1hh3JlvnugxBGQ/exec"
+			method="POST"
+			target="hidden_iframe">
+
+				<input type="text" name="fullname" placeholder="Full Name" required>
+				<input type="email" name="email" placeholder="Email" required>
+				<input type="text" name="company" placeholder="Company Name">
+				<textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
+
+			<div class="form-footer">
+				<p>By submitting, you agree to Fulfillin.id 
+				<a href="#">Privacy Policy</a>
+				</p>
+				<button type="submit" class="submit-btn">Submit</button>
+			</div>
+    </form>
+  </div>
+
+  </div>
+  </section>
+  
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="images/logo.webp" alt="Fulfillin Logo">
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Fulfillin</h4>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Simulasi Biaya Fulfillment</a></li>
+          <li><a href="#">Kontak Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">Jadi Mitra</a></li>
+          <li><a href="#">Mitra Kami</a></li>
+          <li><a href="#">Mitra Lainnya</a></li>
+          <li><a href="#">Warehouse Management System</a></li>
+          <li><a href="#">Seller Management System</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Bantuan & Panduan</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 By Fulfillin. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+  <script src="jsscript/jswarehouse.js"></script>
+</body>
+</html>
