@@ -22,7 +22,7 @@
           <li><a href="index.html">Beranda</a></li>
           <li><a href="layanan.html">Layanan</a></li>
           <li><a href="warehouse.html">Warehouse</a></li>
-          <li><a href="#blog">Tentang</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
           <li><a href="#help">Help Center</a></li>
 	  
       <!-- Login & Daftar versi mobile -->
@@ -64,10 +64,9 @@
   <!-- Indonesia Map Section -->
   <section class="indonesia-map-section">
   <div class="container">
-    <h2 class="map-title">Peta Wilayah Operasional</h2>
+    <h2 class="map-title">Warehouse di Kota Strategis, Siap Melayani Seluruh Indonesia</h2>
     <p class="map-subtitle">
-      Jangkauan layanan Fulfillin di seluruh Indonesia, dari barat hingga timur, 
-      untuk mendukung kelancaran operasional dan pengiriman produk Anda.
+      Kami menempatkan gudang di lokasi yang paling efisien agar proses pengiriman anda lebih cepat sampai, ongkir murah dan lebih menguntungkan untuk bisnis anda.
     </p>
 
     <div class="map-wrapper">
