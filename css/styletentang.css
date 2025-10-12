@@ -426,7 +426,7 @@ body {
   content: "";
   width: 60px;
   height: 6px;
-  background: #fca311;
+  background: #c8102e;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -474,12 +474,26 @@ body {
 }
 
 @media (max-width: 576px) {
-  .vm-title {
-    font-size: 1.5rem;
+  .vm-card {
+    flex-direction: column;
+    text-align: left;
   }
+  .vm-title {
+    font-size: 20px;
+  }
+  .vm-title::after {
+  content: "";
+  width: 60px;
+  height: 6px;
+  background: #c8102e;
+  position: absolute;
+  left: 30px;
+  bottom: -10px;
+  border-radius: 4px;
+}
 
   .vm-content ul {
-    font-size: 0.95rem;
+    font-size: 14px;
   }
 }
 
@@ -596,11 +610,11 @@ body {
   }
 
   .value-card h3 {
-    font-size: 1rem;
+    font-size: 20px;
   }
 
   .value-card p {
-    font-size: 0.9rem;
+    font-size: 14px;
     line-height: 1.5;
   }
 }
