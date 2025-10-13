@@ -542,8 +542,8 @@ body {
 }
 
 .value-card img {
-  max-width: 50px;
-  height: 50px;
+  max-width: 70px;
+  height: 70px;
   margin-bottom: 20px;
 }
 
@@ -784,7 +784,7 @@ body {
 .footer-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 150px;
 }
 
 .footer-column h4 {
@@ -840,9 +840,11 @@ body {
     text-align: left;
   }
 
-  .footer-columns {
-    justify-content: left;
-	text-align: left;
+   .footer-columns {
+    flex-direction: column; /* ⬅️ bikin vertical di HP */
+    align-items: left;
+    gap: 25px;
+    text-align: left;
   }
 
   .footer-bottom {

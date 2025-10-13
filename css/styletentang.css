@@ -761,6 +761,7 @@ body {
   }
 }
 
+/* Footer Section */
 .footer {
   background: #f9f9f9;
   color: #111;
@@ -784,7 +785,7 @@ body {
 .footer-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 150px;
 }
 
 .footer-column h4 {
@@ -840,9 +841,11 @@ body {
     text-align: left;
   }
 
-  .footer-columns {
-    justify-content: left;
-	text-align: left;
+   .footer-columns {
+    flex-direction: column; /* ⬅️ bikin vertical di HP */
+    align-items: left;
+    gap: 25px;
+    text-align: left;
   }
 
   .footer-bottom {
@@ -851,5 +854,3 @@ body {
     gap: 10px;
   }
 }
-
-

@@ -1161,6 +1161,19 @@ body {
   .contact-form {
     width: 100%;
   }
+  
+  .contact-info h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c8102e;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+}
 
   .form-footer {
     flex-direction: column;
@@ -1243,18 +1256,6 @@ body {
 
 /* Responsif */
 @media (max-width: 768px) {
-	.contact-info h2 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #c8102e;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 15px;
-}
   .footer-top {
     flex-direction: column;
     text-align: left;
