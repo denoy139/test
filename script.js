@@ -73,3 +73,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeElements.forEach(el => observer.observe(el));
 });
+
+// === Rotator WA ===
+// === Daftar nomor CS WhatsApp ===
+const csNumbers = [
+  "6281111111111", // CS A
+  "6282222222222", // CS B
+  "6283333333333"  // CS C
+];
+
+// === Fungsi Rotator ===
+document.getElementById("whatsappButton").addEventListener("click", function (e) {
+  e.preventDefault(); // cegah link default
+
+  // Ambil index terakhir dari localStorage
+  let lastIndex = localStorage.getItem("csIndex");
+  lastIndex = lastIndex ? parseInt(lastIndex) : -1;
+
+  // Tentukan index berikutnya
+  let nextIndex = (lastIndex + 1) % csNumbers.length;
+
+  // Simpan index baru ke localStorage
+  localStorage.setItem("csIndex", nextIndex);
+
+  // Nomor CS berikutnya
+  const nextNumber = csNumbers[nextIndex];
+
+  // Pesan default WA (opsional)
+  const defaultMessage = encodeURIComponent("Halo, saya ingin bertanya mengenai layanan Fulfillin.");
+
+  // Redirect ke WhatsApp
+  const waLink = `https://wa.me/${nextNumber}?text=${defaultMessage}`;
+  window.open(waLink, "_blank");
+});
