@@ -55,7 +55,7 @@
 		<p>Kami percaya setiap bisnis lokal memiliki potensi untuk tumbuh dan bersaing di pasar global. Dengan layanan fulfillment terintegrasi, efisien, dan transparan, Fulfillin membantu e-commerce dan UKM meningkatkan operasional, mempercepat pengiriman dan memperluas jangkauan dari pasar lokal menuju kesuksesan global.</p>
       </div>
       <div class="hero-image">
-        <img src="images/jaringangudang.webp" alt="Hero Image">
+        <img src="images/tentang.webp" alt="Hero Image">
       </div>
     </div>
   </section>
@@ -70,7 +70,7 @@
       </p>
     </div>
     <div class="vm-image">
-      <img src="vision-illustratio.png" alt="Vision Illustration">
+      <img src="vision-illustration.png" alt="Vision Illustration">
     </div>
   </div>
 
@@ -86,7 +86,7 @@
       </ul>
     </div>
     <div class="vm-image">
-      <img src="mission-illustration.png" alt="Mission Illustration">
+      <img src="images/misi.webp" alt="Mission Illustration">
     </div>
   </div>
 </section>
@@ -98,37 +98,37 @@
 
     <div class="value-grid">
       <div class="value-card">
-        <img src="images/value-learning.png" alt="Customer Centricity" />
+        <img src="images/c.webp" alt="Customer Centricity" />
         <h3>Customer Centricity</h3>
         <p>Putting customers at the heart of everything we do.</p>
       </div>
 
       <div class="value-card">
-        <img src="images/value-user.png" alt="Innovation" />
+        <img src="images/i.webp" alt="Innovation" />
         <h3>Innovation</h3>
         <p>Continuous innovation to deliver greater value for our customers.</p>
       </div>
 
       <div class="value-card">
-        <img src="images/value-ownership.png" alt="Reliability" />
+        <img src="images/r.webp" alt="Reliability" />
         <h3>Reliability</h3>
         <p>Building trust through commitment and consistent performance.</p>
       </div>
 
       <div class="value-card">
-        <img src="images/value-collaboration.png" alt="Collaboration" />
+        <img src="images/c.webp" alt="Collaboration" />
         <h3>Collaboration</h3>
         <p>Growing together through empowering collaboration.</p>
       </div>
 	  
 	  <div class="value-card">
-        <img src="images/value-learning.png" alt="Learning" />
+        <img src="images/l.webp" alt="Learning" />
         <h3>Learning<br><span>(Continous Learning)</span></br></h3>
         <p>Keep learning and growing to be better every day.</p>
       </div>
 
       <div class="value-card">
-        <img src="images/value-user.png" alt="Excellence" />
+        <img src="images/e.webp" alt="Excellence" />
         <h3>Excellence<br><span>(Service Excellence)</span></br></h3>
         <p>Delivering excellence in every experience</p>
       </div>
