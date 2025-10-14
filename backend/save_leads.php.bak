@@ -1,29 +1,39 @@
 <?php
-// Koneksi database
+// Koneksi ke database
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fulfillin_db"; // ganti sesuai nama database kamu
+$username = "root"; 
+$password = ""; 
+$dbname = "form_leads";
 
+// Buat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Cek koneksi
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Ambil data POST
-$fullname = $_POST['fullname'] ?? '';
+// Ambil data dari form
+$nama = $_POST['fullname'] ?? '';
 $email = $_POST['email'] ?? '';
 $company = $_POST['company'] ?? '';
-$message = $_POST['message'] ?? '';
+$pesan = $_POST['message'] ?? '';
+$no_telp = $_POST['no_telp'] ?? '';
 
-// Simpan ke database
-$sql = "INSERT INTO leads (fullname, email, company, message) 
-        VALUES ('$fullname', '$email', '$company', '$message')";
+// Validasi
+if (!empty($nama) && !empty($email)) {
+  $stmt = $conn->prepare("INSERT INTO kontak (nama, email, company, pesan, no_telp) VALUES (?, ?, ?, ?, ?)");
+  $stmt->bind_param("sssss", $nama, $email, $company, $pesan, $no_telp);
 
-if ($conn->query($sql) === TRUE) {
-  echo "success";
+  if ($stmt->execute()) {
+    echo "success";
+  } else {
+    echo "error: " . $conn->error;
+  }
+
+  $stmt->close();
 } else {
-  echo "error";
+  echo "error: data tidak lengkap";
 }
 
 $conn->close();

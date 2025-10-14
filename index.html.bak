@@ -294,54 +294,47 @@
     </div>
   </div>
   </section>
-
+  
   <!-- Contact Section -->
-<section id="contact">
+  <section id="contact">
   <section class="contact-section">
-    <div class="contact-container">
+  <div class="contact-container">
+    <!-- Left Side -->
+    <div class="contact-info">
+      <h2>Hubungi Kami</h2>
+      <p>
+        Hubungi orang yang tepat di <b>Fulfillin</b>, isi formulir 
+        atau kirim pesan melalui WhatsApp. Kami akan mengarahkan Anda ke tim yang sesuai.
+      </p>
+      <p>Atau Anda bisa langsung mengirim pesan melalui WhatsApp.</p>
 
-      <!-- Left Side -->
-      <div class="contact-info">
-        <h2>Hubungi Kami</h2>
-        <p>
-          Hubungi orang yang tepat di <b>Fulfillin</b>, isi formulir 
-          atau kirim pesan melalui WhatsApp. Kami akan mengarahkan Anda ke tim yang sesuai.
-        </p>
-        <p>Atau Anda bisa langsung mengirim pesan melalui WhatsApp.</p>
-
-        <a href="#" id="whatsappButton" class="whatsapp-btn" target="_blank">
-          <i class="fab fa-whatsapp"></i> Open Whatsapp
-        </a>
-      </div>
-
-      <!-- Right Side -->
-      <div class="contact-form">
-        <form id="contactForm">
-          <input type="text" name="fullname" placeholder="Full Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="text" name="company" placeholder="Company Name">
-          <textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
-
-          <div class="form-footer">
-            <p>
-              By submitting, you agree to Fulfillin.id
-              <a href="#">Privacy Policy</a>
-            </p>
-            <button type="submit" class="submit-btn">Submit</button>
-          </div>
-        </form>
-
-        <!-- Popup Notification -->
-        <div id="popupMessage" class="popup">
-          <div class="popup-content">
-            <span id="popupClose">&times;</span>
-            <p id="popupText"></p>
-          </div>
-        </div>
-      </div>
+      <a href="#" id="whatsappButton" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Open Whatsapp
+      </a>
     </div>
+
+  <div class="contact-form" id="contact">
+  <form id="contactForm" action="backend/save_leads.php" method="POST">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="company" placeholder="Company Name">
+    <textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
+
+    <div class="form-footer">
+      <p>
+        By submitting, you agree to Fulfillin.id
+        <a href="#">Privacy Policy</a>
+      </p>
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
+
+  <!-- Tempat menampilkan pesan status -->
+  <p id="formMessage" style="margin-top:10px; color:green; font-weight:bold;"></p>
+</div>
+
+  </div>
   </section>
-</section>
   
   <!-- Footer Section -->
   <footer class="footer">

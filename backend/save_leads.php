@@ -17,12 +17,12 @@ if ($conn->connect_error) {
 $nama = $_POST['fullname'] ?? '';
 $email = $_POST['email'] ?? '';
 $company = $_POST['company'] ?? '';
-$pesan = $_POST['message'] ?? '';
+$no_telp = $_POST['no_telp'] ?? '';
 
 // Validasi
 if (!empty($nama) && !empty($email)) {
-  $stmt = $conn->prepare("INSERT INTO kontak (nama, email, company, pesan) VALUES (?, ?, ?, ?)");
-  $stmt->bind_param("ssss", $nama, $email, $company, $pesan);
+  $stmt = $conn->prepare("INSERT INTO kontak (nama, email, company, no_telp) VALUES (?, ?, ?, ?)");
+  $stmt->bind_param("ssss", $nama, $email, $company, $no_telp);
 
   if ($stmt->execute()) {
     echo "success";
