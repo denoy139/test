@@ -1,3 +1,34 @@
+// Form Leads
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+  const messageBox = document.getElementById("formMessage");
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    if (result.includes("success")) {
+      messageBox.textContent = "✅ Data berhasil dikirim!";
+      messageBox.style.color = "green";
+      form.reset();
+    } else {
+      messageBox.textContent = "❌ Gagal mengirim data.";
+      messageBox.style.color = "red";
+      console.error(result);
+    }
+  })
+  .catch(error => {
+    messageBox.textContent = "⚠️ Terjadi kesalahan koneksi.";
+    messageBox.style.color = "red";
+    console.error("Error:", error);
+  });
+});
+
 // Animasi Fade-in ketika halaman dimuat
 document.addEventListener("DOMContentLoaded", () => {
   const fadeElements = document.querySelectorAll(".fade-in");

@@ -1,0 +1,30 @@
+<?php
+// Koneksi database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fulfillin_db"; // ganti sesuai nama database kamu
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Ambil data POST
+$fullname = $_POST['fullname'] ?? '';
+$email = $_POST['email'] ?? '';
+$company = $_POST['company'] ?? '';
+$message = $_POST['message'] ?? '';
+
+// Simpan ke database
+$sql = "INSERT INTO leads (fullname, email, company, message) 
+        VALUES ('$fullname', '$email', '$company', '$message')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "success";
+} else {
+  echo "error";
+}
+
+$conn->close();
+?>

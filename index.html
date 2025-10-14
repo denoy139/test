@@ -294,7 +294,8 @@
     </div>
   </div>
   </section>
-
+  
+  <!-- Contact Section -->
   <section id="contact">
   <section class="contact-section">
   <div class="contact-container">
@@ -312,28 +313,25 @@
       </a>
     </div>
 
-  <div class="contact-form">
-	<!-- iframe tersembunyi untuk menerima response -->
-	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+  <div class="contact-form" id="contact">
+  <form id="contactForm" action="backend/save_leads.php" method="POST">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="company" placeholder="Company Name">
+    <textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
 
-	<form id="contactForm"
-			action="https://script.google.com/macros/s/AKfycbzCFMoS1K21uSvq5rbx2SpW9sd5CUPEToYUu_-JrRMLfRo_yJMpSImP1hh3JlvnugxBGQ/exec"
-			method="POST"
-			target="hidden_iframe">
+    <div class="form-footer">
+      <p>
+        By submitting, you agree to Fulfillin.id
+        <a href="#">Privacy Policy</a>
+      </p>
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
 
-				<input type="text" name="fullname" placeholder="Full Name" required>
-				<input type="email" name="email" placeholder="Email" required>
-				<input type="text" name="company" placeholder="Company Name">
-				<textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
-
-			<div class="form-footer">
-				<p>By submitting, you agree to Fulfillin.id 
-				<a href="#">Privacy Policy</a>
-				</p>
-				<button type="submit" class="submit-btn">Submit</button>
-			</div>
-    </form>
-  </div>
+  <!-- Tempat menampilkan pesan status -->
+  <p id="formMessage" style="margin-top:10px; color:green; font-weight:bold;"></p>
+</div>
 
   </div>
   </section>

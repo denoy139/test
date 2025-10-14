@@ -1,30 +1,31 @@
-// menangkap postMessage dari Apps Script
-window.addEventListener("message", function(event) {
-  try {
-    const data = event.data;
-    if (data && data.result === "success") {
-      alert("✅ Data berhasil dikirim ke Google Sheet!");
-      document.getElementById("contactForm").reset();
+// Form Leads
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+  const messageBox = document.getElementById("formMessage");
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    if (result.includes("success")) {
+      messageBox.textContent = "✅ Data berhasil dikirim!";
+      messageBox.style.color = "green";
+      form.reset();
     } else {
-      alert("❌ Gagal mengirim data: " + (data?.message || "Unknown error"));
+      messageBox.textContent = "❌ Gagal mengirim data.";
+      messageBox.style.color = "red";
+      console.error(result);
     }
-  } catch (e) {
-    console.error("Error parsing message:", e);
-  }
-});
-
-// indikator tombol Processing
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const submitBtn = form.querySelector(".submit-btn");
-
-  form.addEventListener("submit", () => {
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Processing...";
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Submit";
-    }, 3000);
+  })
+  .catch(error => {
+    messageBox.textContent = "⚠️ Terjadi kesalahan koneksi.";
+    messageBox.style.color = "red";
+    console.error("Error:", error);
   });
 });
 

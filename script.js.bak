@@ -1,31 +1,49 @@
-<script>
-// menangkap postMessage dari Apps Script
-window.addEventListener("message", function(event) {
-  try {
-    const data = event.data;
-    if (data && data.result === "success") {
-      alert("✅ Data berhasil dikirim ke Google Sheet!");
-      document.getElementById("contactForm").reset();
-    } else {
-      alert("❌ Gagal mengirim data: " + (data?.message || "Unknown error"));
-    }
-  } catch (e) {
-    console.error("Error parsing message:", e);
-  }
-});
-
-// indikator tombol Processing
+// === Input Form Contact ===
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
-  const submitBtn = form.querySelector(".submit-btn");
+  const popup = document.getElementById("popupMessage");
+  const popupText = document.getElementById("popupText");
+  const popupClose = document.getElementById("popupClose");
 
-  form.addEventListener("submit", () => {
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Processing...";
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // cegah reload
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("backend/save_leads.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.text();
+      console.log("Server response:", result);
+
+      if (result.toLowerCase().includes("success")) {
+        showPopup("Data berhasil dikirim!", "success");
+        form.reset();
+      } else {
+        showPopup("Gagal mengirim data, silakan coba lagi.", "error");
+      }
+    } catch (err) {
+      console.error(err);
+      showPopup("Terjadi kesalahan koneksi ke server.", "error");
+    }
+  });
+
+  function showPopup(message, type) {
+    popupText.textContent = message;
+    popup.classList.remove("success", "error");
+    popup.classList.add(type);
+    popup.style.display = "flex";
+
     setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Submit";
+      popup.style.display = "none";
     }, 3000);
+  }
+
+  popupClose.addEventListener("click", () => {
+    popup.style.display = "none";
   });
 });
 
@@ -107,4 +125,3 @@ document.getElementById("whatsappButton").addEventListener("click", function (e)
   const waLink = `https://wa.me/${nextNumber}?text=${defaultMessage}`;
   window.open(waLink, "_blank");
 });
-</script>
