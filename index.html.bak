@@ -315,10 +315,10 @@
 
   <div class="contact-form" id="contact">
   <form id="contactForm" action="backend/save_leads.php" method="POST">
-    <input type="text" name="fullname" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email" required>
     <input type="text" name="company" placeholder="Company Name">
-    <textarea name="message" placeholder="Enter a message.." rows="4"></textarea>
+	<input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="no_telp" name="no_telp" placeholder="No. Telepon" required>
 
     <div class="form-footer">
       <p>

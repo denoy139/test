@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root"; 
 $password = ""; 
-$dbname = "form_leads";
+$dbname = "fulfillin";
 
 // Buat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,8 +21,8 @@ $no_telp = $_POST['no_telp'] ?? '';
 
 // Validasi
 if (!empty($nama) && !empty($email)) {
-  $stmt = $conn->prepare("INSERT INTO kontak (nama, email, company, no_telp) VALUES (?, ?, ?, ?)");
-  $stmt->bind_param("ssss", $nama, $email, $company, $no_telp);
+  $stmt = $conn->prepare("INSERT INTO leads (company, nama, email, no_telp) VALUES (?, ?, ?, ?)");
+  $stmt->bind_param("ssss", $company, $nama, $email, $no_telp);
 
   if ($stmt->execute()) {
     echo "success";

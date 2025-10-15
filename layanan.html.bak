@@ -260,10 +260,10 @@
 
   <div class="contact-form" id="contact">
   <form id="contactForm" action="backend/save_leads.php" method="POST">
-    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="text" name="company" placeholder="Company Name">
+	<input type="text" name="fullname" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email" required>
     <input type="no_telp" name="no_telp" placeholder="No. Telepon" required>
-	<input type="text" name="company" placeholder="Company Name">
 
     <div class="form-footer">
       <p>
