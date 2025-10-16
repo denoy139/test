@@ -27,14 +27,14 @@
 	  
       <!-- Login & Daftar versi mobile -->
         <li class="mobile-only"><a href="#" class="btn-outline">Log In</a></li>
-        <li class="mobile-only"><a href="#" class="btn-primary">Daftar</a></li>
+        <li class="mobile-only"><a href="register.html" class="btn-primary">Daftar</a></li>
       </ul>
     </nav>
 
     <!-- Login & Daftar versi desktop -->
     <div class="nav-buttons desktop-only">
       <a href="#" class="btn-outline">Login</a>
-      <a href="#" class="btn-primary">Daftar</a>
+      <a href="register.html" class="btn-primary">Daftar</a>
     </div>
 	  
 		<!-- NEW: Hamburger menu -->
@@ -53,7 +53,7 @@
       <div class="hero-text fade-in">
         <h1>Jaringan Gudang Yang Luas, Lebih Efisien dan Menguntungkan</h1>
 		<p>Dengan jaringan gudang fulfillment di kota-kota strategis membantu memangkas ongkir dan SLA pengiriman. Dengan dekatnya lokasi ke penerima berdampak langsung pada peningkatan closing rate, success rate dan menekan tingkat retur.</p>
-        <a href="#" class="cta-btn">DAFTAR SEKARANG</a>
+        <a href="register.html" class="cta-btn">DAFTAR SEKARANG</a>
       </div>
       <div class="hero-image">
         <img src="images/jaringangudang.webp" alt="Hero Image">

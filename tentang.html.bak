@@ -27,14 +27,14 @@
 	  
       <!-- Login & Daftar versi mobile -->
         <li class="mobile-only"><a href="#" class="btn-outline">Log In</a></li>
-        <li class="mobile-only"><a href="#" class="btn-primary">Daftar</a></li>
+        <li class="mobile-only"><a href="register.html" class="btn-primary">Daftar</a></li>
       </ul>
     </nav>
 
     <!-- Login & Daftar versi desktop -->
     <div class="nav-buttons desktop-only">
       <a href="#" class="btn-outline">Login</a>
-      <a href="#" class="btn-primary">Daftar</a>
+      <a href="register.html" class="btn-primary">Daftar</a>
     </div>
 	  
 		<!-- NEW: Hamburger menu -->
