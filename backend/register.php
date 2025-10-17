@@ -16,10 +16,24 @@ $phone = $_POST['phone'] ?? '';
 $password = $_POST['password'] ?? '';
 
 if (!empty($email) && !empty($store_name) && !empty($phone) && !empty($password)) {
+  // Cek apakah email sudah digunakan
+  $check = $conn->prepare("SELECT id FROM users WHERE email = ?");
+  $check->bind_param("s", $email);
+  $check->execute();
+  $check->store_result();
+
+  if ($check->num_rows > 0) {
+    echo "email_exists";
+    $check->close();
+    $conn->close();
+    exit;
+  }
+  $check->close();
+
   // Enkripsi password
   $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-  // Simpan ke tabel user
+  // Simpan data user baru
   $stmt = $conn->prepare("INSERT INTO users (email, store_name, phone, password) VALUES (?, ?, ?, ?)");
   $stmt->bind_param("ssss", $email, $store_name, $phone, $hashed_password);
 
