@@ -15,32 +15,26 @@
     </div>
 
     <h2>Buat Akun Baru</h2>
-    <p class="sub">Sudah punya akun? <a href="#">Masuk</a></p>
+    <p class="sub">Sudah punya akun? <a href="login.html">Masuk</a></p>
 
     <form id="registerForm" action="backend/register.php" method="POST">
-      <!-- Email -->
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="example@mail.com" required>
 
-      <!-- Nama Toko -->
       <label for="store_name">Nama Toko</label>
       <input type="text" id="store_name" name="store_name" placeholder="Toko 123" required>
 
-      <!-- Nomor HP -->
       <label for="phone">No. Handphone</label>
       <input type="tel" id="phone" name="phone" placeholder="0812345678910" required>
 
-      <!-- Password -->
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Masukkan password kamu" required>
 
-      <!-- Checkbox tampilkan password -->
       <div class="show-password">
         <input type="checkbox" id="showPassword">
         <label for="showPassword">Tampilkan Password</label>
       </div>
 
-      <!-- Aturan password -->
       <div class="password-rules">
         <ul>
           <li>Minimal satu huruf besar</li>
@@ -51,21 +45,28 @@
         </ul>
       </div>
 
-      <!-- Checkbox persetujuan -->
       <div class="checkbox-group">
         <input type="checkbox" id="agree" required>
         <label for="agree">Saya setuju dengan <a href="#">Ketentuan Penggunaan</a> dan <a href="#">Kebijakan Privasi</a></label>
       </div>
 
-      <!-- Tombol Submit -->
       <button type="submit" class="btn-submit">Daftar Sekarang</button>
     </form>
 
-    <!-- Pesan hasil -->
     <p id="formMessage" class="form-message"></p>
   </div>
 
-  <!-- Script dipanggil terakhir -->
+  <!-- === MODAL OTP === -->
+  <div class="modal" id="otpModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Verifikasi Email</h3>
+      <p>Kami telah mengirimkan kode OTP ke email kamu. Masukkan di bawah ini:</p>
+      <input type="text" id="otpInput" maxlength="6" placeholder="••••••">
+      <button class="btn-submit" id="confirmOtp">Verifikasi OTP</button>
+    </div>
+  </div>
+
   <script src="jsscript/register.js"></script>
 </body>
 </html>

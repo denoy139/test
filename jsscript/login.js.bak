@@ -1,0 +1,28 @@
+document.querySelector("#loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+  const msg = document.getElementById("formMessage");
+
+  msg.textContent = "Memeriksa data...";
+  msg.style.color = "#1c8f60";
+
+  fetch("backend/login.php", {
+    method: "POST",
+    body: formData
+  })
+    .then(res => res.text())
+    .then(response => {
+      if (response.trim() === "success") {
+        msg.textContent = "✅ Login berhasil, mengalihkan...";
+        msg.style.color = "green";
+        setTimeout(() => (window.location.href = "dashboard.php"), 1500);
+      } else {
+        msg.textContent = "❌ " + response;
+        msg.style.color = "red";
+      }
+    })
+    .catch(() => {
+      msg.textContent = "Terjadi kesalahan koneksi.";
+      msg.style.color = "red";
+    });
+});

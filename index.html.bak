@@ -26,15 +26,15 @@
           <li><a href="#contact">Kontak</a></li>
 	  
       <!-- Login & Daftar versi mobile -->
-        <li class="mobile-only"><a href="#" class="btn-outline">Log In</a></li>
-        <li class="mobile-only"><a href="register.html" class="btn-primary">Daftar</a></li>
+        <li class="mobile-only"><a href="login.html" class="btn-outline" target="_blank">Log In</a></li>
+        <li class="mobile-only"><a href="register.html" class="btn-primary" target="_blank">Daftar</a></li>
       </ul>
     </nav>
 
     <!-- Login & Daftar versi desktop -->
     <div class="nav-buttons desktop-only">
-      <a href="#" class="btn-outline">Login</a>
-      <a href="register.html" class="btn-primary">Daftar</a>
+      <a href="#" class="btn-outline" target="_blank">Login</a>
+      <a href="register.html" class="btn-primary" target="_blank">Daftar</a>
     </div>
 	  
 		<!-- NEW: Hamburger menu -->
@@ -53,7 +53,7 @@
       <div class="hero-text fade-in">
         <h1>Kembangkan Bisnismu Tanpa Pusing Urusan Gudang</h1>
 		<p>Biar kami yang urus pengemasan dan logistik, anda fokus scale up bisnismu.</p>
-        <a href="register.html" class="cta-btn">DAFTAR SEKARANG</a>
+        <a href="register.html" class="cta-btn" target="_blank">DAFTAR SEKARANG</a>
       </div>
       <div class="hero-image">
         <img src="images/hero.webp" alt="Hero Image">
