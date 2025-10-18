@@ -15,7 +15,7 @@
     </div>
 
     <h2>Buat Akun Baru</h2>
-    <p class="sub">Sudah punya akun? <a href="login.html">Masuk</a></p>
+    <p class="sub">Sudah punya akun? <a href="#">Masuk</a></p>
 
     <form id="registerForm" action="backend/register.php" method="POST">
       <!-- Email -->

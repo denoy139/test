@@ -153,7 +153,7 @@ input:focus {
 }
 
 .btn-submit:hover {
-  background: #16794e;
+  background: #A50C25;
 }
 
 .form-message {

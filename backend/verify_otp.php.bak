@@ -1,0 +1,23 @@
+<?php
+session_start();
+include 'db_connect.php'; // jika koneksi dipisah
+
+$otp_input = $_POST['otp'] ?? '';
+
+if (isset($_SESSION['otp']) && isset($_SESSION['email'])) {
+  if ($otp_input == $_SESSION['otp']) {
+    $email = $_SESSION['email'];
+
+    // Update user sebagai terverifikasi
+    $stmt = $conn->prepare("UPDATE users SET verified = 1 WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+
+    unset($_SESSION['otp']);
+    echo "verified";
+  } else {
+    echo "invalid";
+  }
+} else {
+  echo "expired";
+}

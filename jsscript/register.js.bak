@@ -5,18 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registerForm");
   const formMessage = document.getElementById("formMessage");
 
-  // ✅ Fungsi tampil/sembunyikan password
+  // ✅ Tampilkan/sembunyikan password
   if (showPasswordCheckbox && passwordInput) {
     showPasswordCheckbox.addEventListener("change", function () {
-      if (this.checked) {
-        passwordInput.type = "text";
-      } else {
-        passwordInput.type = "password";
-      }
+      passwordInput.type = this.checked ? "text" : "password";
     });
   }
 
-  // ✅ Proses submit form (tetap seperti semula)
+  // ✅ Submit form
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -32,16 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then(res => res.text())
         .then(data => {
-          if (data.trim() === "success") {
-            formMessage.textContent = "Pendaftaran berhasil! Akun Anda telah dibuat.";
+          const response = data.trim();
+          if (response === "success") {
+            formMessage.textContent = "✅ Pendaftaran berhasil! Akun Anda telah dibuat.";
             formMessage.style.color = "green";
             form.reset();
+          } else if (response === "email_exists") {
+            formMessage.textContent = "⚠️ Email sudah terdaftar. Gunakan email lain.";
+            formMessage.style.color = "red";
           } else {
-            formMessage.textContent = "Gagal mendaftar: " + data;
+            formMessage.textContent = "❌ Gagal mendaftar: " + data;
             formMessage.style.color = "red";
           }
         })
-        .catch(err => {
+        .catch(() => {
           formMessage.textContent = "Terjadi kesalahan, coba lagi.";
           formMessage.style.color = "red";
         });
