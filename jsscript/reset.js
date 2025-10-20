@@ -1,3 +1,14 @@
+// Toggle show/hide password
+const toggle = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("password");
+
+if (toggle && passwordInput) {
+  toggle.addEventListener("change", () => {
+    passwordInput.type = toggle.checked ? "text" : "password";
+  });
+}
+
+// Submit reset form
 document.getElementById("resetForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 

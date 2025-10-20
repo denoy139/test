@@ -3,19 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fulfillin | Gudang Fulfillment Andalan Anda</title>
+  <title>Fulfillin | Reset Password</title>
   <link rel="icon" type="image/webp" href="images/favicon.webp">
   <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
   <div class="login-container">
+    <img src="images/logo.webp" alt="Fulfillin Logo" class="logo">
+
     <h2>Reset Password</h2>
+
     <form id="resetForm">
-      <input type="password" id="password" name="password" placeholder="Password Baru" required>
+      <div class="password-field">
+        <input type="password" id="password" name="password" placeholder="Password Baru" required>
+        <div class="toggle-wrapper">
+          <input type="checkbox" id="togglePassword">
+          <label for="togglePassword">Tampilkan Password</label>
+        </div>
+      </div>
       <button type="submit">UBAH PASSWORD</button>
     </form>
+
     <p id="message"></p>
   </div>
+
   <script src="jsscript/reset.js"></script>
 </body>
 </html>

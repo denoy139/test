@@ -14,20 +14,49 @@ body {
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
   text-align: center;
-  width: 340px;
+  width: 360px;
 }
 
 .logo {
-  max-width: 200px;
-  margin-bottom: 25px;
+  max-width: 180px;
+  margin-bottom: 20px;
 }
 
-input {
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+input[type="password"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+
+.toggle-wrapper label {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.toggle-wrapper input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 button {
@@ -38,24 +67,34 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 button:hover {
   background-color: #a50c25;
 }
 
-a {
-  color: #c8102e;
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 p#message {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 14px;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  letter-spacing: 0.05em; /* opsional, agar tampak seimbang */
+}
+
+/* Gunakan font dengan lebar tetap supaya tidak berubah saat toggle */
+#password {
+  font-family: 'Inter', sans-serif;
+  font-variant-numeric: tabular-nums; /* jaga kestabilan lebar */
 }
