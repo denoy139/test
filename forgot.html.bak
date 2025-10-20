@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fulfillin | Gudang Fulfillment Andalan Anda</title>
+  <link rel="icon" type="image/webp" href="images/favicon.webp">
+  <link rel="stylesheet" href="css/forgot.css">
+</head>
+<body>
+  <div class="login-container">
+    <img src="logo.webp" alt="Fulfillin" class="logo">
+    <form id="forgotForm">
+      <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+      <button type="submit">RESET PASSWORD</button>
+    </form>
+    <p id="message"></p>
+    <a href="login.html">Back to Login</a>
+  </div>
+  <script src="jsscript/forgot.js"></script>
+</body>
+</html>
