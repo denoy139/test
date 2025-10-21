@@ -14,22 +14,33 @@ body {
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
   text-align: center;
-  width: 340px;
+  width: 360px; /* sedikit lebih lebar agar proporsional */
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 180px;
   margin-bottom: 25px;
 }
 
-input {
+/* Field input */
+input[type="email"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
 }
 
+input[type="email"]:focus {
+  outline: none;
+  border-color: #c8102e;
+  box-shadow: 0 0 4px rgba(200, 16, 46, 0.3);
+}
+
+/* Tombol utama */
 button {
   width: 100%;
   padding: 12px;
@@ -38,24 +49,32 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
   background-color: #a50c25;
+  transform: translateY(-1px);
 }
 
+/* Link "Back to Login" */
 a {
   color: #c8102e;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 14px;
   text-decoration: none;
+  font-size: 14px;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Pesan respon */
 p#message {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 14px;
+  color: #333;
 }

@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // === Rotator WA ===
 // === Daftar nomor CS WhatsApp ===
 const csNumbers = [
-  "6281111111111", // CS A
-  "6282222222222", // CS B
-  "6283333333333"  // CS C
+  "6287871124882", // CS A
+  "6287871124882", // CS B
+  "6287871124882"  // CS C
 ];
 
 // === Fungsi Rotator ===
