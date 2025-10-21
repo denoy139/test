@@ -1,28 +1,61 @@
-document.querySelector("#loginForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("#loginForm");
   const msg = document.getElementById("formMessage");
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordInput = document.getElementById("password");
 
-  msg.textContent = "Memeriksa data...";
-  msg.style.color = "#1c8f60";
+  // Toggle show/hide password
+  togglePassword?.addEventListener("change", function () {
+    if (!passwordInput) return;
+    passwordInput.type = this.checked ? "text" : "password";
+  });
 
-  fetch("backend/login.php", {
-    method: "POST",
-    body: formData
-  })
-    .then(res => res.text())
-    .then(response => {
-      if (response.trim() === "success") {
-        msg.textContent = "✅ Login berhasil, mengalihkan...";
-        msg.style.color = "green";
-        setTimeout(() => (window.location.href = "dashboard.php"), 1500);
-      } else {
-        msg.textContent = "❌ " + response;
-        msg.style.color = "red";
-      }
+  // Submit login (AJAX)
+  form?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    msg.textContent = "Memeriksa data...";
+    msg.style.color = "#1c8f60";
+
+    fetch("backend/login.php", {
+      method: "POST",
+      body: formData
     })
-    .catch(() => {
-      msg.textContent = "Terjadi kesalahan koneksi.";
-      msg.style.color = "red";
-    });
+      .then(res => res.text())
+      .then(response => {
+        const r = response.trim();
+
+        // Arahkan sesuai role yang dikirim dari PHP
+        if (r === "superadmin") {
+          msg.textContent = "✅ Login berhasil sebagai Super Admin...";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "superadmin/superadmindb.php"), 1200);
+
+        } else if (r === "admin") {
+          msg.textContent = "✅ Login berhasil sebagai Admin...";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "admin/admindb.php"), 1200);
+
+        } else if (r === "mitra") {
+          msg.textContent = "✅ Login berhasil sebagai Mitra Gudang...";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "mitra/mitradb.php"), 1200);
+
+        } else if (r === "member") {
+          msg.textContent = "✅ Login berhasil sebagai Member...";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "user/userdb.php"), 1200);
+
+        } else {
+          // jika bukan salah satu role di atas, tampilkan pesan error dari backend
+          msg.textContent = "❌ " + r;
+          msg.style.color = "red";
+        }
+      })
+      .catch(() => {
+        msg.textContent = "Terjadi kesalahan koneksi.";
+        msg.style.color = "red";
+      });
+  });
 });

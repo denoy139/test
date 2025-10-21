@@ -1,0 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'mitra') {
+  header("Location: ../login.html");
+  exit;
+}
+?>
+<h1>Selamat Datang, Mitra Gudang!</h1>
+<a href="../backend/logout.php">Logout</a>

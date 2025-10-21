@@ -25,11 +25,30 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(res => res.text())
       .then(response => {
         const r = response.trim();
-        if (r === "success") {
-          msg.textContent = "✅ Login berhasil, mengalihkan...";
+
+        // Arahkan sesuai role yang dikirim dari PHP
+        if (r === "superadmin") {
+          msg.textContent = "✅ Login berhasil";
           msg.style.color = "green";
-          setTimeout(() => (window.location.href = "dashboard.php"), 1200);
+          setTimeout(() => (window.location.href = "superadmin/superadmindb.php"), 1200);
+
+        } else if (r === "admin") {
+          msg.textContent = "✅ Login berhasil";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "admin/admindb.php"), 1200);
+
+        } else if (r === "mitra") {
+          msg.textContent = "✅ Login berhasil";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "mitra/mitradb.php"), 1200);
+
+        } else if (r === "member") {
+          msg.textContent = "✅ Login berhasil";
+          msg.style.color = "green";
+          setTimeout(() => (window.location.href = "user/userdb.php"), 1200);
+
         } else {
+          // jika bukan salah satu role di atas, tampilkan pesan error dari backend
           msg.textContent = "❌ " + r;
           msg.style.color = "red";
         }
