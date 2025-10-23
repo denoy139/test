@@ -10,7 +10,7 @@ $dbname = "fulfillin";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) die("Koneksi gagal: " . $conn->connect_error);
 
-// === Ambil Data Form ===
+// Ambil data
 $email = $_POST['email'] ?? '';
 $store_name = $_POST['store_name'] ?? '';
 $phone = $_POST['phone'] ?? '';
@@ -21,7 +21,7 @@ if (!$email || !$store_name || !$phone || !$password) {
   exit;
 }
 
-// === Cek Email Sudah Ada Belum ===
+// Cek email sudah ada
 $check = $conn->prepare("SELECT id FROM users WHERE email = ?");
 $check->bind_param("s", $email);
 $check->execute();
@@ -32,26 +32,32 @@ if ($check->num_rows > 0) {
 }
 $check->close();
 
-// === Simpan User Belum Diverifikasi ===
+// Hash password
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-$stmt = $conn->prepare("INSERT INTO users (email, store_name, phone, password, verified) VALUES (?, ?, ?, ?, 0)");
+
+// Insert user dengan verified=0, active=0
+$stmt = $conn->prepare("INSERT INTO users (email, store_name, phone, password, verified, active) VALUES (?, ?, ?, ?, 0, 0)");
 $stmt->bind_param("ssss", $email, $store_name, $phone, $hashed_password);
-$stmt->execute();
+$ok = $stmt->execute();
+if (!$ok) {
+  echo "error: gagal menyimpan user";
+  exit;
+}
+$user_id = $stmt->insert_id;
 $stmt->close();
 
-// === Generate OTP ===
+// Generate OTP (untuk verifikasi email)
 $otp = rand(100000, 999999);
 $_SESSION['otp'] = $otp;
+$_SESSION['otp_expires'] = time() + 300; // 5 menit
 $_SESSION['email'] = $email;
+$_SESSION['user_id_temp'] = $user_id;
 
-// === PHPMailer ===
+// Kirim email OTP ke user (PHPMailer)
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-// ✅ PERBAIKAN PATH: naik 1 folder ke vendor
 require __DIR__ . '/../vendor/autoload.php';
 
-// === Kirim Email OTP ===
 $mail = new PHPMailer(true);
 
 try {
@@ -59,7 +65,7 @@ try {
   $mail->Host = 'smtp.gmail.com';
   $mail->SMTPAuth = true;
   $mail->Username = 'fulfillinverify@gmail.com'; // GANTI
-  $mail->Password = 'rdprnqmvswlgtqsl'; // GANTI dengan App Password Gmail
+  $mail->Password = 'rdprnqmvswlgtqsl'; // GANTI: app password
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
   $mail->Port = 587;
 
@@ -73,14 +79,45 @@ try {
     <h2 style='color:#c8102e;'>$otp</h2>
     <p>Kode ini berlaku selama 5 menit.</p>
   ";
-
   $mail->send();
-  echo "success";
 
 } catch (Exception $e) {
-  error_log("Mailer Error: {$mail->ErrorInfo}");
+  error_log("Mailer Error (user OTP): {$mail->ErrorInfo}");
+  // jangan hentikan pendaftaran — user masih dibuat, tapi beri tahu frontend
   echo "error: gagal mengirim OTP ke email";
+  exit;
 }
 
+// Opsional: Kirim notifikasi ke admin supaya tim tahu ada pendaftaran baru
+try {
+  $adminMail = new PHPMailer(true);
+  $adminMail->isSMTP();
+  $adminMail->Host = 'smtp.gmail.com';
+  $adminMail->SMTPAuth = true;
+  $adminMail->Username = 'fulfillinverify@gmail.com'; // GANTI atau pakai email lain
+  $adminMail->Password = 'rdprnqmvswlgtqsl'; // GANTI
+  $adminMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+  $adminMail->Port = 587;
+
+  $adminMail->setFrom('fulfillinverify@gmail.com', 'Fulfillin');
+  // ganti dengan email tim/admin Fulfillin
+  $adminMail->addAddress('team@fulfillin.co.id'); 
+  $adminMail->isHTML(true);
+  $adminMail->Subject = 'Pendaftaran Baru - Aktivasi Dibutuhkan';
+  // NOTE: link aktivasi di bawah harus dilindungi (contoh di sini hanya ilustrasi)
+  $activateLink = "https://yourdomain.com/admin/activate_user.php?id={$user_id}";
+  $adminMail->Body = "
+    <h4>Ada pendaftaran baru</h4>
+    <p>Email: {$email}<br>Toko: {$store_name}<br>Phone: {$phone}</p>
+    <p>Untuk mengaktifkan akun, buka: <a href='{$activateLink}'>Aktifkan User</a></p>
+  ";
+  $adminMail->send();
+} catch (Exception $e) {
+  error_log("Mailer Error (admin notif): {$adminMail->ErrorInfo}");
+  // tidak fatal
+}
+
+// Sukses pendaftaran — frontend akan membuka modal OTP
+echo "success";
 $conn->close();
 ?>

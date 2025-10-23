@@ -1,10 +1,11 @@
 <?php
 session_start();
 
+// Koneksi database
 $servername = "localhost";
-$username = "root";       // sesuaikan jika pakai hosting
-$password = "";           // sesuaikan jika pakai hosting
-$dbname = "fulfillin";    // pastikan database sudah dibuat
+$username = "root"; // sesuaikan
+$password = "";     // sesuaikan
+$dbname = "fulfillin";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) die("Koneksi gagal: " . $conn->connect_error);
@@ -17,7 +18,8 @@ if (!$email || !$password_input) {
   exit;
 }
 
-$stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
+// Ambil data user + role
+$stmt = $conn->prepare("SELECT id, password, role FROM users WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -32,7 +34,10 @@ $user = $result->fetch_assoc();
 if (password_verify($password_input, $user['password'])) {
   $_SESSION['user_id'] = $user['id'];
   $_SESSION['email'] = $email;
-  echo "success";
+  $_SESSION['role'] = $user['role'];
+
+  // Kembalikan nama role agar JS tahu ke mana diarahkan
+  echo $user['role'];
 } else {
   echo "Password salah.";
 }

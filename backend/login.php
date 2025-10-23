@@ -18,8 +18,8 @@ if (!$email || !$password_input) {
   exit;
 }
 
-// Ambil data user + role
-$stmt = $conn->prepare("SELECT id, password, role FROM users WHERE email = ?");
+// Ambil data user + role + verified + active
+$stmt = $conn->prepare("SELECT id, password, role, verified, active FROM users WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -31,16 +31,29 @@ if ($result->num_rows === 0) {
 
 $user = $result->fetch_assoc();
 
-if (password_verify($password_input, $user['password'])) {
-  $_SESSION['user_id'] = $user['id'];
-  $_SESSION['email'] = $email;
-  $_SESSION['role'] = $user['role'];
-
-  // Kembalikan nama role agar JS tahu ke mana diarahkan
-  echo $user['role'];
-} else {
+// Cek password
+if (!password_verify($password_input, $user['password'])) {
   echo "Password salah.";
+  exit;
 }
 
+// Cek verifikasi email
+if ($user['verified'] != 1) {
+  echo "Akun belum terverifikasi. Silakan cek email untuk kode OTP.";
+  exit;
+}
+
+// Cek aktivasi oleh tim Fulfillin
+if ($user['active'] != 1) {
+  echo "Akun belum diaktifkan oleh tim Fulfillin. Mohon tunggu konfirmasi dari tim.";
+  exit;
+}
+
+// Semua OK -> login
+$_SESSION['user_id'] = $user['id'];
+$_SESSION['email'] = $email;
+$_SESSION['role'] = $user['role'];
+
+echo $user['role'];
 $conn->close();
 ?>
