@@ -33,7 +33,7 @@
 
     <!-- Login & Daftar versi desktop -->
     <div class="nav-buttons desktop-only">
-      <a href="#" class="btn-outline" target="_blank">Login</a>
+      <a href="login.html" class="btn-outline" target="_blank">Login</a>
       <a href="register.html" class="btn-primary" target="_blank">Daftar</a>
     </div>
 	  

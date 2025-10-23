@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fulfillin | Gudang Fulfillment Andalan Anda</title>
+  <link rel="icon" type="image/webp" href="images/favicon.webp">
+  <link rel="stylesheet" href="css/faq.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+ <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+		<a href="index.html">
+        <img src="images/logo.webp" alt="Fulfillin Logo">
+      </div>
+      <nav class="navbar">
+		<ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+          <li><a href="warehouse.html">Warehouse</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+	  
+      <!-- Login & Daftar versi mobile -->
+        <li class="mobile-only"><a href="login.html" class="btn-outline" target="_blank">Log In</a></li>
+        <li class="mobile-only"><a href="register.html" class="btn-primary" target="_blank">Daftar</a></li>
+      </ul>
+    </nav>
+
+    <!-- Login & Daftar versi desktop -->
+    <div class="nav-buttons desktop-only">
+      <a href="login.html" class="btn-outline" target="_blank">Login</a>
+      <a href="register.html" class="btn-primary" target="_blank">Daftar</a>
+    </div>
+	  
+		<!-- NEW: Hamburger menu -->
+		<div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		
+	</div>
+  </header>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="faq-header">
+      <h1>Halo, kami siap membantu anda</h1>
+      <div class="search-container">
+        <input type="text" id="faqSearch" placeholder="Cari yang ingin anda tanyakan..." />
+        <button id="searchButton">Cari</button>
+      </div>
+    </div>
+
+    <div class="faq-container">
+      <h2>Topik Populer</h2>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">Apa itu Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Fulfillin adalah perusahaan layanan fulfillment dan manajemen gudang yang membantu bisnis online dalam penyimpanan, pengemasan, hingga pengiriman produk ke pelanggan. Kami memastikan setiap pesanan diproses cepat, akurat, dan transparan.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">Apa saja layanan yang disediakan oleh Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Kami menyediakan layanan lengkap untuk mendukung operasional bisnis kamu, meliputi :
+				<li>- Penyimpanan barang (warehouse storage)</li>
+				<li>- Pengemasan (picking & packing)</li>
+				<li>- Pengiriman ke pelanggan (fulfillment & last mile delivery)</li>
+				<li>- Integrasi sistem dengan marketplace dan toko online</li>
+				<li>- Pengelolaan retur & laporan real-time</li></p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">Siapa yang cocok menggunakan layanan Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Layanan kami cocok untuk :
+				<li>- Online shop dan brand e-commerce</li>
+				<li>- Distributor dan reseller</li>
+				<li>- Korporasi yang membutuhkan ruang penyimpanan dan pengelolaan gudang</li>
+				<li>- UMKM yang ingin efisien dalam pengelolaan stok dan pengiriman</li>
+				<li>- Perusahaan yang ingin fokus ke penjualan tanpa repot urusan logistik</li></p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">Apakah Fulfillin bisa integrasi dengan marketplace atau website toko saya ?</button>
+          <div class="accordion-content">
+            <p>Ya, sistem Fulfillin dapat terintegrasi dengan berbagai platform seperti Shopee, Tokopedia, Lazada, TikTok Shop dan lainnya. Semua pesanan akan otomatis masuk ke sistem kami untuk diproses lebih cepat.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">Bagaimana cara memulai menggunakan layanan Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Kamu bisa melakukan registrasi di website, menghubungi tim kami melalui formulir “Hubungi Kami” di website atau langsung lewat WhatsApp. Tim kami akan membantu proses onboarding, mulai dari penjelasan sistem, harga, hingga pengiriman stok pertama ke gudang kami.</p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Di mana lokasi gudang Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Gudang kami berlokasi di kota-kota strategis yang ada di Indonesia (Jakarta, Bandung, Yogyakarta, Surabaya dan Makassar) dengan jaringan mitra gudang kami yang luas. Kami siap mendukung pengiriman anda agar lebih cepat dan efisien sampai ke penerima.</p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Apakah ada minimal jumlah barang untuk mulai menggunakan layanan Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Tidak ada batas minimal yang kaku. Kami melayani mulai dari skala kecil hingga besar. Tujuan kami adalah membantu bisnis berkembang tanpa terbebani kapasitas gudang.</p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Bagaimana sistem pelaporan dan transparansi di Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Setiap klien mendapatkan akses dashboard online untuk memantau :
+				<li>- Stok barang secara real-time</li>
+				<li>- Informasi Inbound</li>
+				<li>- Informasi Outbound</li>
+				<li>- Return Management</li>
+				<li>- Dokumentasi video dan photo semua proses dari inbound, outbound dan return</li>
+				<li>- Semua data bisa diunduh dan diakses kapan saja.</li></p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Bagaimana jika ada retur atau barang rusak/hilang ?</button>
+          <div class="accordion-content">
+            <p>Kami memiliki prosedur quality control dan penanganan retur yang jelas. Barang yang rusak atau hilang selama proses di gudang akan ditindaklanjuti sesuai dengan kebijakan SLA (Service Level Agreement) kami.</p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Apakah Fulfillin bisa menyesuaikan kemasan sesuai brand saya ?</button>
+          <div class="accordion-content">
+            <p>Tentu bisa. Kami menyediakan layanan custom packaging agar pengalaman unboxing pelanggan tetap sesuai identitas merek kamu.</p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Bagaimana cara mengetahui harga atau biaya layanan Fulfillin ?</button>
+          <div class="accordion-content">
+            <p>Kamu bisa menghubungi kami untuk mendapatkan simulasi biaya dan konsultasi gratis sesuai kebutuhan bisnis kamu.</p>
+          </div>
+        </div>
+		
+		<div class="accordion-item">
+          <button class="accordion-header">Apa keunggulan Fulfillin dibanding layanan fulfillment lain ?</button>
+          <div class="accordion-content">
+            <p> <li>- Proses cepat & transparan dengan sistem real-time yang di lengkapi dengan dokumentasi proses</li>
+				<li>- Integrasi otomatis ke marketplace & e-commerce</li>
+				<li>- Tim profesional berpengalaman di bidang logistik</li>
+				<li>- Layanan fleksibel dapat disesuaikan dengan kebutuhan</li>
+				<li>- Dukungan Retur Management</li>
+				<li>- Menjaga kerahasiaan informasi produk klien</li></p>
+          </div>
+        </div>
+		
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact">
+  <section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side -->
+    <div class="contact-info">
+      <h2>Hubungi Kami</h2>
+      <p>
+        Hubungi orang yang tepat di <b>Fulfillin</b>, isi formulir 
+        atau kirim pesan melalui WhatsApp. Kami akan mengarahkan Anda ke tim yang sesuai.
+      </p>
+      <p>Atau Anda bisa langsung mengirim pesan melalui WhatsApp.</p>
+
+      <a href="#" id="whatsappButton" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Open Whatsapp
+      </a>
+    </div>
+
+  <div class="contact-form" id="contact">
+  <form id="contactForm" action="backend/save_leads.php" method="POST">
+    <input type="text" name="company" placeholder="Company Name">
+	<input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="no_telp" name="no_telp" placeholder="No. Telepon" required>
+
+    <div class="form-footer">
+      <p>
+        By submitting, you agree to Fulfillin.id
+        <a href="#">Privacy Policy</a>
+      </p>
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
+
+  <!-- Tempat menampilkan pesan status -->
+  <p id="formMessage" style="margin-top:10px; color:green; font-weight:bold;"></p>
+</div>
+
+  </div>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="images/logo.webp" alt="Fulfillin Logo">
+    </div>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Fulfillin</h4>
+        <ul>
+		  <li><a href="layanan.html">Layanan</a></li>
+		  <li><a href="warehouse.html">Warehouse</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="#contact">Kontak Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Bantuan & Panduan</h4>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+		  <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+		  <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 By Fulfillin. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="jsscript/faq.js"></script>
+</body>
+</html>
