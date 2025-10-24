@@ -1,9 +1,0 @@
-<?php
-session_start();
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'superadmin') {
-  header("Location: ../login.html");
-  exit;
-}
-?>
-<h1>Selamat Datang, Super Admin!</h1>
-<a href="../backend/logout.php">Logout</a>
