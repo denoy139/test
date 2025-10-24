@@ -101,7 +101,7 @@ try {
 
   $adminMail->setFrom('fulfillinverify@gmail.com', 'Fulfillin');
   // ganti dengan email tim/admin Fulfillin
-  $adminMail->addAddress('team@fulfillin.co.id'); 
+  $adminMail->addAddress('fulfillment.adm@gmail.com'); 
   $adminMail->isHTML(true);
   $adminMail->Subject = 'Pendaftaran Baru - Aktivasi Dibutuhkan';
   // NOTE: link aktivasi di bawah harus dilindungi (contoh di sini hanya ilustrasi)
